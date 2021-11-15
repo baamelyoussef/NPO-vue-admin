@@ -26,19 +26,19 @@
                     :rules="nameRules"
                     label="Name"
                     required
-                  ></v-text-field>
+                  />
 
                   <v-text-field
                     v-model="email"
                     :rules="emailRules"
                     label="E-mail"
                     required
-                  ></v-text-field>
+                  />
                   <v-text-field
                     v-model="Company"
                     :counter="10"
                     label="Company"
-                  ></v-text-field>
+                  />
                   <v-text-field
                     v-model="password"
                     :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
@@ -49,7 +49,7 @@
                     hint="At least 8 characters"
                     counter
                     @click:append="show1 = !show1"
-                  ></v-text-field>
+                  />
                   <v-row justify="center">
                     <v-btn color="gr" class="mt-6 w-c" @click="validate">
                       Create an account
