@@ -19,9 +19,6 @@
                 :to="`/${child.path}`"
                 router
               >
-                <v-list-item-icon>
-                  <v-icon small>mdi-chevron-right</v-icon>
-                </v-list-item-icon>
                 <v-list-item-content>
                   <v-list-item-title v-text="child.title"></v-list-item-title>
                 </v-list-item-content>
