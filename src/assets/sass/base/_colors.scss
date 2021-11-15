@@ -1,0 +1,110 @@
+// .v-list-item,
+// .v-card__title,
+// .v-subheader:not(.primary),
+// td,
+// td i,
+// p,
+// tr,
+// i {
+//   color: var(--v-text-base) !important;
+// }
+
+// td,
+// tr,
+// th {
+//   background-color: transparent !important;
+// }
+// // ::placeholder,
+// // :-ms-input-placeholder,
+// // ::-ms-input-placeholder {
+// //   font-weight: 500 !important;
+// //   opacity: 1;
+// //   color: red !important;
+// // }
+
+// .v-input input::-moz-placeholder,
+// .v-input textarea::-moz-placeholder {
+//   font-weight: lighter;
+// }
+// .v-input input:-ms-input-placeholder,
+// .v-input textarea:-ms-input-placeholder {
+//   font-weight: lighter;
+// }
+// .v-input input::placeholder,
+// .v-input textarea::placeholder {
+//   font-weight: lighter;
+// }
+
+// .v-data-table {
+//   background: transparent !important;
+//   thead {
+//     position: relative;
+//     background: transparent !important;
+//     z-index: 1;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       height: 100%;
+//       width: 100%;
+//       background-color: var(--v-accent-lighten2);
+//       z-index: -1;
+//       opacity: 0.1;
+//     }
+
+//     th {
+//       color: var(--v-text-base) !important;
+//     }
+//   }
+// }
+// .v-data-table
+//   > .v-data-table__wrapper
+//   > table
+//   > tbody
+//   > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+//   position: relative;
+//   background: transparent !important;
+//   z-index: 1;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     background-color: var(--v-accent-lighten2);
+//     z-index: -1;
+//     opacity: 0.1;
+//   }
+// }
+
+// .v-navigation-drawer {
+//   &,
+//   .v-list {
+//     background-color: transparent !important;
+//   }
+// }
+
+// .v-card__text,
+// .v-tabs-items {
+//   background-color: transparent !important;
+// }
+
+// .v-text-field.v-text-field--outlined {
+//   .v-input__slot {
+//     padding: 0 13px !important;
+//   }
+//   i {
+//     font-size: 20px !important;
+//   }
+//   &:not(.v-input--is-focused) {
+//     i {
+//       margin-top: 1px;
+//       opacity: 0.5 !important;
+//     }
+//     fieldset {
+//       opacity: 0.5;
+//     }
+//   }
+// }
