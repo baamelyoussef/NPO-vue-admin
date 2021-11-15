@@ -3,7 +3,7 @@
     <v-container>
       <div class="d-flex align-center mt-7">
         <v-avatar size="110" class="mr-5">
-          <img src="https://cdn.vuetifyjs.com/images/lists/1.jpg" />
+          <img src="@/assets/img/brian-hughes.jpg" />
         </v-avatar>
         <div>
           <h1 class="font-weight-bold text-4xl">Welcome back, Brian!</h1>
