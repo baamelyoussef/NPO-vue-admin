@@ -1,6 +1,12 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" clipped absolute app class="wall">
+    <v-app-bar fixed app short class="shadow">
+      <!-- color="wall" -->
+      <v-app-bar-nav-icon color="text" @click.stop="drawer = !drawer" />
+      <v-toolbar-title> title </v-toolbar-title>
+      <v-spacer />
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer"  app class="wall shadow">
       <v-card dark tile flat class="wall">
         <v-list nav dense class="menu-links">
           <div v-for="item in links" :key="item.title">
@@ -36,6 +42,7 @@
         </v-list>
       </v-card>
     </v-navigation-drawer>
+
     <v-main>
       <router-view />
     </v-main>

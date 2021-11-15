@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Login from "@/pages/auth/login.vue";
 import Dashboard from "@/pages/dashboard.vue";
+import home from "@/pages/home.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
     component: Dashboard,
     children: [
       // here we will have all the pages that related to dashboard
+      {
+        path: "/",
+        name: "home",
+        component: home,
+      },
     ],
   },
 ];

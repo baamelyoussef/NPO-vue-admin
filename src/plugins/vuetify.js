@@ -17,7 +17,7 @@ export default new Vuetify({
         text: "#4f4c56",
         revertText: "#ccc",
         secondary: "#424242",
-        accent: "#1d4354",
+        accent: "#f2f5f9",
         error: "#ff4c51",
         info: "#2196F3",
         success: "#4CAF50",

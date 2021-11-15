@@ -1,6 +1,6 @@
-// *:not(i) {
-//   font-family: "Inter", sans-serif !important;
-// }
+*:not(i) {
+  font-family: "Inter", sans-serif !important;
+}
 // .v-application--wrap,
 // .v-navigation-drawer__content {
 //   background-color: var(--v-wall-base);
@@ -48,9 +48,12 @@
 // .v-menu__content .v-list {
 //   background-color: var(--v-wall-lighten1) !important;
 // }
-// .v-card {
-//   border-radius: 6px !important;
-// }
+.v-card {
+  border-radius: 1rem !important;
+  &:not(.v-sheet--outlined):not(.v-card--flat) {
+    box-shadow: var(--base-shadow-light) !important;
+  }
+}
 
 // .v-data-table.clickable {
 //   tbody tr {

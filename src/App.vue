@@ -8,4 +8,5 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" src="@/assets/sass/app.scss"></style>
+<style src="./index.css"></style>
