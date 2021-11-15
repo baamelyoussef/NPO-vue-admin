@@ -10,19 +10,19 @@ export default new Vuetify({
     options: {
       customProperties: true,
     },
-    // themes: {
-    //   light: {
-    //     primary: "#37a000",
-    //     wall: "#ccc",
-    //     text: "#4f4c56",
-    //     revertText: "#ccc",
-    //     secondary: "#424242",
-    //     accent: "#1d4354",
-    //     error: "#ff4c51",
-    //     info: "#2196F3",
-    //     success: "#4CAF50",
-    //     warning: "#FFC107",
-    //   },
-    // },
+    themes: {
+      light: {
+        primary: "#F58840",
+        wall: "#0f172a",
+        text: "#4f4c56",
+        revertText: "#ccc",
+        secondary: "#424242",
+        accent: "#1d4354",
+        error: "#ff4c51",
+        info: "#2196F3",
+        success: "#4CAF50",
+        warning: "#FFC107",
+      },
+    },
   },
 });
