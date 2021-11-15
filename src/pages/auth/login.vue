@@ -1,61 +1,78 @@
 <template>
   <div>
+    <div class='box'>
+  <div class='wave -one'></div>
+  <div class='wave -two'></div>
+  <div class='wave -three'></div>
+</div>
     <v-content class="overflow-hidden">
       <v-container
         fluid
         grid-list-xl
-        class="fill-height pa-0"
+        class="fill-height pa-0 bg-im"
         style="height: 100vh"
       >
-        <v-layout row align-center>
+        <v-layout row align-center justify-center >
           <v-row align="center" justify="center">
             <v-flex
               class="d-flex align-center"
               style="flex-direction: column"
               fill-height
             >
-              <v-card title class="pa-8" height="490px" width="auto">
+              <v-card title class="pa-8 s-c" height="auto" width="auto" >
+                <v-row align="start" justify="center">
+                <v-img 
+                  lazy-src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
+                  max-height="50px"
+                  max-width="50px"
+                  align="center"
+                  justify="center"
+                  src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"></v-img>
+                  </v-row>
                 <v-card-title>Sign Up</v-card-title>
                 <v-card-subtitle>
                   Already have an account? <v-btn text>Sign in</v-btn>
                 </v-card-subtitle>
-                <v-form ref="form" v-model="valid" lazy-validation class="">
-                  <v-text-field
-                    v-model="name"
-                    :counter="10"
-                    :rules="nameRules"
-                    label="Name"
-                    required
-                  ></v-text-field>
-
-                  <v-text-field
-                    v-model="email"
-                    :rules="emailRules"
-                    label="E-mail"
-                    required
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="Company"
-                    :counter="10"
-                    label="Company"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="password"
-                    :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                    :rules="[rules.required, rules.min]"
-                    :type="show1 ? 'text' : 'password'"
-                    name="input-10-1"
-                    label="Password"
-                    hint="At least 8 characters"
-                    counter
-                    @click:append="show1 = !show1"
-                  ></v-text-field>
-                  <v-row justify="center">
-                    <v-btn color="gr" class="mt-6 w-c" @click="validate">
-                      Create an account
-                    </v-btn>
-                  </v-row>
-                </v-form>
+                    <v-form ref="form" v-model="valid" lazy-validation class="">
+                      <p>Name</p> 
+                      <v-text-field
+                        v-model="name"
+                        :counter="10"
+                        :rules="nameRules"
+                        outlined
+                        required
+                      ></v-text-field>
+                      <p>E-mail</p>
+                      <v-text-field
+                        v-model="email"
+                        :rules="emailRules"
+                        outlined
+                        required
+                      ></v-text-field>
+                      <p>Company</p>
+                      <v-text-field
+                        v-model="Company"
+                        :counter="10"
+                        outlined
+                      ></v-text-field>
+                      <p>Password</p>
+                      <v-text-field
+                        v-model="password"
+                        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                        :rules="[rules.required, rules.min]"
+                        :type="show1 ? 'text' : 'password'"
+                        name="input-10-1"
+                        hint="At least 8 characters"
+                        outlined
+                        counter
+                        @click:append="show1 = !show1"
+                      ></v-text-field>
+                      <v-row justify="center">
+                        <v-btn color="#F58840" class="pa-6 mt-8 w-c white--text" @click="validate" rounded>
+                          Create an account
+                        </v-btn>
+                      </v-row>
+                    </v-form>
               </v-card>
             </v-flex>
           </v-row>
@@ -115,6 +132,10 @@ export default {
   color: aliceblue;
 }
 .w-c {
-  width: 18rem;
+  width: 19rem;
+  
 }
+
+/* */
+
 </style>
