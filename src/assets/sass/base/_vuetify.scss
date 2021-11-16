@@ -12,20 +12,26 @@
 //   padding-right: 0 !important;
 // }
 
-// .v-btn {
-//   box-shadow: none !important;
-//   &:not(.v-btn--icon):not(.v-btn--rounded):not(.v-btn--round) {
-//     border-radius: 8px;
-//   }
+.v-btn {
+  box-shadow: none !important;
+  // &:not(.v-btn--icon):not(.v-btn--rounded):not(.v-btn--round) {
+  //   border-radius: 8px;
+  // }
 
-//   &.v-size--default {
-//     span {
-//       font-size: 13 !important;
-//       padding-bottom: 2px;
-//     }
-//   }
-// }
+  &.v-size--default {
+    span {
+      font-size: 13 !important;
+      padding-bottom: 2px;
+    }
+  }
+}
+.v-item-group {
+  background: transparent !important;
+}
 
+.v-window.v-item-group {
+  overflow: visible !important;
+}
 // .v-card:not(.transparent),
 // .v-toolbar:not(.v-app-bar),
 // .v-tabs > .v-tabs-bar {
@@ -54,29 +60,30 @@
     box-shadow: var(--base-shadow-light) !important;
   }
 }
+
 .v-text-field .v-input__control .v-input__slot {
-    min-height: 45px !important;
-    padding: 0 8px !important;
-    margin-bottom: 2px !important;
-    display: flex !important;
-    align-items: center !important;
-  }
-  
-  .v-text-field .v-input__control .v-input__slot .v-input__append-inner {
-    margin-top: 5px !important;
-  }
-  
-  .v-text-field .v-input__control .v-input__slot label {
-    margin-top: -12px !important;
-  }
-  
-  .v-text-field .v-input__control .v-input__slot label.v-label--active {
-    margin: 0 0 0 5px !important;
-  }
-  
-  .v-text-field__details {
-    margin: 2px !important;
-  }
+  min-height: 45px !important;
+  padding: 0 8px !important;
+  margin-bottom: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.v-text-field .v-input__control .v-input__slot .v-input__append-inner {
+  margin-top: 5px !important;
+}
+
+.v-text-field .v-input__control .v-input__slot label {
+  margin-top: -12px !important;
+}
+
+.v-text-field .v-input__control .v-input__slot label.v-label--active {
+  margin: 0 0 0 5px !important;
+}
+
+.v-text-field__details {
+  margin: 2px !important;
+}
 // .v-data-table.clickable {
 //   tbody tr {
 //     cursor: pointer;

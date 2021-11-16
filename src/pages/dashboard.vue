@@ -8,23 +8,18 @@
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app class="wall shadow">
       <v-card dark tile flat class="wall">
-        <v-img 
-                  lazy-src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
-                  max-height="50px"
-                  max-width="50px"
-                  class="ma-4"
-                  align="center"
-                  justify="center"
-                  src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"></v-img>
+        <v-img
+          lazy-src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
+          max-height="50px"
+          max-width="50px"
+          class="ma-4"
+          align="center"
+          justify="center"
+          src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
+        ></v-img>
         <v-list dense>
-          <v-list-item-group
-            v-model="selectedItem"
-            color="primary"
-          >
-            <v-list-item
-              v-for="(item, i) in items"
-              :key="i"
-            >
+          <v-list-item-group v-model="selectedItem" color="primary">
+            <v-list-item v-for="(item, i) in items" :key="i">
               <v-list-item-icon>
                 <v-icon v-text="item.icon"></v-icon>
               </v-list-item-icon>
@@ -47,42 +42,10 @@ export default {
   data() {
     return {
       drawer: true,
-<<<<<<< HEAD
-      links: [
-        {
-          title: "Organization's basic information",
-          icon: "mdi-calendar-multiple-check",
-          path: "#",
-          // items: [
-          //   { title: "link-1", icon: "mdi-account-group", path: "jobs" },
-          //   {
-          //     title: "link-2",
-          //     icon: "mdi-account-group",
-          //     path: "employee",
-          //   },
-          //   {
-          //     title: "link-3",
-          //     icon: "mdi-account-group",
-          //     path: "position",
-          //   },
-          // ],
-        },
-        {
-          title: "Scope of Engagement Information",
-          icon: "mdi-calendar-multiple-check",
-          path: "#",
-        },
-        {
-          title: "NPO Nominated resource personal details (provide Bio)",
-          icon: "mdi-calendar-multiple-check",
-          path: "#",
-        },
-=======
       items: [
-        { text: 'Organization info', icon: 'mdi-domain' },
-        { text: 'Engagement Info', icon: 'mdi-clipboard-check' },
-        { text: 'Nominated Personal', icon: 'mdi-account-tie' },
->>>>>>> 4bbfaf000a02aaaf11ca9ba2d2639b65cb1635e4
+        { text: "Organization info", icon: "mdi-domain" },
+        { text: "Engagement Info", icon: "mdi-clipboard-check" },
+        { text: "Nominated Personal", icon: "mdi-account-tie" },
       ],
     };
   },
