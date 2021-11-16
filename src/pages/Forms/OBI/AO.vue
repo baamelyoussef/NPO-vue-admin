@@ -63,11 +63,13 @@
 
         <v-col cols="12" md="3">
           <v-select
-            hide-details="auto"
             :items="items"
-            label="Registered Legal Entity"
             outlined
-          />
+            transition="scroll-y-transition"
+            append-icon="mdi-chevron-down"
+            label="Registered Legal Entity"
+            hide-details="auto"
+          ></v-select>
         </v-col>
 
         <v-col cols="12" md="3">

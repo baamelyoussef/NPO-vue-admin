@@ -14,6 +14,20 @@
               </v-card-text>
             </v-card>
           </v-tab-item>
+          <v-tab-item>
+            <v-card>
+              <v-card-text>
+                <AO />
+              </v-card-text>
+            </v-card>
+          </v-tab-item>
+          <v-tab-item>
+            <v-card>
+              <v-card-text>
+                <AO />
+              </v-card-text>
+            </v-card>
+          </v-tab-item>
         </v-tabs>
       </v-container>
     </div>

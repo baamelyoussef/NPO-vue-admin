@@ -32,7 +32,7 @@
       </v-card>
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main class="accent">
       <router-view />
     </v-main>
   </div>
