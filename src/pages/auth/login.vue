@@ -25,60 +25,7 @@
                     src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
                   ></v-img>
                 </v-row>
-                <v-card-title>Sign Up</v-card-title>
-                <v-card-subtitle>
-                  {{ accountStatus }}
-                  <v-btn text @click="signSwitch">{{ signSwitcher }}</v-btn>
-                </v-card-subtitle>
-                <div v-if="hasAccount == false">
-                  <v-form ref="form" v-model="valid" lazy-validation class="">
-                    <p>Name</p>
-                    <v-text-field
-                      v-model="name"
-                      :counter="10"
-                      :rules="nameRules"
-                      outlined
-                      required
-                    ></v-text-field>
-                    <p>E-mail</p>
-                    <v-text-field
-                      v-model="email"
-                      :rules="emailRules"
-                      outlined
-                      required
-                    ></v-text-field>
-                    <p>Company</p>
-                    <v-text-field
-                      v-model="Company"
-                      :counter="10"
-                      outlined
-                    ></v-text-field>
-                    <p>Password</p>
-                    <v-text-field
-                      v-model="password"
-                      :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                      :rules="[rules.required, rules.min]"
-                      :type="show1 ? 'text' : 'password'"
-                      name="input-10-1"
-                      hint="At least 8 characters"
-                      outlined
-                      counter
-                      @click:append="show1 = !show1"
-                    ></v-text-field>
-                    <v-row justify="center">
-                      <v-btn
-                        to="/"
-                        color="#F58840"
-                        class="pa-6 mt-8 w-c white--text"
-                        @click="validate"
-                        rounded
-                      >
-                        Create an account
-                      </v-btn>
-                    </v-row>
-                  </v-form>
-                </div>
-                <div v-else>
+                <v-card-title>Sign In</v-card-title>
                   <v-form>
                     <p>E-mail</p>
                     <v-text-field
@@ -109,7 +56,6 @@
                       </v-btn>
                     </v-row>
                   </v-form>
-                </div>
               </v-card>
             </v-flex>
           </v-row>
