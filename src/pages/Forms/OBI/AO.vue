@@ -3,7 +3,7 @@
     <v-form v-model="valid">
       <v-row>
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="firstname"
             outlined
@@ -13,7 +13,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="lastname"
             outlined
@@ -22,7 +22,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="email"
             outlined
@@ -32,7 +32,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="email"
             outlined
@@ -43,7 +43,7 @@
       </v-row>
       <v-row>
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="firstname"
             outlined
@@ -53,7 +53,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="lastname"
             outlined
@@ -73,7 +73,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="email"
             outlined
@@ -84,7 +84,7 @@
       </v-row>
       <v-row>
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="firstname"
             outlined
@@ -94,7 +94,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="lastname"
             outlined
@@ -103,7 +103,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="email"
             outlined
@@ -113,7 +113,7 @@
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
+          <v-text-field dense
             hide-details="auto"
             v-model="email"
             outlined
