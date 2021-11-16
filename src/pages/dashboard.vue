@@ -3,7 +3,7 @@
     <v-app-bar fixed app short class="shadow">
       <!-- color="wall" -->
       <v-app-bar-nav-icon color="text" @click.stop="drawer = !drawer" />
-      <v-toolbar-title> title </v-toolbar-title>
+      <v-toolbar-title>NPO Form </v-toolbar-title>
       <v-spacer />
     </v-app-bar>
     <v-navigation-drawer v-model="drawer"  app class="wall shadow">

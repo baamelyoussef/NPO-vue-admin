@@ -64,7 +64,7 @@
                         @click:append="show1 = !show1"
                       ></v-text-field>
                       <v-row justify="center">
-                        <v-btn color="#F58840" class="pa-6 mt-8 w-c white--text" @click="validate" rounded>
+                        <v-btn to="/" color="#F58840" class="pa-6 mt-8 w-c white--text" @click="validate" rounded>
                           Create an account
                         </v-btn>
                       </v-row>
@@ -90,7 +90,7 @@
                         @click:append="show1 = !show1"
                       ></v-text-field>
                       <v-row justify="center">
-                        <v-btn color="#F58840" class="pa-6 mt-8 w-c white--text" @click="validate" rounded>
+                        <v-btn to="/" color="#F58840" class="pa-6 mt-8 w-c white--text" @click="validate" rounded>
                           Sign In
                         </v-btn>
                       </v-row>
