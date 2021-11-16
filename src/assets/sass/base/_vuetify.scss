@@ -34,6 +34,29 @@
 .v-window.v-item-group {
   overflow: visible !important;
 }
+.v-tabs {
+  .v-window-item {
+    padding-top: 17px;
+  }
+  .v-tabs-slider {
+    display: none;
+  }
+  .v-tab {
+    &:not(&:last-of-type) {
+      margin-right: 10px;
+    }
+    &::before {
+      border-radius: 50px;
+    }
+    border-radius: 50px;
+    padding: 0 28px;
+    text-transform: capitalize;
+    &.v-tab--active {
+      background-color: var(--v-primary-base) !important;
+      color: white;
+    }
+  }
+}
 // .v-card:not(.transparent),
 // .v-toolbar:not(.v-app-bar),
 // .v-tabs > .v-tabs-bar {
@@ -57,12 +80,19 @@
 //   background-color: var(--v-wall-lighten1) !important;
 // }
 .v-card {
-  border-radius: 1rem !important;
+  border-radius: 10px !important;
   &:not(.v-sheet--outlined):not(.v-card--flat) {
     box-shadow: var(--base-shadow-light) !important;
   }
 }
-
+.v-input {
+  &:not(.v-input--is-focused) {
+    label,
+    .v-input__control > .v-input__slot fieldset {
+      color: #94a3b8 !important;
+    }
+  }
+}
 // .v-text-field .v-input__control .v-input__slot {
 //   min-height: 45px !important;
 //   padding: 0 8px !important;
