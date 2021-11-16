@@ -54,7 +54,29 @@
     box-shadow: var(--base-shadow-light) !important;
   }
 }
-
+.v-text-field .v-input__control .v-input__slot {
+    min-height: 45px !important;
+    padding: 0 8px !important;
+    margin-bottom: 2px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .v-text-field .v-input__control .v-input__slot .v-input__append-inner {
+    margin-top: 5px !important;
+  }
+  
+  .v-text-field .v-input__control .v-input__slot label {
+    margin-top: -12px !important;
+  }
+  
+  .v-text-field .v-input__control .v-input__slot label.v-label--active {
+    margin: 0 0 0 5px !important;
+  }
+  
+  .v-text-field__details {
+    margin: 2px !important;
+  }
 // .v-data-table.clickable {
 //   tbody tr {
 //     cursor: pointer;
