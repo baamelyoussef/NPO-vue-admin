@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div class='box'>
-  <div class='wave -one'></div>
-  <div class='wave -two'></div>
-  <div class='wave -three'></div>
-</div>
     <v-content class="overflow-hidden">
       <v-container
         fluid
@@ -31,8 +26,9 @@
                   </v-row>
                 <v-card-title>Sign Up</v-card-title>
                 <v-card-subtitle>
-                  Already have an account? <v-btn text>Sign in</v-btn>
+                  {{accountStatus}} <v-btn text @click="signSwitch">{{signSwitcher}}</v-btn>
                 </v-card-subtitle>
+                  <div v-if="hasAccount ==false">
                     <v-form ref="form" v-model="valid" lazy-validation class="">
                       <p>Name</p> 
                       <v-text-field
@@ -73,6 +69,33 @@
                         </v-btn>
                       </v-row>
                     </v-form>
+                  </div>  
+                  <div v-else>  
+                    <v-form>
+                      <p>E-mail</p>
+                      <v-text-field
+                        v-model="email"
+                        :rules="emailRules"
+                        outlined
+                        required
+                      ></v-text-field>
+                      <p>Password</p>
+                      <v-text-field
+                        v-model="password"
+                        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                        :rules="[rules.required, rules.min]"
+                        :type="show1 ? 'text' : 'password'"
+                        name="input-10-1"
+                        outlined
+                        @click:append="show1 = !show1"
+                      ></v-text-field>
+                      <v-row justify="center">
+                        <v-btn color="#F58840" class="pa-6 mt-8 w-c white--text" @click="validate" rounded>
+                          Sign In
+                        </v-btn>
+                      </v-row>
+                    </v-form>
+                  </div>  
               </v-card>
             </v-flex>
           </v-row>
@@ -96,7 +119,11 @@ export default {
   components: {},
   data() {
     return {
+      //Card details
+      signSwitcher:'Sign In',
+      accountStatus:'Already have an account?',
       //form details
+      hasAccount:false,
       show1: false,
       valid: true,
       name: "",
@@ -120,6 +147,21 @@ export default {
       },
     };
   },
+  methods: {
+    signSwitch: function(){
+      if(this.signSwitcher =='Sign In'){
+        this.signSwitcher='Sign Up'
+      }else{
+        this.signSwitcher='Sign In'
+      }
+      if(this.accountStatus=='Already have an account?'){
+        this.accountStatus='Don\'t have an account?'
+      }else{
+        this.accountStatus='Already have an account?'
+      }
+      this.hasAccount=!this.hasAccount
+    }
+  }
 };
 </script>
 <style>
