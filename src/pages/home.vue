@@ -1,6 +1,6 @@
 <template>
   <v-container class="mt-7">
-    <v-tabs v-model="e1">
+    <v-tabs show-arrows v-model="e1">
       <v-tab>Step One</v-tab>
       <v-tab>Step Two</v-tab>
       <v-tab>Step Three</v-tab>

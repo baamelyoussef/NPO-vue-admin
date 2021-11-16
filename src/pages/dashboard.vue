@@ -17,7 +17,7 @@
           justify="center"
           src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
         ></v-img>
-        <v-list dense>
+        <v-list nav class="nav-list">
           <v-list-item-group v-model="selectedItem" color="primary">
             <v-list-item v-for="(item, i) in items" :key="i">
               <v-list-item-icon>

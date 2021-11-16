@@ -35,6 +35,16 @@
   overflow: visible !important;
 }
 .v-tabs {
+  .v-slide-group__next {
+    min-width: 29px;
+    max-width: 29px;
+    justify-content: flex-start;
+  }
+  .v-slide-group__prev {
+    min-width: 29px;
+    max-width: 29px;
+    justify-content: flex-end;
+  }
   .v-window-item {
     padding-top: 17px;
   }
@@ -57,6 +67,7 @@
     }
   }
 }
+
 // .v-card:not(.transparent),
 // .v-toolbar:not(.v-app-bar),
 // .v-tabs > .v-tabs-bar {
