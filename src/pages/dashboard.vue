@@ -116,6 +116,38 @@ export default {
           path: "#",
           items: [
             {
+              title: "Basic Info",
+              path: { path: "/organization-info", query: { s: "1" } },
+            },
+            {
+              title: "NP Info",
+              path: { path: "/organization-info", query: { s: "2" } },
+            },
+            {
+              title: "NPO Info",
+              path: { path: "/organization-info", query: { s: "3" } },
+            },
+            {
+              title: "Documents Info",
+              path: { path: "/organization-info", query: { s: "4" } },
+            },
+            {
+              title: "History Info",
+              path: { path: "/organization-info", query: { s: "5" } },
+            },
+            {
+              title: "Details Info",
+              path: { path: "/organization-info", query: { s: "6" } },
+            },
+            
+          ],
+        },
+        {
+          title: "Engagement Info",
+          icon: "mdi-clipboard-check",
+          path: "#",
+          items: [
+            {
               title: "Step 1",
               path: { path: "/organization-info", query: { s: "1" } },
             },
@@ -127,25 +159,19 @@ export default {
               title: "Step 3",
               path: { path: "/organization-info", query: { s: "3" } },
             },
-          ],
-        },
-        {
-          title: "Engagement Info",
-          icon: "mdi-clipboard-check",
-          path: "#",
-          items: [
             {
-              title: "Step 1",
-              path: { path: "/something", query: { s: "1" } },
+              title: "Step 4",
+              path: { path: "/organization-info", query: { s: "3" } },
             },
             {
-              title: "Step 2",
-              path: { path: "/something", query: { s: "2" } },
+              title: "Step 5",
+              path: { path: "/organization-info", query: { s: "3" } },
             },
             {
-              title: "Step 3",
-              path: { path: "/something", query: { s: "3" } },
+              title: "Step 6",
+              path: { path: "/organization-info", query: { s: "3" } },
             },
+            
             ,
           ],
         },

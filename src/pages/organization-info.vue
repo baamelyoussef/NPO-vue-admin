@@ -1,17 +1,17 @@
 <template>
   <v-container class="mt-7">
     <v-tabs show-arrows v-model="tab">
-      <v-tab>Step One</v-tab>
+      <v-tab>Basic Info</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Step Two</v-tab>
+      <v-tab>NP Info</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Step Three</v-tab>
+      <v-tab>NPO Info</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Step Four</v-tab>
+      <v-tab>Documents Info</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Step Five</v-tab>
+      <v-tab>History Info</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Step Six</v-tab>
+      <v-tab>Details Info</v-tab>
 
       <!-- step #1 -->
       <v-tab-item>
@@ -364,7 +364,7 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p>Deatils of NPO CEO/ED/Funder</p>
+                  <p>Details of NPO CEO/ED/Funder</p>
                   <v-textarea
                     class="mx-2"
                     label="Name"
@@ -666,108 +666,157 @@
           <v-card-text>
             <v-form v-model="valid">
               <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="firstname"
-                    outlined
-                    label="Name of the Organization"
-                    required
-                  />
+                <v-col cols="12" md="12">
+                  <v-row align="center" justify="center" class="mb-2">    
+                    <p>Organisational Impact/ End beneficiary quantitative details (Past and Projected)</p>
+                  </v-row>
+                  <v-simple-table>
+                      <template v-slot:default>
+                        <thead>
+                          <tr>
+                            <th class="text-left">
+                              
+                            </th>
+                            <th class="text-left">
+                              Past- 2018-19
+                            </th>
+                            <th class="text-left">
+                              Past2- 2019-20
+                            </th>
+                            <th class="text-left">
+                              CY 2020-21 (Provisional)
+                            </th>
+                            <th class="text-left">
+                              Projected-1 2021-22
+                            </th>
+                            <th class="text-left">
+                              Projected- 2022-23
+                            </th>
+                            <th class="text-left">
+                              Projected- 2013-24
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr
+                            v-for="item in details4"
+                            :key="item.name"
+                          >
+                            <td>{{ item.name }}</td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </template>
+                    </v-simple-table>
                 </v-col>
 
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="lastname"
-                    outlined
-                    label="Legal Name"
-                  />
+                <v-col cols="12" md="12">
+                  <v-row align="center" justify="center" class="mb-2">    
+                    <p>Provide names of states in wich you have project offices in India</p>
+                  </v-row>
+                  <v-simple-table>
+                      <template v-slot:default>
+                        <thead>
+                          <tr>
+                            <th class="text-left">
+                              City/District
+                            </th>
+                            <th class="text-left">
+                              State
+                            </th>     
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr
+                            v-for="item in details4"
+                            :key="item.name"
+                          >
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                            <td><v-text-field
+                                  outlined
+                                  dense
+                                ></v-text-field>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </template>
+                    </v-simple-table>
                 </v-col>
 
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="Year of Establishment"
-                    required
-                  />
+
+                <v-col cols="12" md="12">
+                  <v-row align="center" justify="center">    
+                    <p>Organisational employee details (as of last month or Qtr)</p>
+                  </v-row>
+                  <v-simple-table>
+                      <template v-slot:default>
+                        <thead>
+                          <tr>
+                            <th class="text-left">
+                              Level
+                            </th>
+                            <th class="text-left">
+                              Full time employees
+                            </th>
+                            <th class="text-left">
+                              Part-time/Volunteers/etc
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr
+                            v-for="item in details5"
+                            :key="item.name"
+                          >
+                            <td>{{ item.name }}</td>
+                            <td>	
+                              <v-text-field dense outlined></v-text-field>
+                            </td>
+                            <td>                              
+                              <v-text-field dense outlined></v-text-field>
+
+                            </td>
+                            
+                            
+                          </tr>
+                        </tbody>
+                      </template>
+                    </v-simple-table>
                 </v-col>
 
-                
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="firstname"
-                    outlined
-                    label="HO Address"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="lastname"
-                    outlined
-                    label="Website"
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-select
-                    dense
-                    :items="items"
-                    outlined
-                    transition="scroll-y-transition"
-                    append-icon="mdi-chevron-down"
-                    label="Registered Legal Entity"
-                    hide-details="auto"
-                  ></v-select>
-                </v-col>
-
-                
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="firstname"
-                    outlined
-                    label="Registration Certificate Number"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="lastname"
-                    outlined
-                    label="80G Address"
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="12A Number"
-                    required
-                  />
-                </v-col>
                 
               </v-row>
             </v-form>
@@ -789,116 +838,99 @@
         </v-card>
       </v-tab-item>
 
-      <!-- step #2 -->
+      <!-- step #6 -->
       <v-tab-item>
         <v-card>
           <v-card-text>
             <v-form v-model="valid">
               <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="firstname"
-                    outlined
-                    label="Name of the Organization"
-                    required
-                  />
+                <v-col cols="12" md="12">
+                  <v-row align="center" justify="center">    
+                    <p>Organisational Risk Details</p>
+                  </v-row>
+                  <v-simple-table>
+                      <template v-slot:default>
+                        <thead>
+                          <tr>
+                            <th class="text-left">
+                              Category
+                            </th>
+                            <th class="text-left">
+                              Scale 
+                            </th>
+                            <th class="text-left">
+                              Details
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr
+                            v-for="item in details6"
+                            :key="item.name"
+                          >
+                            <td>{{ item.name }}</td>
+                            <td>	
+                              <v-select
+                                dense
+                                :items="itemsSc"
+                                outlined
+                                transition="scroll-y-transition"
+                                label="Choose Scale"
+                                class="mb-6"
+                                hide-details="auto"
+                              ></v-select>
+                            </td>
+                            <td>                              
+                              <v-text-field dense outlined></v-text-field>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </template>
+                    </v-simple-table>
                 </v-col>
 
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="lastname"
-                    outlined
-                    label="Legal Name"
-                  />
-                </v-col>
+                <v-col cols="12" md="12">
+                  <v-row align="center" justify="center">    
+                    <p>Organisational IT infrastructure availability details</p>
+                  </v-row>
+                  <v-simple-table>
+                      <template v-slot:default>
+                        <thead>
+                          <tr>
+                            <th class="text-left">
+                              Category
+                            </th>
+                            <th class="text-left">
+                              At Office
+                            </th>
+                            <th class="text-left">
+                              Field Level
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr
+                            v-for="item in details5"
+                            :key="item.name"
+                          >
+                            <td>{{ item.name }}</td>
+                            <td>	
+                              <v-text-field dense outlined></v-text-field>
+                            </td>
+                            <td>                              
+                              <v-text-field dense outlined></v-text-field>
 
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="Year of Establishment"
-                    required
-                  />
+                            </td>
+                            
+                            
+                          </tr>
+                        </tbody>
+                      </template>
+                    </v-simple-table>
                 </v-col>
-
-                
               </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="firstname"
-                    outlined
-                    label="HO Address"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="lastname"
-                    outlined
-                    label="Website"
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-select
-                    dense
-                    :items="items"
-                    outlined
-                    transition="scroll-y-transition"
-                    append-icon="mdi-chevron-down"
-                    label="Registered Legal Entity"
-                    hide-details="auto"
-                  ></v-select>
-                </v-col>
-
-                
-              </v-row>
-              <v-row>
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="firstname"
-                    outlined
-                    label="Registration Certificate Number"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="lastname"
-                    outlined
-                    label="80G Address"
-                  />
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="12A Number"
-                    required
-                  />
-                </v-col>
-                
-              </v-row>
+              
+              
             </v-form>
             <div class="d-flex">
                             <v-spacer></v-spacer>
@@ -934,6 +966,7 @@ export default {
       items: ["Section 8 or 25 Company", "Trust", "Society"],
       itemsDomain: ["Education","Women's empowerment","Skilling","Livelihood","Health","Others"],
       itemsAcc: ["NGO Darpan","Guidestar","Charity Aid Foundation","Others","None"],
+      itemsSc: ["High","Medium","Low"],
       details: [
           {
             name: 'Income',
@@ -958,7 +991,89 @@ export default {
             name: 'Please provide names of significant donors',
           },
         ],
-
+      details4: [
+          {
+            name: 'Education-Number of students',
+          },
+          {
+            name: 'Livelihood Development - Number of patients',
+          },
+          {
+            name: 'Health-Number of patients',
+          },
+          {
+            name: 'Skilling and employability - Number of youth',
+          },
+          {
+            name: 'Others - Number of beneficiaries',
+          },
+        ],
+        details5: [
+          {
+            name: 'Senior Management',
+          },
+          {
+            name: 'Middle Management',
+          },
+          {
+            name: 'Field team',
+          },
+          {
+            name: 'Support Staff (Admin,IT,Finance,HR)',
+          },
+          {
+            name: 'Total',
+          },
+        ],
+        details6: [
+          {
+            name: 'Program Delivery (Covid, geographical terrain,etc)',
+          },
+          {
+            name: 'Funding (Regulatory, FCRA, etc)',
+          },
+          {
+            name: 'Others',
+          }       
+        ],
+        details7: [
+          {
+            name: 'Computers/Laptop/Tablets/Mobile devices',
+          },
+          {
+            name: 'Internet',
+          },
+          {
+            name: 'Organization email domain (eg. xyz@ngodomain.com; xyz@gmail.com)',
+          },
+          {
+            name: 'Online video call tools used',
+          },
+          {
+            name: 'Accounting Software',
+          },
+          {
+            name: 'ERP',
+          },
+          {
+            name: 'Project Mangement Tools',
+          },
+          {
+            name: 'HR Software',
+          },
+          {
+            name: 'Data Collection Tools',
+          },
+          {
+            name: 'Data Reporting Tools/Software',
+          },
+          {
+            name: 'Donor Reporting Tools',
+          },    
+          {
+            name: 'Others',
+          },  
+        ],
     };
   },
   watch: {
