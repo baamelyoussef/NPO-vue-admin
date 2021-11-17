@@ -3,13 +3,14 @@ import VueRouter from "vue-router";
 import Login from "@/pages/auth/login.vue";
 import Dashboard from "@/pages/dashboard.vue";
 import home from "@/pages/home.vue";
+import organization from "@/pages/organization-info.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/auth/login",
-    name: "Login",
+    name: "login",
     component: Login,
   },
   {
@@ -22,6 +23,11 @@ const routes = [
         path: "/",
         name: "home",
         component: home,
+      },
+      {
+        path: "/organization-info",
+        name: "organization-info",
+        component: organization,
       },
     ],
   },

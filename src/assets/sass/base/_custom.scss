@@ -10,3 +10,52 @@ div[style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: au
 .shadow {
   box-shadow: var(--base-shadow-light) !important;
 }
+
+::-webkit-scrollbar {
+   width: 5px;
+   border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: var(--v-accent-base);
+   transition: 0.5s ease;
+   border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: rgba(grey, .5);
+   border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: rgba(grey, .7);
+   border-radius: 50px;
+}
+
+
+.v-navigation-drawer__content::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50px;
+}
+
+/* Track */
+.v-navigation-drawer__content::-webkit-scrollbar-track {
+  background: var(--v-wall-base);
+  transition: 0.5s ease;
+  border-radius: 50px;
+}
+
+/* Handle */
+.v-navigation-drawer__content::-webkit-scrollbar-thumb {
+  background: rgba(grey, .5);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.v-navigation-drawer__content::-webkit-scrollbar-thumb:hover {
+  background: rgba(grey, .7);
+  border-radius: 50px;
+}

@@ -16,7 +16,7 @@ export default new Vuetify({
         wall: "#0f172a",
         text: "#4f4c56",
         revertText: "#ccc",
-        secondary: "#424242",
+        secondary: "#94a3b8",
         accent: "#f2f5f9",
         error: "#ff4c51",
         info: "#2196F3",
