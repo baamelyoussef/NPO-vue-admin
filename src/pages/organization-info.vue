@@ -295,11 +295,19 @@
                 </v-col>
               </v-row>
             </v-form>
+            <div class="d-flex">
+              <v-spacer>  </v-spacer>
+            <div class="d-flex justify-end mt-5 mr-3">
+              <v-btn large rounded color="primary" @click="tab--">
+                <v-icon left>mdi-arrow-left</v-icon>Back
+              </v-btn>
+            </div>
             <div class="d-flex justify-end mt-5">
               <v-btn large rounded color="primary" @click="tab++">
                 next
                 <v-icon right>mdi-arrow-right</v-icon>
               </v-btn>
+            </div>
             </div>
           </v-card-text>
         </v-card>
@@ -311,7 +319,7 @@
           <v-card-text>
             <v-form v-model="valid">
               <v-row>
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -322,7 +330,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -332,7 +340,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -343,19 +351,10 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="Rged Address with state and pin code"
-                    required
-                  />
-                </v-col>
+                
               </v-row>
               <v-row>
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -366,7 +365,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -376,7 +375,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-select
                     dense
                     :items="items"
@@ -388,19 +387,10 @@
                   ></v-select>
                 </v-col>
 
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="PAN Number"
-                    required
-                  />
-                </v-col>
+                
               </v-row>
               <v-row>
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -411,7 +401,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -421,7 +411,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
                     dense
                     hide-details="auto"
@@ -431,19 +421,15 @@
                     required
                   />
                 </v-col>
-
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    hide-details="auto"
-                    v-model="email"
-                    outlined
-                    label="FCRA Number (if applicable)"
-                    required
-                  />
-                </v-col>
+                
               </v-row>
             </v-form>
+            <div class="d-flex justify-end mt-5">
+              <v-spacer></v-spacer>
+                <v-btn large rounded color="primary" @click="tab--">
+                  <v-icon left>mdi-arrow-left</v-icon>Back
+                </v-btn>
+            </div>
             <!-- last form shouldn't have next button -->
             <!-- <div class="d-flex justify-end mt-5">
               <v-btn large rounded color="primary">
