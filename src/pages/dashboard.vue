@@ -31,10 +31,10 @@
         </div>
         <v-list nav class="menu-links">
           <div v-for="(item, i) in links" :key="i" cl>
-            <div v-if="item.items">
-              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 1">
+              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 3">
                 modules
               </p>
+            <div v-if="item.items">
               <v-list-group no-action class="mb-1">
                 <template #activator>
                   <v-list-item-icon>
@@ -67,7 +67,7 @@
               </v-list-group>
             </div>
             <div v-else>
-              <p class="upperline mt-8 mb-2 primary--text mx-4">dashbaords</p>
+              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0">dashbaords</p>
               <v-list-item class="alone-list mb-1" :to="item.path" router>
                 <v-list-item-icon class="regular">
                   <v-icon>{{ item.icon }}</v-icon>
@@ -99,6 +99,16 @@ export default {
           title: "Dashboard",
           icon: "mdi-view-carousel",
           path: { path: "/" },
+        },
+        {
+          title: "Analytics",
+          icon: "mdi-google-analytics",
+          path: { path: "/#" },
+        },
+        {
+          title: "All Projects",
+          icon: "mdi-cube",
+          path: { path: "/##" },
         },
         {
           title: "Organization Info",

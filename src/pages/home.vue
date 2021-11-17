@@ -20,7 +20,7 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h1 class="font-weight-medium">Summary</h1>
+                <h4 class="font-weight-medium">Summary</h4>
                 <div class="text-center">
                   <div class="blue--text my-2">
                     <div class="display-4 font-weight-bold">21</div>
@@ -34,7 +34,7 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h1 class="font-weight-medium">Overdue</h1>
+                <h4 class="font-weight-medium">Overdue</h4>
                 <div class="text-center">
                   <div class="red--text my-2">
                     <div class="display-4 font-weight-bold">17</div>
@@ -48,7 +48,7 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h1 class="font-weight-medium">Issues</h1>
+                <h4 class="font-weight-medium">Issues</h4>
                 <div class="text-center">
                   <div class="orange--text my-2">
                     <div class="display-4 font-weight-bold">24</div>
@@ -62,7 +62,7 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h1 class="font-weight-medium">Features</h1>
+                <h4 class="font-weight-medium">Features</h4>
                 <div class="text-center">
                   <div class="green--text my-2">
                     <div class="display-4 font-weight-bold">38</div>
@@ -76,7 +76,7 @@
         </v-row>
         <v-card class="mt-5">
           <div class="pa-4">
-            <h1 class="font-weight-medium">Github Issues Summary</h1>
+            <h4 class="font-weight-medium">Github Issues Summary</h4>
             <v-row>
               <v-col cols="12" md="6">
                 <h5 class="text--text mt-4">Description</h5>

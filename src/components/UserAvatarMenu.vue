@@ -7,6 +7,7 @@
       :close-on-content-click="false"
       :nudge-width="170"
       offset-y
+      offset-x
       left
     >
       <template #activator="{ on, attrs }">
