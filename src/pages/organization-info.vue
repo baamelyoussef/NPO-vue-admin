@@ -1,17 +1,17 @@
 <template>
   <v-container class="mt-7">
     <v-tabs show-arrows v-model="tab">
-      <v-tab>Basic Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>NP Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>NPO Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Documents Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>History Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Details Info</v-tab>
+      <v-tab>Text Here</v-tab>
 
       <!-- step #1 -->
       <v-tab-item>
@@ -50,8 +50,6 @@
                     required
                   />
                 </v-col>
-
-                
               </v-row>
               <v-row>
                 <v-col cols="12" md="4">
@@ -84,9 +82,6 @@
                     required
                   />
                 </v-col>
-                
-
-                
               </v-row>
               <v-row>
                 <v-col cols="12" md="4">
@@ -121,7 +116,6 @@
                     required
                   />
                 </v-col>
-                
               </v-row>
             </v-form>
             <div class="d-flex justify-end mt-5">
@@ -171,58 +165,36 @@
                     required
                   />
                 </v-col>
-
-                
               </v-row>
               <v-row>
                 <v-col cols="12" md="4">
-                <p>Renewed 80G,12A,FCRA per the new guidelines?</p>           
-                <v-radio-group v-model="radioGroup" row>
-                  <v-radio
-                    label="Yes"
-                    color="primary"
-                    value="Yes"
-                  ></v-radio>
-                  <v-radio
-                    label="No"
-                    color="wall"
-                    value="No"
-                  ></v-radio>
-                </v-radio-group>
+                  <p>Renewed 80G,12A,FCRA per the new guidelines?</p>
+                  <v-radio-group v-model="radioGroup" row>
+                    <v-radio label="Yes" color="primary" value="Yes"></v-radio>
+                    <v-radio label="No" color="wall" value="No"></v-radio>
+                  </v-radio-group>
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p>Availability of Audited Financial statements for previous 3 years?</p>           
-                <v-radio-group v-model="radioGroup2" row>
-                  <v-radio
-                    label="Yes"
-                    color="primary"
-                    value="Yes"
-                  ></v-radio>
-                  <v-radio
-                    label="No"
-                    color="wall"
-                    value="No"
-                  ></v-radio>
-                </v-radio-group>
+                  <p>
+                    Availability of Audited Financial statements for previous 3
+                    years?
+                  </p>
+                  <v-radio-group v-model="radioGroup2" row>
+                    <v-radio label="Yes" color="primary" value="Yes"></v-radio>
+                    <v-radio label="No" color="wall" value="No"></v-radio>
+                  </v-radio-group>
                 </v-col>
                 <v-col cols="12" md="4">
-                  <p>Compliant with Income Tax Return filing for previous 3 years?</p>           
-                <v-radio-group v-model="radioGroup3" row>
-                  <v-radio
-                    label="Yes"
-                    color="primary"
-                    value="Yes"
-                  ></v-radio>
-                  <v-radio
-                    label="No"
-                    color="wall"
-                    value="No"
-                  ></v-radio>
-                </v-radio-group>
+                  <p>
+                    Compliant with Income Tax Return filing for previous 3
+                    years?
+                  </p>
+                  <v-radio-group v-model="radioGroup3" row>
+                    <v-radio label="Yes" color="primary" value="Yes"></v-radio>
+                    <v-radio label="No" color="wall" value="No"></v-radio>
+                  </v-radio-group>
                 </v-col>
-
-                
               </v-row>
               <v-row>
                 <v-col cols="12" md="4">
@@ -250,44 +222,38 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p>Any litigation history against the organization ? If yes, please provide details</p>           
-                <v-radio-group v-model="radioGroup4" row>
-                  <v-radio
-                    label="Yes"
-                    color="primary"
-                    value="Yes"
-                  ></v-radio>
-                  <v-radio
-                    label="No"
-                    color="wall"
-                    value="No"
-                  ></v-radio>
-                </v-radio-group>
-                <v-textarea
-                  label="Details here"
-                  auto-grow
-                  outlined
-                  rows="3"
-                  row-height="25"
-                  shaped
-                ></v-textarea>
+                  <p>
+                    Any litigation history against the organization ? If yes,
+                    please provide details
+                  </p>
+                  <v-radio-group v-model="radioGroup4" row>
+                    <v-radio label="Yes" color="primary" value="Yes"></v-radio>
+                    <v-radio label="No" color="wall" value="No"></v-radio>
+                  </v-radio-group>
+                  <v-textarea
+                    label="Details here"
+                    auto-grow
+                    outlined
+                    rows="3"
+                    row-height="25"
+                    shaped
+                  ></v-textarea>
                 </v-col>
-                
               </v-row>
             </v-form>
             <div class="d-flex">
-              <v-spacer>  </v-spacer>
-            <div class="d-flex justify-end mt-5 mr-3">
-              <v-btn large rounded color="primary" @click="tab--">
-                <v-icon left>mdi-arrow-left</v-icon>Back
-              </v-btn>
-            </div>
-            <div class="d-flex justify-end mt-5">
-              <v-btn large rounded color="primary" @click="tab++">
-                next
-                <v-icon right>mdi-arrow-right</v-icon>
-              </v-btn>
-            </div>
+              <v-spacer> </v-spacer>
+              <div class="d-flex justify-end mt-5 mr-3">
+                <v-btn large rounded color="primary" @click="tab--">
+                  <v-icon left>mdi-arrow-left</v-icon>Back
+                </v-btn>
+              </div>
+              <div class="d-flex justify-end mt-5">
+                <v-btn large rounded color="primary" @click="tab++">
+                  next
+                  <v-icon right>mdi-arrow-right</v-icon>
+                </v-btn>
+              </div>
             </div>
           </v-card-text>
         </v-card>
@@ -306,28 +272,24 @@
                     label="Name"
                     rows="1"
                     prepend-icon="mdi-account-details"
-              
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="Designation"
                     rows="1"
                     prepend-icon="mdi-information-outline"
-                    
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="E-mail"
                     rows="1"
                     prepend-icon="mdi-email"
-                    
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="Mobile"
                     rows="1"
                     prepend-icon="mdi-cellphone"
-                    
                   ></v-textarea>
                 </v-col>
 
@@ -338,28 +300,24 @@
                     label="Name"
                     rows="1"
                     prepend-icon="mdi-account-details"
-              
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="Designation"
                     rows="1"
                     prepend-icon="mdi-information-outline"
-                    
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="E-mail"
                     rows="1"
                     prepend-icon="mdi-email"
-                    
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="Mobile"
                     rows="1"
                     prepend-icon="mdi-cellphone"
-                    
                   ></v-textarea>
                 </v-col>
 
@@ -370,37 +328,32 @@
                     label="Name"
                     rows="1"
                     prepend-icon="mdi-account-details"
-              
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="Designation"
                     rows="1"
                     prepend-icon="mdi-information-outline"
-                    
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="E-mail"
                     rows="1"
                     prepend-icon="mdi-email"
-                    
                   ></v-textarea>
                   <v-textarea
                     class="mx-2"
                     label="Mobile"
                     rows="1"
                     prepend-icon="mdi-cellphone"
-                    
                   ></v-textarea>
                 </v-col>
-
-                
               </v-row>
               <v-row>
                 <v-col cols="12" md="4">
-                  <p>Explain organization's origin,purpose and core activities. What is the social
-                    problem you are addressing
+                  <p>
+                    Explain organization's origin,purpose and core activities.
+                    What is the social problem you are addressing
                   </p>
                   <v-textarea
                     label="Explain here"
@@ -413,7 +366,9 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p>Who are the direct and indirect beneficiaries of the organisation
+                  <p>
+                    Who are the direct and indirect beneficiaries of the
+                    organisation
                   </p>
                   <v-textarea
                     label="Explain here"
@@ -426,8 +381,7 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p>What are the key qualitative impact indicators measured
-                  </p>
+                  <p>What are the key qualitative impact indicators measured</p>
                   <v-textarea
                     label="Explain here"
                     auto-grow
@@ -437,13 +391,10 @@
                     shaped
                   ></v-textarea>
                 </v-col>
-
-                
               </v-row>
               <v-row>
                 <v-col cols="12" md="12">
-                  <p>Mention the SDG's impacted
-                  </p>
+                  <p>Mention the SDG's impacted</p>
                   <v-textarea
                     label="Mention here (if known)"
                     auto-grow
@@ -453,22 +404,21 @@
                     shaped
                   ></v-textarea>
                 </v-col>
-                
               </v-row>
             </v-form>
             <div class="d-flex">
-              <v-spacer>  </v-spacer>
-            <div class="d-flex justify-end mt-5 mr-3">
-              <v-btn large rounded color="primary" @click="tab--">
-                <v-icon left>mdi-arrow-left</v-icon>Back
-              </v-btn>
-            </div>
-            <div class="d-flex justify-end mt-5">
-              <v-btn large rounded color="primary" @click="tab++">
-                next
-                <v-icon right>mdi-arrow-right</v-icon>
-              </v-btn>
-            </div>
+              <v-spacer> </v-spacer>
+              <div class="d-flex justify-end mt-5 mr-3">
+                <v-btn large rounded color="primary" @click="tab--">
+                  <v-icon left>mdi-arrow-left</v-icon>Back
+                </v-btn>
+              </div>
+              <div class="d-flex justify-end mt-5">
+                <v-btn large rounded color="primary" @click="tab++">
+                  next
+                  <v-icon right>mdi-arrow-right</v-icon>
+                </v-btn>
+              </div>
             </div>
           </v-card-text>
         </v-card>
@@ -481,180 +431,154 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">    
-                    <p>Please provide supporting documents with the form Organisational Funding details in Crors (Past and Projected)</p>
+                  <v-row align="center" justify="center">
+                    <p>
+                      Please provide supporting documents with the form
+                      Organisational Funding details in Crors (Past and
+                      Projected)
+                    </p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              
-                            </th>
-                            <th class="text-left">
-                              Past-2018-19
-                            </th>
-                            <th class="text-left">
-                              Past2-2019-20
-                            </th>
-                            <th class="text-left">
-                              CY2020-21 (Provisional)
-                            </th>
-                            <th class="text-left">
-                              Projected-1 2021-22
-                            </th>
-                            <th class="text-left">
-                              Projected-2023-24
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left"></th>
+                          <th class="text-left">Past-2018-19</th>
+                          <th class="text-left">Past2-2019-20</th>
+                          <th class="text-left">CY2020-21 (Provisional)</th>
+                          <th class="text-left">Projected-1 2021-22</th>
+                          <th class="text-left">Projected-2023-24</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">    
-                    <p>Please provide Committed and expected funding details in croces</p>
+                  <v-row align="center" justify="center">
+                    <p>
+                      Please provide Committed and expected funding details in
+                      croces
+                    </p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              
-                            </th>
-                            <th class="text-left">
-                              Projected-1 2021-22
-                            </th>
-                            <th class="text-left">
-                              Projected-2022-23
-                            </th>
-                            <th class="text-left">
-                              Projected-2023-24
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details2"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                            <td><v-file-input
-                                  label="File input"
-                                  outlined
-                                  dense
-                                ></v-file-input>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left"></th>
+                          <th class="text-left">Projected-1 2021-22</th>
+                          <th class="text-left">Projected-2022-23</th>
+                          <th class="text-left">Projected-2023-24</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details2" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                          <td>
+                            <v-file-input
+                              label="File input"
+                              outlined
+                              dense
+                            ></v-file-input>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center" class="mb-2">    
-                    <p>Please provide Committed and expected funding details in croces</p>
+                  <v-row align="center" justify="center" class="mb-2">
+                    <p>
+                      Please provide Committed and expected funding details in
+                      croces
+                    </p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr></tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details3"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr></tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details3" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
-
-                
               </v-row>
-              
             </v-form>
             <div class="d-flex">
-              <v-spacer>  </v-spacer>
-            <div class="d-flex justify-end mt-5 mr-3">
-              <v-btn large rounded color="primary" @click="tab--">
-                <v-icon left>mdi-arrow-left</v-icon>Back
-              </v-btn>
-            </div>
-            <div class="d-flex justify-end mt-5">
-              <v-btn large rounded color="primary" @click="tab++">
-                next
-                <v-icon right>mdi-arrow-right</v-icon>
-              </v-btn>
-            </div>
+              <v-spacer> </v-spacer>
+              <div class="d-flex justify-end mt-5 mr-3">
+                <v-btn large rounded color="primary" @click="tab--">
+                  <v-icon left>mdi-arrow-left</v-icon>Back
+                </v-btn>
+              </div>
+              <div class="d-flex justify-end mt-5">
+                <v-btn large rounded color="primary" @click="tab++">
+                  next
+                  <v-icon right>mdi-arrow-right</v-icon>
+                </v-btn>
+              </div>
             </div>
           </v-card-text>
         </v-card>
@@ -667,172 +591,109 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center" class="mb-2">    
-                    <p>Organisational Impact/ End beneficiary quantitative details (Past and Projected)</p>
+                  <v-row align="center" justify="center" class="mb-2">
+                    <p>
+                      Organisational Impact/ End beneficiary quantitative
+                      details (Past and Projected)
+                    </p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              
-                            </th>
-                            <th class="text-left">
-                              Past- 2018-19
-                            </th>
-                            <th class="text-left">
-                              Past2- 2019-20
-                            </th>
-                            <th class="text-left">
-                              CY 2020-21 (Provisional)
-                            </th>
-                            <th class="text-left">
-                              Projected-1 2021-22
-                            </th>
-                            <th class="text-left">
-                              Projected- 2022-23
-                            </th>
-                            <th class="text-left">
-                              Projected- 2013-24
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details4"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left"></th>
+                          <th class="text-left">Past- 2018-19</th>
+                          <th class="text-left">Past2- 2019-20</th>
+                          <th class="text-left">CY 2020-21 (Provisional)</th>
+                          <th class="text-left">Projected-1 2021-22</th>
+                          <th class="text-left">Projected- 2022-23</th>
+                          <th class="text-left">Projected- 2013-24</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details4" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center" class="mb-2">    
-                    <p>Provide names of states in wich you have project offices in India</p>
+                  <v-row align="center" justify="center" class="mb-2">
+                    <p>
+                      Provide names of states in wich you have project offices
+                      in India
+                    </p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              City/District
-                            </th>
-                            <th class="text-left">
-                              State
-                            </th>     
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details4"
-                            :key="item.name"
-                          >
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                            <td><v-text-field
-                                  outlined
-                                  dense
-                                ></v-text-field>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left">City/District</th>
+                          <th class="text-left">State</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details4" :key="item.name">
+                          <td><v-text-field outlined dense></v-text-field></td>
+                          <td><v-text-field outlined dense></v-text-field></td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
-
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">    
-                    <p>Organisational employee details (as of last month or Qtr)</p>
+                  <v-row align="center" justify="center">
+                    <p>
+                      Organisational employee details (as of last month or Qtr)
+                    </p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              Level
-                            </th>
-                            <th class="text-left">
-                              Full time employees
-                            </th>
-                            <th class="text-left">
-                              Part-time/Volunteers/etc
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details5"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td>	
-                              <v-text-field dense outlined></v-text-field>
-                            </td>
-                            <td>                              
-                              <v-text-field dense outlined></v-text-field>
-
-                            </td>
-                            
-                            
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left">Level</th>
+                          <th class="text-left">Full time employees</th>
+                          <th class="text-left">Part-time/Volunteers/etc</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details5" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td>
+                            <v-text-field dense outlined></v-text-field>
+                          </td>
+                          <td>
+                            <v-text-field dense outlined></v-text-field>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
-
-                
               </v-row>
             </v-form>
             <div class="d-flex">
-              <v-spacer>  </v-spacer>
-            <div class="d-flex justify-end mt-5 mr-3">
-              <v-btn large rounded color="primary" @click="tab--">
-                <v-icon left>mdi-arrow-left</v-icon>Back
-              </v-btn>
-            </div>
-            <div class="d-flex justify-end mt-5">
-              <v-btn large rounded color="primary" @click="tab++">
-                next
-                <v-icon right>mdi-arrow-right</v-icon>
-              </v-btn>
-            </div>
+              <v-spacer> </v-spacer>
+              <div class="d-flex justify-end mt-5 mr-3">
+                <v-btn large rounded color="primary" @click="tab--">
+                  <v-icon left>mdi-arrow-left</v-icon>Back
+                </v-btn>
+              </div>
+              <div class="d-flex justify-end mt-5">
+                <v-btn large rounded color="primary" @click="tab++">
+                  next
+                  <v-icon right>mdi-arrow-right</v-icon>
+                </v-btn>
+              </div>
             </div>
           </v-card-text>
         </v-card>
@@ -845,108 +706,85 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">    
+                  <v-row align="center" justify="center">
                     <p>Organisational Risk Details</p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              Category
-                            </th>
-                            <th class="text-left">
-                              Scale 
-                            </th>
-                            <th class="text-left">
-                              Details
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details6"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td>	
-                              <v-select
-                                dense
-                                :items="itemsSc"
-                                outlined
-                                transition="scroll-y-transition"
-                                label="Choose Scale"
-                                class="mb-6"
-                                hide-details="auto"
-                              ></v-select>
-                            </td>
-                            <td>                              
-                              <v-text-field dense outlined></v-text-field>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left">Category</th>
+                          <th class="text-left">Scale</th>
+                          <th class="text-left">Details</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details6" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td>
+                            <v-select
+                              dense
+                              :items="itemsSc"
+                              outlined
+                              transition="scroll-y-transition"
+                              label="Choose Scale"
+                              class="mb-6"
+                              hide-details="auto"
+                            ></v-select>
+                          </td>
+                          <td>
+                            <v-text-field dense outlined></v-text-field>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">    
+                  <v-row align="center" justify="center">
                     <p>Organisational IT infrastructure availability details</p>
                   </v-row>
                   <v-simple-table>
-                      <template v-slot:default>
-                        <thead>
-                          <tr>
-                            <th class="text-left">
-                              Category
-                            </th>
-                            <th class="text-left">
-                              At Office
-                            </th>
-                            <th class="text-left">
-                              Field Level
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr
-                            v-for="item in details5"
-                            :key="item.name"
-                          >
-                            <td>{{ item.name }}</td>
-                            <td>	
-                              <v-text-field dense outlined></v-text-field>
-                            </td>
-                            <td>                              
-                              <v-text-field dense outlined></v-text-field>
-
-                            </td>
-                            
-                            
-                          </tr>
-                        </tbody>
-                      </template>
-                    </v-simple-table>
+                    <template v-slot:default>
+                      <thead>
+                        <tr>
+                          <th class="text-left">Category</th>
+                          <th class="text-left">At Office</th>
+                          <th class="text-left">Field Level</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="item in details5" :key="item.name">
+                          <td>{{ item.name }}</td>
+                          <td>
+                            <v-text-field dense outlined></v-text-field>
+                          </td>
+                          <td>
+                            <v-text-field dense outlined></v-text-field>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </template>
+                  </v-simple-table>
                 </v-col>
               </v-row>
-              
-              
             </v-form>
             <div class="d-flex">
-                            <v-spacer></v-spacer>
+              <v-spacer></v-spacer>
 
-            <div class="d-flex justify-end mt-5 mr-3">
+              <div class="d-flex justify-end mt-5 mr-3">
                 <v-btn large rounded color="primary" @click="tab--">
                   <v-icon left>mdi-arrow-left</v-icon>Back
                 </v-btn>
+              </div>
+              <div class="d-flex justify-end mt-5">
+                <v-btn large rounded color="wall" class="white--text">
+                  Engagement Info
+                  <v-icon right>mdi-arrow-right</v-icon>
+                </v-btn>
+              </div>
             </div>
-            <div class="d-flex justify-end mt-5">
-              <v-btn large rounded color="wall" class="white--text">
-                Engagement Info
-                <v-icon right>mdi-arrow-right</v-icon>
-              </v-btn>
-            </div>
-            </div> 
           </v-card-text>
         </v-card>
       </v-tab-item>
@@ -964,116 +802,129 @@ export default {
       radioGroup3: 1,
       radioGroup4: 1,
       items: ["Section 8 or 25 Company", "Trust", "Society"],
-      itemsDomain: ["Education","Women's empowerment","Skilling","Livelihood","Health","Others"],
-      itemsAcc: ["NGO Darpan","Guidestar","Charity Aid Foundation","Others","None"],
-      itemsSc: ["High","Medium","Low"],
+      itemsDomain: [
+        "Education",
+        "Women's empowerment",
+        "Skilling",
+        "Livelihood",
+        "Health",
+        "Others",
+      ],
+      itemsAcc: [
+        "NGO Darpan",
+        "Guidestar",
+        "Charity Aid Foundation",
+        "Others",
+        "None",
+      ],
+      itemsSc: ["High", "Medium", "Low"],
       details: [
-          {
-            name: 'Income',
-          },
-          {
-            name: 'Expenditure',
-          },
-        ],
+        {
+          name: "Income",
+        },
+        {
+          name: "Expenditure",
+        },
+      ],
       details2: [
-          {
-            name: 'Committed funding',
-          },
-          {
-            name: 'Expected funding',
-          },
-        ],
+        {
+          name: "Committed funding",
+        },
+        {
+          name: "Expected funding",
+        },
+      ],
       details3: [
-          {
-            name: 'Type of donors (CSR, international grant,HN1)',
-          },
-          {
-            name: 'Please provide names of significant donors',
-          },
-        ],
+        {
+          name: "Type of donors (CSR, international grant,HN1)",
+        },
+        {
+          name: "Please provide names of significant donors",
+        },
+      ],
       details4: [
-          {
-            name: 'Education-Number of students',
-          },
-          {
-            name: 'Livelihood Development - Number of patients',
-          },
-          {
-            name: 'Health-Number of patients',
-          },
-          {
-            name: 'Skilling and employability - Number of youth',
-          },
-          {
-            name: 'Others - Number of beneficiaries',
-          },
-        ],
-        details5: [
-          {
-            name: 'Senior Management',
-          },
-          {
-            name: 'Middle Management',
-          },
-          {
-            name: 'Field team',
-          },
-          {
-            name: 'Support Staff (Admin,IT,Finance,HR)',
-          },
-          {
-            name: 'Total',
-          },
-        ],
-        details6: [
-          {
-            name: 'Program Delivery (Covid, geographical terrain,etc)',
-          },
-          {
-            name: 'Funding (Regulatory, FCRA, etc)',
-          },
-          {
-            name: 'Others',
-          }       
-        ],
-        details7: [
-          {
-            name: 'Computers/Laptop/Tablets/Mobile devices',
-          },
-          {
-            name: 'Internet',
-          },
-          {
-            name: 'Organization email domain (eg. xyz@ngodomain.com; xyz@gmail.com)',
-          },
-          {
-            name: 'Online video call tools used',
-          },
-          {
-            name: 'Accounting Software',
-          },
-          {
-            name: 'ERP',
-          },
-          {
-            name: 'Project Mangement Tools',
-          },
-          {
-            name: 'HR Software',
-          },
-          {
-            name: 'Data Collection Tools',
-          },
-          {
-            name: 'Data Reporting Tools/Software',
-          },
-          {
-            name: 'Donor Reporting Tools',
-          },    
-          {
-            name: 'Others',
-          },  
-        ],
+        {
+          name: "Education-Number of students",
+        },
+        {
+          name: "Livelihood Development - Number of patients",
+        },
+        {
+          name: "Health-Number of patients",
+        },
+        {
+          name: "Skilling and employability - Number of youth",
+        },
+        {
+          name: "Others - Number of beneficiaries",
+        },
+      ],
+      details5: [
+        {
+          name: "Senior Management",
+        },
+        {
+          name: "Middle Management",
+        },
+        {
+          name: "Field team",
+        },
+        {
+          name: "Support Staff (Admin,IT,Finance,HR)",
+        },
+        {
+          name: "Total",
+        },
+      ],
+      details6: [
+        {
+          name: "Program Delivery (Covid, geographical terrain,etc)",
+        },
+        {
+          name: "Funding (Regulatory, FCRA, etc)",
+        },
+        {
+          name: "Others",
+        },
+      ],
+      details7: [
+        {
+          name: "Computers/Laptop/Tablets/Mobile devices",
+        },
+        {
+          name: "Internet",
+        },
+        {
+          name: "Organization email domain (eg. xyz@ngodomain.com; xyz@gmail.com)",
+        },
+        {
+          name: "Online video call tools used",
+        },
+        {
+          name: "Accounting Software",
+        },
+        {
+          name: "ERP",
+        },
+        {
+          name: "Project Mangement Tools",
+        },
+        {
+          name: "HR Software",
+        },
+        {
+          name: "Data Collection Tools",
+        },
+        {
+          name: "Data Reporting Tools/Software",
+        },
+        {
+          name: "Donor Reporting Tools",
+        },
+        {
+          name: "Others",
+        },
+      ],
     };
   },
   watch: {

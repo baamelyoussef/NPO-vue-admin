@@ -4,6 +4,7 @@ import Login from "@/pages/auth/login.vue";
 import Dashboard from "@/pages/dashboard.vue";
 import home from "@/pages/home.vue";
 import organization from "@/pages/organization-info.vue";
+import engagement from "@/pages/engagement-info.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,12 @@ const routes = [
         path: "/organization-info",
         name: "organization-info",
         component: organization,
+      },
+      // add engagement here
+      {
+        path: "/engagement-info",
+        name: "engagement-info",
+        component: engagement,
       },
     ],
   },
