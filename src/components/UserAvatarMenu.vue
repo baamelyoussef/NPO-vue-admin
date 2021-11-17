@@ -11,8 +11,8 @@
     >
       <template #activator="{ on, attrs }">
         <div v-ripple class="pa-1 rounded-pill" v-bind="attrs" v-on="on">
-          <v-btn icon color="secondary">
-            <v-icon color="secondary"> mdi-account </v-icon>
+          <v-btn icon :color="color">
+            <v-icon> mdi-account </v-icon>
           </v-btn>
         </div>
       </template>
@@ -21,10 +21,8 @@
         <v-list class="py-2">
           <v-list-item>
             <v-list-item-subtitle class="d-flex flex-column">
-              <p class="mb-1 black--text"> Sign In As </p>
-              <p  class="secondary--text mb-1">
-                email@email.com
-              </p>
+              <p class="mb-1 black--text">Sign In As</p>
+              <p class="secondary--text mb-1">email@email.com</p>
             </v-list-item-subtitle>
           </v-list-item>
         </v-list>
@@ -63,6 +61,12 @@
 <script>
 export default {
   name: "UserAvatarMenu",
+  props: {
+    color: {
+      type: String,
+      default: "secondary",
+    },
+  },
   data() {
     return {
       menu: false,

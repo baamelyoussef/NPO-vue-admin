@@ -14,7 +14,7 @@ export default new Vuetify({
       light: {
         primary: "#F58840",
         wall: "#0f172a",
-        text: "#4f4c56",
+        text: "#64748b",
         revertText: "#ccc",
         secondary: "#94a3b8",
         accent: "#f2f5f9",

@@ -3,8 +3,15 @@
     <v-app-bar fixed app short class="shadow">
       <!-- color="wall" -->
       <v-app-bar-nav-icon color="text" @click.stop="drawer = !drawer" />
-      <v-toolbar-title>NPO Form </v-toolbar-title>
+      <v-toolbar-title class="font-weight-medium text--text">NP Project </v-toolbar-title>
       <v-spacer />
+      <v-btn icon color="text" class="mx-1">
+        <v-icon> mdi-apps </v-icon>
+      </v-btn>
+      <v-btn icon color="text">
+        <v-icon> mdi-clipboard-arrow-down </v-icon>
+      </v-btn>
+      <user-avatar-menu color="text" />
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app class="wall">
       <v-card dark tile flat class="wall">
