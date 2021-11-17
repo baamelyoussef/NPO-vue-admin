@@ -1,17 +1,17 @@
 <template>
   <v-container class="mt-7">
     <v-tabs show-arrows v-model="tab">
-      <v-tab>Basic Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>NP Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>NPO Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Documents Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>History Info</v-tab>
+      <v-tab>Text Here</v-tab>
       <v-icon>mdi-chevron-right</v-icon>
-      <v-tab>Details Info</v-tab>
+      <v-tab>Text Here</v-tab>
 
       <!-- step #1 -->
       <v-tab-item>
