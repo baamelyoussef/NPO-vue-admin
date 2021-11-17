@@ -3,7 +3,9 @@
     <v-app-bar fixed app short class="shadow">
       <!-- color="wall" -->
       <v-app-bar-nav-icon color="text" @click.stop="drawer = !drawer" />
-      <v-toolbar-title class="font-weight-medium text--text">NP Project </v-toolbar-title>
+      <v-toolbar-title class="font-weight-medium text--text"
+        >NP Project
+      </v-toolbar-title>
       <v-spacer />
       <v-btn icon color="text" class="mx-1">
         <v-icon> mdi-apps </v-icon>
@@ -31,9 +33,9 @@
         </div>
         <v-list nav class="menu-links">
           <div v-for="(item, i) in links" :key="i" cl>
-              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 3">
-                modules
-              </p>
+            <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 3">
+              modules
+            </p>
             <div v-if="item.items">
               <v-list-group no-action class="mb-1">
                 <template #activator>
@@ -67,7 +69,9 @@
               </v-list-group>
             </div>
             <div v-else>
-              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0">dashbaords</p>
+              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0">
+                dashbaords
+              </p>
               <v-list-item class="alone-list mb-1" :to="item.path" router>
                 <v-list-item-icon class="regular">
                   <v-icon>{{ item.icon }}</v-icon>
@@ -139,7 +143,6 @@ export default {
               title: "Details Info",
               path: { path: "/organization-info", query: { s: "6" } },
             },
-            
           ],
         },
         {
@@ -171,8 +174,6 @@ export default {
               title: "Text Here",
               path: { path: "/engagement-info", query: { s: "6" } },
             },
-            
-            ,
           ],
         },
         {
@@ -181,16 +182,28 @@ export default {
           path: "#",
           items: [
             {
-              title: "Step 1",
-              path: { path: "/something", query: { s: "1" } },
+              title: "Text Here",
+              path: { path: "/nominated-personal", query: { s: "1" } },
             },
             {
-              title: "Step 2",
-              path: { path: "/something", query: { s: "2" } },
+              title: "Text Here",
+              path: { path: "/nominated-personal", query: { s: "2" } },
             },
             {
-              title: "Step 3",
-              path: { path: "/something", query: { s: "3" } },
+              title: "Text Here",
+              path: { path: "/nominated-personal", query: { s: "3" } },
+            },
+            {
+              title: "Text Here",
+              path: { path: "/nominated-personal", query: { s: "4" } },
+            },
+            {
+              title: "Text Here",
+              path: { path: "/nominated-personal", query: { s: "5" } },
+            },
+            {
+              title: "Text Here",
+              path: { path: "/nominated-personal", query: { s: "6" } },
             },
           ],
         },

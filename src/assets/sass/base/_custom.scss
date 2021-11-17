@@ -13,6 +13,7 @@ div[style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: au
 
 ::-webkit-scrollbar {
    width: 5px;
+   height: 5px;
    border-radius: 50px;
 }
 
@@ -38,6 +39,7 @@ div[style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: au
 
 .v-navigation-drawer__content::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
   border-radius: 50px;
 }
 

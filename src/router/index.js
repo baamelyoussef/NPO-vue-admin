@@ -5,6 +5,7 @@ import Dashboard from "@/pages/dashboard.vue";
 import home from "@/pages/home.vue";
 import organization from "@/pages/organization-info.vue";
 import engagement from "@/pages/engagement-info.vue";
+import nominated from "@/pages/nominated-personal.vue";  
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,11 @@ const routes = [
         path: "/engagement-info",
         name: "engagement-info",
         component: engagement,
+      },
+      {
+        path: "/nominated-personal",
+        name: "nominated-personal",
+        component: nominated,
       },
     ],
   },
