@@ -151,28 +151,12 @@ export default {
           path: "#",
           items: [
             {
-              title: "Text Here",
+              title: "More NPO details",
               path: { path: "/engagement-info", query: { s: "1" } },
             },
             {
-              title: "Text Here",
+              title: "Beneficiary details",
               path: { path: "/engagement-info", query: { s: "2" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/engagement-info", query: { s: "3" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/engagement-info", query: { s: "4" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/engagement-info", query: { s: "5" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/engagement-info", query: { s: "6" } },
             },
           ],
         },
@@ -182,29 +166,9 @@ export default {
           path: "#",
           items: [
             {
-              title: "Text Here",
+              title: "NP details",
               path: { path: "/nominated-personal", query: { s: "1" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/nominated-personal", query: { s: "2" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/nominated-personal", query: { s: "3" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/nominated-personal", query: { s: "4" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/nominated-personal", query: { s: "5" } },
-            },
-            {
-              title: "Text Here",
-              path: { path: "/nominated-personal", query: { s: "6" } },
-            },
+            }
           ],
         },
       ],
