@@ -82,7 +82,7 @@
                   <div class="d-flex">
                     <div class="d-inline-flex flex-wrap ma-3">
                       <div class="d-flex mt-5 mr-3">
-                        <v-btn large rounded color="primary" @click="tab--">
+                        <v-btn large rounded color="primary" to="/organization-info?s=6">
                           <v-icon left>mdi-arrow-left</v-icon>
                           Back
                         </v-btn>
@@ -366,7 +366,7 @@
                         </v-btn>
                       </div>
                       <div class="d-flex mt-5">
-                        <v-btn large rounded color="primary" @click="tab++">
+                        <v-btn large rounded color="primary" to="/nominated-personal?s=1">
                           Nominated Personal
                           <v-icon right>mdi-arrow-right</v-icon>
                         </v-btn>

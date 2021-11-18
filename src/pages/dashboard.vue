@@ -50,6 +50,9 @@
             <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 1 && !mini">
               DIY (Do It Yourself) Projects
             </p>
+            <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 6 && !mini">
+              DEEP Projects
+            </p>
             <div v-if="item.items">
               <v-list-group no-action class="mb-1">
                 <template #activator>
@@ -83,6 +86,8 @@
                 </template>
               </v-list-group>
             </div>
+            <!---->
+            
             <div v-else>
               <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0 && !mini">
                 dashbaords
@@ -103,6 +108,7 @@
             </div>
           </div>
         </v-list>
+        
       </v-card>
     </v-navigation-drawer>
 
@@ -190,6 +196,82 @@ export default {
               title: "NP details",
               path: { path: "/nominated-personal", query: { s: "1" } },
             },
+          ],
+        },
+        {
+          title: "Beneficiary",
+          icon: "mdi-handshake",
+          path: { path: "/beneficiary", query: { s: "1" } },
+          items: [
+            {
+              title: "Basic Info",
+              path: { path: "/beneficiary", query: { s: "1" } },
+            }
+          ],
+        },
+        {
+          title: "Digital Signature",
+          icon: "mdi-file-sign",
+          path: { path: "/sign", query: { s: "1" } },
+          items: [
+            {
+              title: "Signature Form",
+              path: { path: "/sign", query: { s: "1" } },
+            }
+          ],
+        },
+        //
+        {
+          title: "Organization Info",
+          icon: "mdi-domain",
+          path: { path: "/organization-infod", query: { s: "1" } },
+          items: [
+            {
+              title: "Basic Info",
+              path: { path: "/organization-infod", query: { s: "1" } },
+            },
+            {
+              title: "NP Info",
+              path: { path: "/organization-infod", query: { s: "2" } },
+            },
+            {
+              title: "NPO Info",
+              path: { path: "/organization-infod", query: { s: "3" } },
+            },
+            {
+              title: "Documents Info",
+              path: { path: "/organization-infod", query: { s: "4" } },
+            },
+            {
+              title: "History Info",
+              path: { path: "/organization-infod", query: { s: "5" } },
+            },
+            {
+              title: "Details Info",
+              path: { path: "/organization-infod", query: { s: "6" } },
+            },
+          ],
+        },
+        {
+          title: "Beneficiary",
+          icon: "mdi-handshake",
+          path: { path: "/beneficiaryd", query: { s: "1" } },
+          items: [
+            {
+              title: "Basic Info",
+              path: { path: "/beneficiaryd", query: { s: "1" } },
+            }
+          ],
+        },
+        {
+          title: "Digital Signature",
+          icon: "mdi-file-sign",
+          path: { path: "/signd", query: { s: "1" } },
+          items: [
+            {
+              title: "Signature Form",
+              path: { path: "/signd", query: { s: "1" } },
+            }
           ],
         },
       ],

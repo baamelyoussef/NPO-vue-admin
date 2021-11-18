@@ -62,7 +62,7 @@
                   <div class="d-flex">
                     <div class="d-inline-flex flex-wrap ma-3">
                       <div class="d-flex mt-5 mr-3">
-                        <v-btn large rounded color="primary" @click="tab--">
+                        <v-btn large rounded color="primary" to="/engagement-info?s=2">
                           <v-icon left>mdi-arrow-left</v-icon>
                           Engagement Info
                         </v-btn>
@@ -92,8 +92,8 @@
                         </v-btn>
                       </div>
                       <div class="d-flex mt-5">
-                        <v-btn large rounded color="primary" @click="tab++">
-                          Digital Signature
+                        <v-btn large rounded color="primary" to="/beneficiary?s=1">
+                          Beneficiary
                           <v-icon right>mdi-arrow-right</v-icon>
                         </v-btn>
                       </div>

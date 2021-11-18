@@ -5,7 +5,12 @@ import Dashboard from "@/pages/dashboard.vue";
 import home from "@/pages/home.vue";
 import organization from "@/pages/organization-info.vue";
 import engagement from "@/pages/engagement-info.vue";
-import nominated from "@/pages/nominated-personal.vue";  
+import nominated from "@/pages/nominated-personal.vue";
+import beneficiary from '@/pages/beneficiary.vue'
+import sign from '@/pages/sign.vue'
+import beneficiaryd from '@/pages/beneficiaryd.vue'
+import organizationd from '@/pages/organization-infod.vue'
+import signd from '@/pages/signd.vue'
 
 Vue.use(VueRouter);
 
@@ -41,6 +46,31 @@ const routes = [
         path: "/nominated-personal",
         name: "nominated-personal",
         component: nominated,
+      },
+      {
+        path: "/beneficiary",
+        name: "beneficiary",
+        component: beneficiary,
+      },
+      {
+        path: "/beneficiaryd",
+        name: "beneficiaryd",
+        component: beneficiaryd,
+      },
+      {
+        path: "/organization-infod",
+        name: "organization-infod",
+        component: organizationd,
+      },
+      {
+        path: "/sign",
+        name: "sign",
+        component: sign,
+      },
+      {
+        path: "/signd",
+        name: "signd",
+        component: signd,
       },
     ],
   },
