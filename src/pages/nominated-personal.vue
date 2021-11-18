@@ -1,59 +1,63 @@
 <template>
   <v-container class="mt-7">
-    <v-tabs show-arrows v-model="tab">
-      <v-tab>Nominated Personal details</v-tab>
+    <v-card>
+      <v-card-text>
+        <v-tabs show-arrows v-model="tab">
+          <v-tab>Nominated Personal details</v-tab>
 
-      <!--Step #3-->
-      <v-tab-item>
-        <v-card>
-          <v-card-text>
-            <v-form v-model="valid">
-              <v-row>
-                <v-col cols="12" md="12">
-                  <v-simple-table>
-                    <template v-slot:default>
-                      <thead>
-                        <tr></tr>
-                      </thead>
-                      <tbody>
-                        <tr v-for="item in details5" :key="item.name">
-                          <td>{{ item.name }}</td>
-                          <td>
-                            <v-textarea
-                              hide-details="auto"
-                              filled
-                              dense
-                              auto-grow
-                              outlined
-                              rows="2"
-                              row-height="20"
-                            ></v-textarea>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </template>
-                  </v-simple-table>
-                </v-col>
-              </v-row>
-            </v-form>
-            <div class="d-flex">
-              <v-spacer> </v-spacer>
-              <div class="d-flex justify-end mt-5 mr-3">
-                <v-btn large rounded color="primary" @click="tab--">
-                  <v-icon left>mdi-arrow-left</v-icon>Back
-                </v-btn>
-              </div>
-              <div class="d-flex justify-end mt-5">
-                <v-btn large rounded color="primary" @click="tab++">
-                  Digital Signature
-                  <v-icon right>mdi-arrow-right</v-icon>
-                </v-btn>
-              </div>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs>
+          <!--Step #3-->
+          <v-tab-item>
+            <v-card outlined>
+              <v-card-text>
+                <v-form v-model="valid">
+                  <v-row>
+                    <v-col cols="12" md="12">
+                      <v-simple-table>
+                        <template v-slot:default>
+                          <thead>
+                            <tr></tr>
+                          </thead>
+                          <tbody>
+                            <tr v-for="item in details5" :key="item.name">
+                              <td>{{ item.name }}</td>
+                              <td>
+                                <v-textarea
+                                  hide-details="auto"
+                                  filled
+                                  dense
+                                  auto-grow
+                                  outlined
+                                  rows="2"
+                                  row-height="20"
+                                ></v-textarea>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </template>
+                      </v-simple-table>
+                    </v-col>
+                  </v-row>
+                </v-form>
+                <div class="d-flex">
+                  <v-spacer> </v-spacer>
+                  <div class="d-flex justify-end mt-5 mr-3">
+                    <v-btn large rounded color="primary" @click="tab--">
+                      <v-icon left>mdi-arrow-left</v-icon>Back
+                    </v-btn>
+                  </div>
+                  <div class="d-flex justify-end mt-5">
+                    <v-btn large rounded color="primary" @click="tab++">
+                      Digital Signature
+                      <v-icon right>mdi-arrow-right</v-icon>
+                    </v-btn>
+                  </div>
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-tab-item>
+        </v-tabs>
+      </v-card-text>
+    </v-card>
   </v-container>
 </template>
 
