@@ -1,8 +1,8 @@
 <template>
   <v-container class="mt-7">
     <!--btnScroll-->
-    
 
+    <float />
     <v-card>
       <v-card-text>
         <v-tabs show-arrows v-model="tab" fixed-tabs>
@@ -44,7 +44,7 @@
 
                     <v-col cols="12" md="12">
                       <v-row align="center" class="mb-4" justify="center">
-                        <p class="mb-1 secondary--text">
+                        <p class="mb-6 mx-2 secondary--text">
                           Please provide the details of the program or
                           intervention or project where MIS restructuring is
                           needed. <br />
@@ -79,32 +79,46 @@
                   </v-row>
                 </v-form>
                 <v-row align="center" justify="center">
-                <div class="d-flex">
-                  <div class="d-inline-flex flex-wrap ma-3">
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" @click="tab--">
-                      <v-icon left>mdi-arrow-left</v-icon>
-                      Back
-                    </v-btn>
+                  <div class="d-flex">
+                    <div class="d-inline-flex flex-wrap ma-3">
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn large rounded color="primary" @click="tab--">
+                          <v-icon left>mdi-arrow-left</v-icon>
+                          Back
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn
+                          large
+                          rounded
+                          color="primary"
+                          class="wall"
+                          @click="tab--"
+                        >
+                          Save And Exit
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn
+                          large
+                          rounded
+                          color="primary"
+                          class="wall"
+                          @click="tab++"
+                        >
+                          Save And Continue<v-icon right
+                            >mdi-arrow-right</v-icon
+                          >
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5">
+                        <v-btn large rounded color="primary" @click="tab++">
+                          next
+                          <v-icon right>mdi-arrow-right</v-icon>
+                        </v-btn>
+                      </div>
+                    </div>
                   </div>
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" class="wall" @click="tab--">
-                      Save And Exit
-                    </v-btn>
-                  </div>
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" class="wall" @click="tab++">
-                      Save And Continue<v-icon right>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                  <div class="d-flex mt-5">
-                    <v-btn large rounded color="primary" @click="tab++">
-                      next
-                      <v-icon right>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                  </div>
-                </div>
                 </v-row>
               </v-card-text>
             </v-card>
@@ -118,7 +132,7 @@
                   <v-row>
                     <v-col cols="12" md="12">
                       <v-row align="center" class="mb-4 pt-4" justify="center">
-                        <p class="mb-1 secondary--text">
+                        <p class="mb-6 mx-2 secondary--text">
                           Program total beneficary impact details
                         </p>
                       </v-row>
@@ -222,7 +236,7 @@
 
                     <v-col cols="12" md="12">
                       <v-row align="center" class="mb-4" justify="center">
-                        <p class="mb-1 secondary--text">
+                        <p class="mb-6 mx-2 secondary--text">
                           Explain the MIS process(as per questions in table
                           below)
                         </p>
@@ -319,32 +333,46 @@
                   </v-row>
                 </v-form>
                 <v-row align="center" justify="center">
-                <div class="d-flex">
-                  <div class="d-inline-flex flex-wrap ma-3">
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" @click="tab--">
-                      <v-icon left>mdi-arrow-left</v-icon>
-                      Organization Info
-                    </v-btn>
+                  <div class="d-flex">
+                    <div class="d-inline-flex flex-wrap ma-3">
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn large rounded color="primary" @click="tab--">
+                          <v-icon left>mdi-arrow-left</v-icon>
+                          Organization Info
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn
+                          large
+                          rounded
+                          color="primary"
+                          class="wall"
+                          @click="tab--"
+                        >
+                          Save And Exit
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn
+                          large
+                          rounded
+                          color="primary"
+                          class="wall"
+                          @click="tab++"
+                        >
+                          Save And Continue<v-icon right
+                            >mdi-arrow-right</v-icon
+                          >
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5">
+                        <v-btn large rounded color="primary" @click="tab++">
+                          Nominated Personal
+                          <v-icon right>mdi-arrow-right</v-icon>
+                        </v-btn>
+                      </div>
+                    </div>
                   </div>
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" class="wall" @click="tab--">
-                      Save And Exit
-                    </v-btn>
-                  </div>
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" class="wall" @click="tab++">
-                      Save And Continue<v-icon right>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                  <div class="d-flex mt-5">
-                    <v-btn large rounded color="primary" @click="tab++">
-                      Nominated Personal
-                      <v-icon right>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                  </div>
-                </div>
                 </v-row>
               </v-card-text>
             </v-card>
@@ -356,7 +384,9 @@
 </template>
 
 <script>
+import Float from "../components/Float.vue";
 export default {
+  components: { Float },
   name: "engagement-info",
   data() {
     return {

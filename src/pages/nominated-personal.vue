@@ -1,5 +1,6 @@
 <template>
   <v-container class="mt-7">
+    <float />
     <v-card>
       <v-card-text>
         <v-tabs show-arrows v-model="tab">
@@ -18,9 +19,28 @@
                             <tr></tr>
                           </thead>
                           <tbody>
-                            <tr v-for="item in details5" :key="item.name">
-                              <td>{{ item.name }}</td>
-                              <td>
+                            <template v-for="item in details5">
+                              <tr
+                                :key="item.name"
+                                v-if="$vuetify.breakpoint.mdAndUp"
+                              >
+                                <td>{{ item.name }}</td>
+                                <td>
+                                  <v-textarea
+                                    hide-details="auto"
+                                    filled
+                                    dense
+                                    auto-grow
+                                    outlined
+                                    rows="2"
+                                    row-height="20"
+                                  ></v-textarea>
+                                </td>
+                              </tr>
+                              <tr v-else :key="item.name">
+                                <div class="mt-4">
+                                  {{ item.name }}
+                                </div>
                                 <v-textarea
                                   hide-details="auto"
                                   filled
@@ -30,8 +50,8 @@
                                   rows="2"
                                   row-height="20"
                                 ></v-textarea>
-                              </td>
-                            </tr>
+                              </tr>
+                            </template>
                           </tbody>
                         </template>
                       </v-simple-table>
@@ -39,32 +59,46 @@
                   </v-row>
                 </v-form>
                 <v-row align="center" justify="center">
-                <div class="d-flex">
-                  <div class="d-inline-flex flex-wrap ma-3">
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" @click="tab--">
-                      <v-icon left>mdi-arrow-left</v-icon>
-                      Engagement Info
-                    </v-btn>
+                  <div class="d-flex">
+                    <div class="d-inline-flex flex-wrap ma-3">
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn large rounded color="primary" @click="tab--">
+                          <v-icon left>mdi-arrow-left</v-icon>
+                          Engagement Info
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn
+                          large
+                          rounded
+                          color="primary"
+                          class="wall"
+                          @click="tab--"
+                        >
+                          Save And Exit
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5 mr-3">
+                        <v-btn
+                          large
+                          rounded
+                          color="primary"
+                          class="wall"
+                          @click="tab++"
+                        >
+                          Save And Continue<v-icon right
+                            >mdi-arrow-right</v-icon
+                          >
+                        </v-btn>
+                      </div>
+                      <div class="d-flex mt-5">
+                        <v-btn large rounded color="primary" @click="tab++">
+                          Digital Signature
+                          <v-icon right>mdi-arrow-right</v-icon>
+                        </v-btn>
+                      </div>
+                    </div>
                   </div>
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" class="wall" @click="tab--">
-                      Save And Exit
-                    </v-btn>
-                  </div>
-                  <div class="d-flex mt-5 mr-3">
-                    <v-btn large rounded color="primary" class="wall" @click="tab++">
-                      Save And Continue<v-icon right>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                  <div class="d-flex mt-5">
-                    <v-btn large rounded color="primary" @click="tab++">
-                      Digital Signature
-                      <v-icon right>mdi-arrow-right</v-icon>
-                    </v-btn>
-                  </div>
-                  </div>
-                </div>
                 </v-row>
               </v-card-text>
             </v-card>
@@ -76,7 +110,9 @@
 </template>
 
 <script>
+import Float from "../components/Float.vue";
 export default {
+  components: { Float },
   data() {
     return {
       tab: 0,
