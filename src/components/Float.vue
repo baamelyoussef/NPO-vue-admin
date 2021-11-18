@@ -8,7 +8,6 @@
     fixed
     bottom
     right
-    v-if="$vuetify.breakpoint.smAndDown"
   >
     <v-icon>mdi-chevron-down</v-icon>
   </v-btn>

@@ -48,7 +48,7 @@
         <v-list nav class="menu-links">
           <div v-for="(item, i) in links" :key="i" cl>
             <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 1 && !mini">
-              modules
+              DIY (Do It Yourself) Projects
             </p>
             <div v-if="item.items">
               <v-list-group no-action class="mb-1">
