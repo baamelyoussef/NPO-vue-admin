@@ -1,10 +1,9 @@
 <template>
   <v-container class="mt-7">
-    <v-tabs show-arrows v-model="tab">
+    <v-tabs show-arrows v-model="tab" fixed-tabs>
       <v-tab>More NPO details</v-tab>
-      <v-icon>mdi-chevron-right</v-icon>
+      <div class="dash"></div>
       <v-tab>Beneficiary details</v-tab>
-      
 
       <!-- step #1 -->
       <v-tab-item>
@@ -23,6 +22,7 @@
                           <td>{{ item.name }}</td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -38,22 +38,25 @@
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center"  class="mb-4" justify="center">
+                  <v-row align="center" class="mb-4" justify="center">
                     <p class="mb-1 secondary--text">
-                      Please provide the details of the program or intervention or project where MIS restructuring is needed. <br> Since this is a short term engagement we can take up to 1 core program
+                      Please provide the details of the program or intervention
+                      or project where MIS restructuring is needed. <br />
+                      Since this is a short term engagement we can take up to 1
+                      core program
                     </p>
                   </v-row>
                   <v-simple-table>
                     <template v-slot:default>
                       <thead>
-                        <tr>
-                        </tr>
+                        <tr></tr>
                       </thead>
                       <tbody>
                         <tr v-for="item in details2" :key="item.name">
                           <td>{{ item.name }}</td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -66,9 +69,8 @@
                       </tbody>
                     </template>
                   </v-simple-table>
-                </v-col>                
+                </v-col>
               </v-row>
-              
             </v-form>
             <div class="d-flex justify-end mt-5">
               <v-btn large rounded color="primary" @click="tab++">
@@ -87,7 +89,7 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center"  class="mb-4" justify="center">
+                  <v-row align="center" class="mb-4 pt-4" justify="center">
                     <p class="mb-1 secondary--text">
                       Program total beneficary impact details
                     </p>
@@ -106,9 +108,10 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr >
+                        <tr>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -119,6 +122,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -129,6 +133,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -139,6 +144,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -149,6 +155,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -159,6 +166,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -169,6 +177,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -184,7 +193,7 @@
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center"  class="mb-4" justify="center">
+                  <v-row align="center" class="mb-4" justify="center">
                     <p class="mb-1 secondary--text">
                       Explain the MIS process(as per questions in table below)
                     </p>
@@ -198,7 +207,9 @@
                           <th class="text-left">Who collects</th>
                           <th class="text-left">Frequency</th>
                           <th class="text-left">Type of data collected</th>
-                          <th class="text-left">Challenges (Languages, internet)</th>
+                          <th class="text-left">
+                            Challenges (Languages, internet)
+                          </th>
                           <th class="text-left">Time taken</th>
                         </tr>
                       </thead>
@@ -207,6 +218,7 @@
                           <td>{{ item.name }}</td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -217,6 +229,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -227,6 +240,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -237,6 +251,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -247,6 +262,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -257,6 +273,7 @@
                           </td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -269,9 +286,8 @@
                       </tbody>
                     </template>
                   </v-simple-table>
-                </v-col>                
+                </v-col>
               </v-row>
-              
             </v-form>
             <div class="d-flex">
               <v-spacer> </v-spacer>
@@ -290,8 +306,6 @@
           </v-card-text>
         </v-card>
       </v-tab-item>
-
-      
     </v-tabs>
   </v-container>
 </template>
@@ -357,7 +371,7 @@ export default {
         },
         {
           name: "Generating insights from the report",
-        }
+        },
       ],
       details4: [
         {
@@ -377,9 +391,8 @@ export default {
         },
         {
           name: "How do you plan to sustain the MIS solution designed by (licence cost, maintenance, enhancement, resources, etc)",
-        }
+        },
       ],
-      
     };
   },
   watch: {

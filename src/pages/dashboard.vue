@@ -2,38 +2,52 @@
   <div>
     <v-app-bar fixed app short class="shadow">
       <!-- color="wall" -->
-      <v-app-bar-nav-icon color="text" @click.stop="drawer = !drawer" />
-      <v-toolbar-title class="font-weight-medium text--text"
-        >NP Project
-      </v-toolbar-title>
-      <v-spacer />
+      <v-app-bar-nav-icon color="text" @click.stop="toggleDrawer" />
+      <router-link to="/">
+        <v-img
+          max-height="40px"
+          max-width="40px"
+          align="center"
+          justify="center"
+          class="my-2"
+          src="@/assets/img/logo.png"
+        ></v-img>
+      </router-link>
+      <!-- <v-spacer />
       <v-btn icon color="text" class="mx-1">
         <v-icon> mdi-apps </v-icon>
       </v-btn>
       <v-btn icon color="text">
         <v-icon> mdi-clipboard-arrow-down </v-icon>
-      </v-btn>
-      <user-avatar-menu color="text" />
+      </v-btn> -->
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" app class="wall">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      class="wall"
+      :mini-variant="mini"
+      mini-variant-width="80"
+      :expand-on-hover="mini"
+    >
       <v-card dark tile flat class="wall">
-        <div class="d-flex justify-end pa-4 pb-0">
-          <user-avatar-menu />
-        </div>
-        <div class="d-flex flex-column align-center text-center mb-2">
-          <v-img
-            lazy-src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
-            max-height="96px"
-            max-width="96px"
-            class="my-6"
-            src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
-          />
-          <h4 style="font-size: 14px">Put Company Name</h4>
-          <div class="caption secondary--text">email@email.com</div>
-        </div>
+        <template v-if="!mini">
+          <div class="d-flex justify-end pa-4 pb-0">
+            <user-avatar-menu />
+          </div>
+          <div class="d-flex flex-column align-center text-center mb-2">
+            <v-img
+              max-height="96px"
+              max-width="96px"
+              class="my-6"
+              src="@/assets/img/logo.png"
+            />
+            <h4 style="font-size: 14px">NP project</h4>
+            <div class="caption secondary--text">email@email.com</div>
+          </div>
+        </template>
         <v-list nav class="menu-links">
           <div v-for="(item, i) in links" :key="i" cl>
-            <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 3">
+            <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 1 && !mini">
               modules
             </p>
             <div v-if="item.items">
@@ -42,6 +56,7 @@
                   <v-list-item-icon>
                     <v-icon v-text="item.icon"></v-icon>
                   </v-list-item-icon>
+                  <v-list-item link :to="item.path" class="item-link" />
                   <v-list-item-content>
                     <v-list-item-title v-text="item.title"></v-list-item-title>
                   </v-list-item-content>
@@ -69,10 +84,15 @@
               </v-list-group>
             </div>
             <div v-else>
-              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0">
+              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0 && !mini">
                 dashbaords
               </p>
-              <v-list-item class="alone-list mb-1" :to="item.path" router>
+              <v-list-item
+                color="primary"
+                class="alone-list mb-1"
+                :to="item.path"
+                link
+              >
                 <v-list-item-icon class="regular">
                   <v-icon>{{ item.icon }}</v-icon>
                 </v-list-item-icon>
@@ -97,6 +117,7 @@ export default {
   components: { UserAvatarMenu },
   data() {
     return {
+      mini: false,
       drawer: true,
       links: [
         {
@@ -104,20 +125,20 @@ export default {
           icon: "mdi-view-carousel",
           path: { path: "/" },
         },
-        {
-          title: "Analytics",
-          icon: "mdi-google-analytics",
-          path: { path: "/#" },
-        },
-        {
-          title: "All Projects",
-          icon: "mdi-cube",
-          path: { path: "/##" },
-        },
+        // {
+        //   title: "Analytics",
+        //   icon: "mdi-google-analytics",
+        //   path: { path: "/#" },
+        // },
+        // {
+        //   title: "All Projects",
+        //   icon: "mdi-cube",
+        //   path: { path: "/##" },
+        // },
         {
           title: "Organization Info",
           icon: "mdi-domain",
-          path: "#",
+          path: { path: "/organization-info", query: { s: "1" } },
           items: [
             {
               title: "Basic Info",
@@ -148,7 +169,7 @@ export default {
         {
           title: "Engagement Info",
           icon: "mdi-clipboard-check",
-          path: "#",
+          path: { path: "/engagement-info", query: { s: "1" } },
           items: [
             {
               title: "More NPO details",
@@ -163,20 +184,36 @@ export default {
         {
           title: "Nominated Personal",
           icon: "mdi-account-tie",
-          path: "#",
+          path: { path: "/nominated-personal", query: { s: "1" } },
           items: [
             {
               title: "NP details",
               path: { path: "/nominated-personal", query: { s: "1" } },
-            }
+            },
           ],
         },
       ],
     };
   },
-  mounted() {
-    // vue router query
+  methods: {
+    toggleDrawer() {
+      if (this.$vuetify.breakpoint.mdAndDown) {
+        this.mini = false;
+        this.drawer = !this.drawer;
+      } else {
+        this.drawer = true;
+        this.mini = !this.mini;
+      }
+    },
   },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.item-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+</style>

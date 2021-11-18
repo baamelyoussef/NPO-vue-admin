@@ -4,9 +4,21 @@
       <v-container
         fluid
         grid-list-xl
-        class="fill-height pa-0 bg-im"
-        style="height: 100vh"
+        class="fill-height pa-0"
+        style="height: calc(100vh - 56px)"
       >
+        <v-app-bar fixed app short class="shadow white">
+          <router-link to="/">
+            <v-img
+              max-height="40px"
+              max-width="40px"
+              align="center"
+              justify="center"
+              class="my-2"
+              src="@/assets/img/logo.png"
+            ></v-img>
+          </router-link>
+        </v-app-bar>
         <v-layout row align-center justify-center>
           <v-row align="center" justify="center">
             <v-flex
@@ -17,25 +29,30 @@
               <v-card title class="pa-8 s-c" height="auto" width="auto">
                 <v-row align="start" justify="center">
                   <v-img
-                    lazy-src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
-                    max-height="50px"
-                    max-width="50px"
+                    max-height="90px"
+                    max-width="90px"
                     align="center"
                     justify="center"
-                    src="https://i.postimg.cc/X7mxW0Sm/logonpo.png"
+                    class="my-2"
+                    src="@/assets/img/logo.png"
                   ></v-img>
                 </v-row>
-                <v-card-title>Sign In</v-card-title>
+                <v-card-text class="pa-0">
+                  <div class="display-1 font-weight-medium my-5">Sign In</div>
                   <v-form>
-                    <p>E-mail</p>
+                    <!-- <p>E-mail</p> -->
                     <v-text-field
+                      label="E-mail"
+                      dense
                       v-model="email"
                       :rules="emailRules"
                       outlined
                       required
                     ></v-text-field>
-                    <p>Password</p>
+                    <!-- <p>Password</p> -->
                     <v-text-field
+                      label="Password"
+                      dense
                       v-model="password"
                       :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                       :rules="[rules.required, rules.min]"
@@ -56,6 +73,7 @@
                       </v-btn>
                     </v-row>
                   </v-form>
+                </v-card-text>
               </v-card>
             </v-flex>
           </v-row>

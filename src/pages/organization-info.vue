@@ -1,16 +1,16 @@
 <template>
   <v-container class="mt-7">
-    <v-tabs show-arrows v-model="tab">
+    <v-tabs show-arrows v-model="tab" fixed-tabs>
       <v-tab>Basic Info</v-tab>
-      <v-icon>mdi-chevron-right</v-icon>
+      <div class="dash"></div>
       <v-tab>NP Info</v-tab>
-      <v-icon>mdi-chevron-right</v-icon>
+      <div class="dash"></div>
       <v-tab>NPO Info</v-tab>
-      <v-icon>mdi-chevron-right</v-icon>
+      <div class="dash"></div>
       <v-tab>Documents Info</v-tab>
-      <v-icon>mdi-chevron-right</v-icon>
+      <div class="dash"></div>
       <v-tab>History Info</v-tab>
-      <v-icon>mdi-chevron-right</v-icon>
+      <div class="dash"></div>
       <v-tab>Details Info</v-tab>
 
       <!-- step #1 -->
@@ -265,9 +265,9 @@
         <v-card>
           <v-card-text>
             <v-form v-model="valid">
-              <v-row>
+              <v-row class="pt-4">
                 <v-col cols="12" md="4">
-                  <p class="mb-1 secondary--text">
+                  <p class="mb-2 secondary--text ml-10">
                     Details of NPO Person filling the form :
                   </p>
                   <v-text-field
@@ -301,7 +301,7 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p class="mb-1 secondary--text">Details of NPO Champion :</p>
+                  <p class="mb-2 secondary--text ml-10">Details of NPO Champion :</p>
                   <v-text-field
                     class="mx-2"
                     label="Name"
@@ -333,7 +333,7 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p class="mb-1 secondary--text">
+                  <p class="mb-2 secondary--text ml-10">
                     Details of NPO CEO/ED/Funder
                   </p>
                   <v-text-field
@@ -368,7 +368,7 @@
               </v-row>
               <v-row>
                 <v-col cols="12" md="4">
-                  <p class="mb-1 secondary--text">
+                  <p class="secondary--text" style="margin-bottom:6px">
                     Explain organization's origin,purpose and core activities.
                     What is the social problem you are addressing
                   </p>
@@ -382,7 +382,7 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p class="mb-1 secondary--text">
+                  <p class="mb-1 secondary--text mb-md-7">
                     Who are the direct and indirect beneficiaries of the
                     organisation
                   </p>
@@ -396,7 +396,7 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <p class="mb-1 secondary--text">
+                  <p class="mb-1 secondary--text mb-md-7">
                     What are the key qualitative impact indicators measured
                   </p>
                   <v-textarea
@@ -410,7 +410,7 @@
               </v-row>
               <v-row>
                 <v-col cols="12" md="12">
-                  <p class="mb-1 secondary--text">Mention the SDG's impacted</p>
+                  <p class="mb-2 secondary--text">Mention the SDG's impacted</p>
                   <v-textarea
                     label="Mention here (if known)"
                     auto-grow
@@ -446,7 +446,7 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">
+                  <v-row align="center" justify="center" class="pt-4">
                     <p class="mb-1 secondary--text">
                       Please provide supporting documents with the form
                       Organisational Funding details in Crors (Past and
@@ -515,7 +515,7 @@
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">
+                  <v-row align="center" justify="center" class="pt-4">
                     <p class="mb-1 secondary--text">
                       Please provide Committed and expected funding details in
                       croces
@@ -565,7 +565,7 @@
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center" class="mb-2">
+                  <v-row align="center" justify="center" class="mb-2 pt-2">
                     <p class="mb-1 secondary--text">
                       Please provide Committed and expected funding details in
                       croces
@@ -632,7 +632,7 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center" class="mb-2">
+                  <v-row align="center" justify="center" class="mb-2 pt-4">
                     <p class="mb-1 secondary--text">
                       Organisational Impact/ End beneficiary quantitative
                       details (Past and Projected)
@@ -703,7 +703,7 @@
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center" class="mb-2">
+                  <v-row align="center" justify="center" class="mb-2 pt-5">
                     <p class="mb-1 secondary--text">
                       Provide names of states in wich you have project offices
                       in India
@@ -803,7 +803,7 @@
             <v-form v-model="valid">
               <v-row>
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">
+                  <v-row align="center" justify="center" class="pt-4">
                     <p class="mb-1 secondary--text">
                       Organisational Risk Details
                     </p>
@@ -845,7 +845,7 @@
                 </v-col>
 
                 <v-col cols="12" md="12">
-                  <v-row align="center" justify="center">
+                  <v-row align="center" justify="center" class="pt-4">
                     <p class="mb-1 secondary--text">
                       Organisational IT infrastructure availability details
                     </p>

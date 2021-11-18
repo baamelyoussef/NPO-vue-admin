@@ -2,7 +2,7 @@
   <v-container class="mt-7">
     <v-tabs show-arrows v-model="tab">
       <v-tab>Nominated Personal details</v-tab>
-      
+
       <!--Step #3-->
       <v-tab-item>
         <v-card>
@@ -20,6 +20,7 @@
                           <td>{{ item.name }}</td>
                           <td>
                             <v-textarea
+                              hide-details="auto"
                               filled
                               dense
                               auto-grow
@@ -33,10 +34,7 @@
                     </template>
                   </v-simple-table>
                 </v-col>
-
-                               
               </v-row>
-              
             </v-form>
             <div class="d-flex">
               <v-spacer> </v-spacer>
@@ -115,8 +113,8 @@ export default {
         },
         {
           name: "Has the ability to deal with stakeholder, get approval/take decision and influence others in the organisation to adopt the project improvements",
-        }
-      ]
+        },
+      ],
     };
   },
   watch: {
