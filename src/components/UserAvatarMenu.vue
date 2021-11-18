@@ -36,7 +36,7 @@
               v-for="(t, i) in item"
               :key="i"
               @click="listMethod(t.code)"
-              :link="t.to ? t.to : false"
+              :link="t.to ? true : false"
               :to="t.to ? t.to : false"
             >
               <v-list-item-icon>
@@ -76,7 +76,7 @@ export default {
           {
             icon: "mdi-account",
             title: "Profile",
-            to: "/employee-self-service/profile",
+            to: "/profile",
           },
           {
             icon: "mdi-bell",

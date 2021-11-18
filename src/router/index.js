@@ -5,7 +5,8 @@ import Dashboard from "@/pages/dashboard.vue";
 import home from "@/pages/home.vue";
 import organization from "@/pages/organization-info.vue";
 import engagement from "@/pages/engagement-info.vue";
-import nominated from "@/pages/nominated-personal.vue";  
+import nominated from "@/pages/nominated-personal.vue";
+import profile from "@/pages/profile.vue";
 
 Vue.use(VueRouter);
 
@@ -31,7 +32,6 @@ const routes = [
         name: "organization-info",
         component: organization,
       },
-      // add engagement here
       {
         path: "/engagement-info",
         name: "engagement-info",
@@ -41,6 +41,11 @@ const routes = [
         path: "/nominated-personal",
         name: "nominated-personal",
         component: nominated,
+      },
+      {
+        path: "/profile",
+        name: "profile",
+        component: profile,
       },
     ],
   },

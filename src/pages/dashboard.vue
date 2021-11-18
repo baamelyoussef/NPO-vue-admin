@@ -13,8 +13,9 @@
           src="@/assets/img/logo.png"
         ></v-img>
       </router-link>
-      <!-- <v-spacer />
-      <v-btn icon color="text" class="mx-1">
+      <v-spacer />
+      <h4>{{ $dayjs().format("MMM-DD-YYYY") }}</h4>
+      <!-- <v-btn icon color="text" class="mx-1">
         <v-icon> mdi-apps </v-icon>
       </v-btn>
       <v-btn icon color="text">
@@ -47,7 +48,10 @@
         </template>
         <v-list nav class="menu-links">
           <div v-for="(item, i) in links" :key="i" cl>
-            <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 1 && !mini">
+            <p
+              class="upperline mt-8 mb-2 primary--text mx-4"
+              v-if="i === 1 && !mini"
+            >
               DIY (Do It Yourself) Projects
             </p>
             <div v-if="item.items">
@@ -84,7 +88,10 @@
               </v-list-group>
             </div>
             <div v-else>
-              <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 0 && !mini">
+              <p
+                class="upperline mt-8 mb-2 primary--text mx-4"
+                v-if="i === 0 && !mini"
+              >
                 dashbaords
               </p>
               <v-list-item
