@@ -18,8 +18,9 @@
         <v-card outlined>
           <v-card-text>
             <v-form ref="form" v-model="valid" lazy-validation>
+              <h3 class="mb-3">Primary Informations</h3>
               <v-row>
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -31,7 +32,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -42,7 +43,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -54,7 +55,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -65,8 +66,11 @@
                     required
                   />
                 </v-col>
+              </v-row>
+              <h3 class="my-3">Address Informations</h3>
 
-                <v-col cols="12" md="3" lg="2">
+              <v-row>
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -77,7 +81,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -88,7 +92,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -99,7 +103,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -109,8 +113,12 @@
                     required
                   />
                 </v-col>
+              </v-row>
 
-                <v-col cols="12" md="3" lg="2">
+              <h3 class="my-3">Secondary Informations</h3>
+
+              <v-row>
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -121,7 +129,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -132,7 +140,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined
@@ -143,7 +151,7 @@
                   />
                 </v-col>
 
-                <v-col cols="12" md="3" lg="2">
+                <v-col cols="12" md="3">
                   <v-text-field
                     dense
                     outlined

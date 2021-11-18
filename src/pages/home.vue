@@ -16,15 +16,19 @@
     </v-container>
     <div class="accent mt-6">
       <v-container class="px-md-7">
-        <v-row class="my-2">
+        <!-- box -->
+        <h3 class="my-2" style="opacity: 0.85">
+          DIY (DO IT YOURSELF) Projects Summary
+        </h3>
+        <v-row>
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h4 class="font-weight-medium">Summary</h4>
+                <h5 class="text--text">DIY Projects Allocated</h5>
                 <div class="text-center">
                   <div class="blue--text my-2">
                     <div class="display-4 font-weight-bold">21</div>
-                    <p>Due Task</p>
+                    <p>Allocated</p>
                   </div>
                   <div style="opacity: 0.7">Completed: <b> 13</b></div>
                 </div>
@@ -34,11 +38,11 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h4 class="font-weight-medium">Overdue</h4>
+                <h5 class="text--text">DIY Projects Submitted</h5>
                 <div class="text-center">
                   <div class="red--text my-2">
                     <div class="display-4 font-weight-bold">17</div>
-                    <p>Tasks</p>
+                    <p>Submitted</p>
                   </div>
                   <div style="opacity: 0.7">Completed: <b> 9</b></div>
                 </div>
@@ -48,11 +52,11 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h4 class="font-weight-medium">Issues</h4>
+                <h5 class="text--text">DIY Projects Approved</h5>
                 <div class="text-center">
                   <div class="orange--text my-2">
                     <div class="display-4 font-weight-bold">24</div>
-                    <p>Open</p>
+                    <p>Approved</p>
                   </div>
                   <div style="opacity: 0.7">Completed: <b> 19</b></div>
                 </div>
@@ -62,11 +66,11 @@
           <v-col cols="12" md="3">
             <v-card>
               <div class="pa-4">
-                <h4 class="font-weight-medium">Features</h4>
+                <h5 class="text--text">DIY Projects Rejected</h5>
                 <div class="text-center">
                   <div class="green--text my-2">
                     <div class="display-4 font-weight-bold">38</div>
-                    <p>Proposals</p>
+                    <p>Rejected</p>
                   </div>
                   <div style="opacity: 0.7">Completed: <b> 16</b></div>
                 </div>
@@ -74,6 +78,69 @@
             </v-card>
           </v-col>
         </v-row>
+
+        <!-- box -->
+        <h3 class="mt-11 mb-2" style="opacity: 0.85">Deep Projects Summary</h3>
+        <v-row>
+          <v-col cols="12" md="3">
+            <v-card>
+              <div class="pa-4">
+                <h5 class="text--text">DEEP Projects Allocated</h5>
+                <div class="text-center">
+                  <div class="blue--text my-2">
+                    <div class="display-4 font-weight-bold">11</div>
+                    <p>Allocated</p>
+                  </div>
+                  <div style="opacity: 0.7">Completed: <b> 13</b></div>
+                </div>
+              </div>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-card>
+              <div class="pa-4">
+                <h5 class="text--text">DEEP Projects Submitted</h5>
+                <div class="text-center">
+                  <div class="red--text my-2">
+                    <div class="display-4 font-weight-bold">22</div>
+                    <p>Submitted</p>
+                  </div>
+                  <div style="opacity: 0.7">Completed: <b> 9</b></div>
+                </div>
+              </div>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-card>
+              <div class="pa-4">
+                <h5 class="text--text">DEEP Projects Approved</h5>
+                <div class="text-center">
+                  <div class="orange--text my-2">
+                    <div class="display-4 font-weight-bold">14</div>
+                    <p>Approved</p>
+                  </div>
+                  <div style="opacity: 0.7">Completed: <b> 19</b></div>
+                </div>
+              </div>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="3">
+            <v-card>
+              <div class="pa-4">
+                <h5 class="text--text">DEEP Projects Rejected</h5>
+                <div class="text-center">
+                  <div class="green--text my-2">
+                    <div class="display-4 font-weight-bold">64</div>
+                    <p>Rejected</p>
+                  </div>
+                  <div style="opacity: 0.7">Completed: <b> 16</b></div>
+                </div>
+              </div>
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <!-- box -->
         <v-card class="mt-5">
           <div class="pa-4">
             <h4 class="font-weight-medium">Github Issues Summary</h4>

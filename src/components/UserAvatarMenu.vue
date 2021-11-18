@@ -79,9 +79,9 @@ export default {
             to: "/profile",
           },
           {
-            icon: "mdi-bell",
-            title: "notification",
-            counter: "2",
+            icon: "mdi-lock",
+            title: "Reset Password",
+            to: "/auth/reset-password",
           },
         ],
         [

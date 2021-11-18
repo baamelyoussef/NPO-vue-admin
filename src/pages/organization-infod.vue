@@ -395,7 +395,7 @@
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-2 secondary--text ml-10">
+                        <p class="mb-2 secondary--text  ml-10">
                           Details of NPO Champion :
                         </p>
                         <v-text-field
@@ -1120,7 +1120,7 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" to="/engagement-info?s=1">
+                          <v-btn large rounded color="primary" to="/beneficiaryd?s=1">
                             Engagement Info
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>
