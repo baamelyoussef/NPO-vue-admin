@@ -141,9 +141,9 @@
         </v-row>
 
         <!-- box -->
-        <v-card class="mt-5">
+        <v-card class="mt-10">
           <div class="pa-4">
-            <h4 class="font-weight-medium">Github Issues Summary</h4>
+            <!-- <h4 class="font-weight-medium">Github Issues Summary</h4> -->
             <v-row>
               <v-col cols="12" md="6">
                 <h5 class="text--text mt-4">Description</h5>

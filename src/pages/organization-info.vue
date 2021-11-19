@@ -359,9 +359,26 @@
               <v-card outlined>
                 <v-card-text>
                   <v-form v-model="valid">
-                    <v-row class="pt-4">
+                    <v-row class="d-none d-md-flex pt-4">
+                      <v-col cols="4" md="4">
+                        <p class="mb-n2 secondary--text ml-10">
+                          Details of NPO Person filling the form :
+                        </p>
+                      </v-col>
+                      <v-col cols="4" md="4">
+                        <p class="mb-n2 secondary--text ml-10">
+                          Details of NPO Champion :
+                        </p>
+                      </v-col>
+                      <v-col cols="4" md="4">
+                        <p class="mb-n2 secondary--text ml-10">
+                          Details of NPO CEO/ED/Funder
+                        </p>
+                      </v-col>
+                    </v-row>
+                    <v-row>
                       <v-col cols="12" md="4">
-                        <p class="mb-2 secondary--text ml-10">
+                        <p class="mb-2 secondary--text ml-10 d-md-none">
                           Details of NPO Person filling the form :
                         </p>
                         <v-text-field
@@ -395,7 +412,7 @@
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-2 secondary--text ml-10">
+                        <p class="mb-2 secondary--text ml-10 d-md-none">
                           Details of NPO Champion :
                         </p>
                         <v-text-field
@@ -429,7 +446,7 @@
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-2 secondary--text ml-10">
+                        <p class="mb-2 secondary--text ml-10 d-md-none">
                           Details of NPO CEO/ED/Funder
                         </p>
                         <v-text-field
@@ -1120,7 +1137,7 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" to="/engagement-info?s=1">
+                          <v-btn large rounded color="primary" @click="tab++">
                             Engagement Info
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>
@@ -1139,7 +1156,7 @@
 </template>
 
 <script>
-import Float from '../components/Float.vue';
+import Float from "../components/Float.vue";
 export default {
   components: { Float },
   data() {
