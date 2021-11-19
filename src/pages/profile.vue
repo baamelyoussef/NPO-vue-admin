@@ -2,88 +2,101 @@
   <v-container>
     <!-- create user image with name -->
     <div class="d-flex align-center my-7">
-      
       <div>
         <h1 class="font-weight-bold text-4xl">NP Project</h1>
-      
       </div>
     </div>
 
     <v-card>
       <v-card-text>
         <v-card outlined>
-          <v-card-text>
+          <v-btn
+            icon
+            class="wall"
+            @click="edit = !edit"
+            large
+            absolute
+            top
+            right
+            dark
+          >
+            <v-icon v-if="edit">mdi-check</v-icon>
+            <v-icon v-else>mdi-pencil</v-icon>
+          </v-btn>
+          <v-card-text class="mt-7">
             <v-form ref="form" v-model="valid" lazy-validation>
               <h3 class="mb-3">Primary Informations</h3>
               <v-row>
                 <v-col cols="12" md="4">
                   <v-text-field
-                  dense
-                  v-model="name"
-                  label="Name"
-                  outlined
-                  clearable
+                    :disabled="!edit"
+                    dense
+                    v-model="name"
+                    label="Name"
+                    outlined
+                    clearable
                   ></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
                   <v-text-field
-                  dense
-                  v-model="email"
-                  label="Email"
-                  outlined
-                  clearable
+                    :disabled="!edit"
+                    dense
+                    v-model="email"
+                    label="Email"
+                    outlined
+                    clearable
                   ></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
                   <v-text-field
-                  dense
-                  v-model="phone"
-                  label="Phone"
-                  outlined
-                  clearable
+                    :disabled="!edit"
+                    dense
+                    v-model="phone"
+                    label="Phone"
+                    outlined
+                    clearable
                   ></v-text-field>
                 </v-col>
-
-                
               </v-row>
               <h3 class="my-3">Address Informations</h3>
 
               <v-row>
-                
                 <v-col cols="12" md="4">
                   <v-text-field
-                  dense
-                  v-model="adress"
-                  label="Adress"
-                  outlined
-                  clearable
+                    :disabled="!edit"
+                    dense
+                    v-model="adress"
+                    label="Adress"
+                    outlined
+                    clearable
                   ></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
                   <v-text-field
-                  dense
-                  v-model="city"
-                  label="City"
-                  outlined
-                  clearable
+                    :disabled="!edit"
+                    dense
+                    v-model="city"
+                    label="City"
+                    outlined
+                    clearable
                   ></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
                   <v-text-field
-                  dense
-                  v-model="state"
-                  label="State"
-                  outlined
-                  clearable
+                    :disabled="!edit"
+                    dense
+                    v-model="state"
+                    label="State"
+                    outlined
+                    clearable
                   ></v-text-field>
                 </v-col>
               </v-row>
 
-              
               <!-- sabmit button for saving changes and redirect to /dashboard -->
               <div class="d-flex align-center justify-center">
                 <v-btn
@@ -111,12 +124,13 @@
 export default {
   data() {
     return {
-      state:'Assam',
-      city:'Silchar',
-      adress:'Tarapur, Silchar, Assam 788007, India',
-      name:'NP organization',
-      email:'npo-org@mail.com',
-      phone:'+91 7503907302',
+      edit: false,
+      state: "Assam",
+      city: "Silchar",
+      adress: "Tarapur, Silchar, Assam 788007, India",
+      name: "NP organization",
+      email: "npo-org@mail.com",
+      phone: "+91 7503907302",
       valid: true,
       user: {
         name: "",
