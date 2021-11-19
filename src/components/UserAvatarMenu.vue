@@ -86,12 +86,6 @@ export default {
         ],
         [
           {
-            icon: "mdi-cog",
-            title: "Setting",
-          },
-        ],
-        [
-          {
             icon: "mdi-exit-to-app",
             title: "Logout",
             code: "logout",

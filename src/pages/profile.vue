@@ -2,14 +2,10 @@
   <v-container>
     <!-- create user image with name -->
     <div class="d-flex align-center my-7">
-      <v-avatar size="110" class="mr-5">
-        <img src="@/assets/img/brian-hughes.jpg" />
-      </v-avatar>
+      
       <div>
-        <h1 class="font-weight-bold text-4xl">Brian Johnson</h1>
-        <div class="d-flex align-center mt-1">
-          <p class="caption ma-0">From London</p>
-        </div>
+        <h1 class="font-weight-bold text-4xl">NP Project</h1>
+      
       </div>
     </div>
 
@@ -20,148 +16,74 @@
             <v-form ref="form" v-model="valid" lazy-validation>
               <h3 class="mb-3">Primary Informations</h3>
               <v-row>
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
-                    dense
-                    outlined
-                    v-model="user.name"
-                    :rules="nameRules"
-                    label="Name"
-                    required
-                    autofocus
-                  />
+                  dense
+                  v-model="name"
+                  label="Name"
+                  outlined
+                  clearable
+                  ></v-text-field>
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
-                    dense
-                    outlined
-                    v-model="user.email"
-                    :rules="emailRules"
-                    label="Email"
-                    required
-                  />
+                  dense
+                  v-model="email"
+                  label="Email"
+                  outlined
+                  clearable
+                  ></v-text-field>
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
-                    dense
-                    outlined
-                    v-model="user.password"
-                    :rules="passwordRules"
-                    type="password"
-                    label="Password"
-                    required
-                  />
+                  dense
+                  v-model="phone"
+                  label="Phone"
+                  outlined
+                  clearable
+                  ></v-text-field>
                 </v-col>
 
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    outlined
-                    v-model="user.password_confirmation"
-                    :rules="passwordConfirmationRules"
-                    type="password"
-                    label="Confirm Password"
-                    required
-                  />
-                </v-col>
+                
               </v-row>
               <h3 class="my-3">Address Informations</h3>
 
               <v-row>
-                <v-col cols="12" md="3">
+                
+                <v-col cols="12" md="4">
                   <v-text-field
-                    dense
-                    outlined
-                    v-model="user.phone"
-                    :rules="phoneRules"
-                    label="Phone"
-                    required
-                  />
+                  dense
+                  v-model="adress"
+                  label="Adress"
+                  outlined
+                  clearable
+                  ></v-text-field>
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
-                    dense
-                    outlined
-                    v-model="user.address"
-                    :rules="addressRules"
-                    label="Address"
-                    required
-                  />
+                  dense
+                  v-model="city"
+                  label="City"
+                  outlined
+                  clearable
+                  ></v-text-field>
                 </v-col>
 
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="4">
                   <v-text-field
-                    dense
-                    outlined
-                    v-model="user.city"
-                    :rules="cityRules"
-                    label="City"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    outlined
-                    v-model="user.state"
-                    :rules="stateRules"
-                    label="State"
-                    required
-                  />
+                  dense
+                  v-model="state"
+                  label="State"
+                  outlined
+                  clearable
+                  ></v-text-field>
                 </v-col>
               </v-row>
 
-              <h3 class="my-3">Secondary Informations</h3>
-
-              <v-row>
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    outlined
-                    v-model="user.zip"
-                    :rules="zipRules"
-                    label="Zip"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    outlined
-                    v-model="user.country"
-                    :rules="countryRules"
-                    label="Country"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    outlined
-                    v-model="user.company"
-                    :rules="companyRules"
-                    label="Company"
-                    required
-                  />
-                </v-col>
-
-                <v-col cols="12" md="3">
-                  <v-text-field
-                    dense
-                    outlined
-                    v-model="user.website"
-                    :rules="websiteRules"
-                    label="Website"
-                    required
-                  />
-                </v-col>
-              </v-row>
+              
               <!-- sabmit button for saving changes and redirect to /dashboard -->
               <div class="d-flex align-center justify-center">
                 <v-btn
@@ -189,6 +111,12 @@
 export default {
   data() {
     return {
+      state:'Assam',
+      city:'Silchar',
+      adress:'Tarapur, Silchar, Assam 788007, India',
+      name:'NP organization',
+      email:'npo-org@mail.com',
+      phone:'+91 7503907302',
       valid: true,
       user: {
         name: "",

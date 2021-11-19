@@ -44,7 +44,7 @@
                   <v-form>
                     <!-- <p>E-mail</p> -->
                     <v-text-field
-                      label="E-mail"
+                      label="Old Password"
                       dense
                       v-model="email"
                       :rules="emailRules"
@@ -53,7 +53,7 @@
                     ></v-text-field>
                     <!-- <p>Password</p> -->
                     <v-text-field
-                      label="Password"
+                      label="New Password"
                       dense
                       v-model="password"
                       :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
