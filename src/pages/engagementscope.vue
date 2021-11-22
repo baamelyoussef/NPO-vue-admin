@@ -5,8 +5,10 @@
       <v-card>
         <v-card-text>
           <v-tabs show-arrows v-model="tab" fixed-tabs>
-            <v-tab>Basic Info</v-tab>
-            
+            <v-tab>Questionnaire</v-tab>
+            <div class="dash"></div>
+            <v-tab>Related Info</v-tab>
+
             <!-- step #1 -->
             <v-tab-item>
               <v-card outlined>
@@ -158,6 +160,158 @@
               </v-card>
             </v-tab-item>
 
+            <!-- step #2 -->
+            <v-tab-item>
+              <v-card outlined>
+                <v-card-text>
+                  <v-form v-model="valid">
+                    <v-row>
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="firstname"
+                          outlined
+                          label="Name of the Organization"
+                          required
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="lastname"
+                          outlined
+                          label="Legal Name"
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="email"
+                          outlined
+                          label="Year of Establishment"
+                          required
+                        />
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="firstname"
+                          outlined
+                          label="Regd Adress with state and pin code"
+                          required
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="lastname"
+                          outlined
+                          label="HO Address"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="firstname"
+                          outlined
+                          label="Website"
+                          required
+                        />
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="12" md="4">
+                        <v-select
+                          dense
+                          :items="items"
+                          outlined
+                          transition="scroll-y-transition"
+                          append-icon="mdi-chevron-down"
+                          label="Registered Legal Entity"
+                          hide-details="auto"
+                        ></v-select>
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="lastname"
+                          outlined
+                          label="PAN Number"
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="email"
+                          outlined
+                          label="Registration Certificate Number"
+                          required
+                        />
+                      </v-col>
+                    </v-row>
+                  </v-form>
+                  <v-row align="center" justify="center">
+                    <div class="d-flex">
+                      <div class="d-inline-flex flex-wrap ma-3">
+                          <div class="d-flex mt-5 mr-3">
+                        <v-btn large rounded color="primary" to="/organization-infod?s=6">
+                          <v-icon left>mdi-arrow-left</v-icon>
+                          Back
+                        </v-btn>
+                      </div>
+                        <div class="d-flex mt-5 mr-3">
+                          <v-btn
+                            large
+                            rounded
+                            color="primary"
+                            class="wall"
+                            @click="tab--"
+                          >
+                            Save And Exit
+                          </v-btn>
+                        </div>
+                        <div class="d-flex mt-5 mr-3">
+                          <v-btn
+                            large
+                            rounded
+                            color="primary"
+                            class="wall"
+                            @click="tab++"
+                          >
+                            Save And Continue<v-icon right
+                              >mdi-arrow-right</v-icon
+                            >
+                          </v-btn>
+                        </div>
+                        <div class="d-flex mt-5">
+                          <v-btn large rounded color="primary" to="/signd?s=1">
+                            Digital Signature
+                            <v-icon right>mdi-arrow-right</v-icon>
+                          </v-btn>
+                        </div>
+                      </div>
+                    </div>
+                  </v-row>
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+
+            
             
           </v-tabs>
         </v-card-text>

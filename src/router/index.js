@@ -8,8 +8,12 @@ import engagement from "@/pages/engagement-info.vue";
 import nominated from "@/pages/nominated-personal.vue";
 import beneficiary from "@/pages/beneficiary.vue";
 import sign from "@/pages/sign.vue";
-import beneficiaryd from "@/pages/beneficiaryd.vue";
-import organizationd from "@/pages/organization-infod.vue";
+import generalinfo from "@/pages/generalinfo.vue";
+import financialproc from "@/pages/financialproc";
+import projectdetails from '@/pages/projectdetails.vue';
+import engagementscope from '@/pages/engagementscope.vue';
+import monitorevaluate from '@/pages/monitorevaluate.vue';
+import fundingdetails from '@/pages/fundingdetails.vue';
 import signd from "@/pages/signd.vue";
 import profile from "@/pages/profile.vue";
 import forgotPass from "@/pages/auth/forgot-pass.vue";
@@ -65,14 +69,34 @@ const routes = [
         component: beneficiary,
       },
       {
-        path: "/beneficiaryd",
-        name: "beneficiaryd",
-        component: beneficiaryd,
+        path: "/general-info",
+        name: "generalinfo",
+        component: generalinfo,
       },
       {
-        path: "/organization-infod",
-        name: "organization-infod",
-        component: organizationd,
+        path: "/project-details",
+        name: "projectdetails",
+        component: projectdetails,
+      },
+      {
+        path: "/engage-scope",
+        name: "engagementscope",
+        component: engagementscope,
+      },
+      {
+        path: "/m-v",
+        name: "monitorevaluate",
+        component: monitorevaluate,
+      },
+      {
+        path: "/funding-details",
+        name: "fundingdetails",
+        component: fundingdetails,
+      },
+      {
+        path: "/financial-proc",
+        name: "financial-proc",
+        component: financialproc,
       },
       {
         path: "/sign",

@@ -5,17 +5,15 @@
       <v-card>
         <v-card-text>
           <v-tabs show-arrows v-model="tab" fixed-tabs>
-            <v-tab>Basic Info</v-tab>
+            <v-tab>Financial Processes</v-tab>
             <div class="dash"></div>
-            <v-tab>NP Info</v-tab>
+            <v-tab>HR</v-tab>
             <div class="dash"></div>
-            <v-tab>NPO Info</v-tab>
+            <v-tab>Legal</v-tab>
             <div class="dash"></div>
-            <v-tab>Documents Info</v-tab>
+            <v-tab>Data Manag. Processes</v-tab>
             <div class="dash"></div>
-            <v-tab>History Info</v-tab>
-            <div class="dash"></div>
-            <v-tab>Details Info</v-tab>
+            <v-tab>Programs & Operations</v-tab>
 
             <!-- step #1 -->
             <v-tab-item>

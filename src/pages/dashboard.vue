@@ -229,50 +229,103 @@ export default {
         },
         //
         {
-          title: "Organization Info",
-          icon: "mdi-domain",
-          path: { path: "/organization-infod", query: { s: "1" } },
+          title: "Govt. Engamement",
+          icon: "mdi-office-building-cog",
+          path: { path: "/financial-proc", query: { s: "1" } },
           items: [
             {
-              title: "Basic Info",
-              path: { path: "/organization-infod", query: { s: "1" } },
+              title: "Financial Processes",
+              path: { path: "/financial-proc", query: { s: "1" } },
             },
             {
-              title: "NP Info",
-              path: { path: "/organization-infod", query: { s: "2" } },
+              title: "HR",
+              path: { path: "/financial-proc", query: { s: "2" } },
             },
             {
-              title: "NPO Info",
-              path: { path: "/organization-infod", query: { s: "3" } },
+              title: "Legal",
+              path: { path: "/financial-proc", query: { s: "3" } },
             },
             {
-              title: "Documents Info",
-              path: { path: "/organization-infod", query: { s: "4" } },
+              title: "Admin Processes",
+              path: { path: "/financial-proc", query: { s: "4" } },
             },
             {
-              title: "History Info",
-              path: { path: "/organization-infod", query: { s: "5" } },
+              title: "Data Manag. Processes",
+              path: { path: "/financial-proc", query: { s: "5" } },
             },
             {
-              title: "Details Info",
-              path: { path: "/organization-infod", query: { s: "6" } },
+              title: "Programs & Operations",
+              path: { path: "/financial-proc", query: { s: "6" } },
+            },
+          ],
+        },
+        
+        {
+          title: "General Info",
+          icon: "mdi-cellphone-information",
+          path: { path: "/general-info", query: { s: "1" } },
+          items: [
+            {
+              title: "Informations",
+              path: { path: "/general-info", query: { s: "1" } },
             },
           ],
         },
         {
-          title: "Beneficiary",
-          icon: "mdi-handshake",
-          path: { path: "/beneficiaryd", query: { s: "1" } },
+          title: "Project Details",
+          icon: "mdi-projector-screen",
+          path: { path: "/project-details", query: { s: "1" } },
           items: [
             {
-              title: "Basic Info",
-              path: { path: "/beneficiaryd", query: { s: "1" } },
+              title: "Questionnaire",
+              path: { path: "/project-details", query: { s: "1" } },
+            },
+            {
+              title: "Related Info",
+              path: { path: "/project-details", query: { s: "2" } },
             }
           ],
         },
         {
-          title: "Digital Signature",
-          icon: "mdi-file-sign",
+          title: "Engagement Scope",
+          icon: "mdi-account-group",
+          path: { path: "/engage-scope", query: { s: "1" } },
+          items: [
+            {
+              title: "Basic Info",
+              path: { path: "/engage-scope", query: { s: "1" } },
+            }
+          ],
+        },
+        {
+          title: "Monitoring ",
+          icon: "mdi-playlist-edit",
+          path: { path: "/m-v", query: { s: "1" } },
+          items: [
+            {
+              title: "Basic Info",
+              path: { path: "/m-v", query: { s: "1" } },
+            },
+            {
+              title: "Related Info",
+              path: { path: "/m-v", query: { s: "2" } },
+            }
+          ],
+        },
+        {
+          title: "Funding Details",
+          icon: "mdi-hand-coin",
+          path: { path: "/funding-details", query: { s: "1" } },
+          items: [
+            {
+              title: "Basic Info",
+              path: { path: "/funding-details", query: { s: "1" } },
+            }
+          ],
+        },
+        {
+          title: "Org. Declaration",
+          icon: "mdi-draw-pen",
           path: { path: "/signd", query: { s: "1" } },
           items: [
             {
