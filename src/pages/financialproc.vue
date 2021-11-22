@@ -27,7 +27,7 @@
                           hide-details="auto"
                           v-model="firstname"
                           outlined
-                          label="Name of the Organization"
+                          label="Financial Management System"
                           required
                         />
                       </v-col>
@@ -38,64 +38,29 @@
                           hide-details="auto"
                           v-model="lastname"
                           outlined
-                          label="Legal Name"
+                          label="Staff Payroll management"
                         />
                       </v-col>
 
-                      <v-col cols="12" md="4">
-                        <v-text-field
-                          dense
-                          hide-details="auto"
-                          v-model="email"
-                          outlined
-                          label="Year of Establishment"
-                          required
-                        />
-                      </v-col>
-                    </v-row>
-                    <v-row>
-                      <v-col cols="12" md="4">
-                        <v-text-field
-                          dense
-                          hide-details="auto"
-                          v-model="firstname"
-                          outlined
-                          label="Regd Adress with state and pin code"
-                          required
-                        />
-                      </v-col>
-
-                      <v-col cols="12" md="4">
-                        <v-text-field
-                          dense
-                          hide-details="auto"
-                          v-model="lastname"
-                          outlined
-                          label="HO Address"
-                        />
-                      </v-col>
-                      <v-col cols="12" md="4">
-                        <v-text-field
-                          dense
-                          hide-details="auto"
-                          v-model="firstname"
-                          outlined
-                          label="Website"
-                          required
-                        />
-                      </v-col>
-                    </v-row>
-                    <v-row>
                       <v-col cols="12" md="4">
                         <v-select
                           dense
                           :items="items"
+                          label="Account Management"
                           outlined
-                          transition="scroll-y-transition"
-                          append-icon="mdi-chevron-down"
-                          label="Registered Legal Entity"
-                          hide-details="auto"
                         ></v-select>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="12" md="4">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="firstname"
+                          outlined
+                          label="Appropriate Budget Allocation"
+                          required
+                        />
                       </v-col>
 
                       <v-col cols="12" md="4">
@@ -104,21 +69,21 @@
                           hide-details="auto"
                           v-model="lastname"
                           outlined
-                          label="PAN Number"
+                          label="Disbursement"
                         />
                       </v-col>
-
                       <v-col cols="12" md="4">
                         <v-text-field
                           dense
                           hide-details="auto"
-                          v-model="email"
+                          v-model="firstname"
                           outlined
-                          label="Registration Certificate Number"
+                          label="Utilization Dashboard"
                           required
                         />
                       </v-col>
                     </v-row>
+                    
                   </v-form>
                   <v-row align="center" justify="center">
                     <div class="d-flex">
@@ -1147,7 +1112,7 @@ export default {
       radioGroup2: 1,
       radioGroup3: 1,
       radioGroup4: 1,
-      items: ["Section 8 or 25 Company", "Trust", "Society"],
+      items: ["Management reports", "Financial reports"],
       itemsDomain: [
         "Education",
         "Women's empowerment",
