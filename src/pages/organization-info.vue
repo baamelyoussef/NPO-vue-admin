@@ -22,101 +22,119 @@
               <v-card outlined>
                 <v-card-text>
                   <v-form v-model="valid">
-                    <v-row>
+                    <v-row align="center">
                       <v-col cols="12" md="4">
+                        <p class="label">Name of the Organization</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="firstname"
                           outlined
-                          label="Name of the Organization"
                           required
                         />
                       </v-col>
 
                       <v-col cols="12" md="4">
+                        <p class="label">Legal Name</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="lastname"
                           outlined
-                          label="Legal Name"
                         />
                       </v-col>
 
                       <v-col cols="12" md="4">
+                        <p class="label">Year of Establishment</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="email"
                           outlined
-                          label="Year of Establishment"
                           required
                         />
                       </v-col>
                     </v-row>
-                    <v-row>
-                      <v-col cols="12" md="4">
+                    <v-row align="center"
+                      ><v-col cols="12" md="4">
+                        <p class="label">
+                          Regd Adress with state and pin code
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="firstname"
                           outlined
-                          label="Regd Adress with state and pin code"
                           required
                         />
                       </v-col>
-
                       <v-col cols="12" md="4">
+                        <p class="label">HO Address</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="lastname"
                           outlined
-                          label="HO Address"
-                        />
-                      </v-col>
-                      <v-col cols="12" md="4">
+                        /> </v-col
+                      ><v-col cols="12" md="4">
+                        <p class="label">Website</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="firstname"
                           outlined
-                          label="Website"
                           required
                         />
                       </v-col>
                     </v-row>
-                    <v-row>
-                      <v-col cols="12" md="4">
+                    <v-row align="center"
+                      ><v-col cols="12" md="4">
+                        <p class="label">Registered Legal Entity</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-select
                           dense
                           :items="items"
                           outlined
                           transition="scroll-y-transition"
                           append-icon="mdi-chevron-down"
-                          label="Registered Legal Entity"
                           hide-details="auto"
                         ></v-select>
                       </v-col>
-
                       <v-col cols="12" md="4">
+                        <p class="label">PAN Number</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="lastname"
                           outlined
-                          label="PAN Number"
                         />
                       </v-col>
-
                       <v-col cols="12" md="4">
+                        <p class="label">
+                          Registration Certificate Number
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="email"
                           outlined
-                          label="Registration Certificate Number"
                           required
                         />
                       </v-col>
@@ -169,42 +187,50 @@
                   <v-form v-model="valid">
                     <v-row>
                       <v-col cols="12" md="4">
+                        <p class="label">80G Number</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="firstname"
                           outlined
-                          label="80G Number"
                           required
                         />
                       </v-col>
 
                       <v-col cols="12" md="4">
+                        <p class="label">12A Number</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="lastname"
                           outlined
-                          label="12A Number"
                         />
                       </v-col>
 
                       <v-col cols="12" md="4">
+                        <p class="label">FCRA Number (if applicable)</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="email"
                           outlined
-                          label="FCRA Number (if applicable)"
                           required
                         />
                       </v-col>
                     </v-row>
                     <v-row>
                       <v-col cols="12" md="4">
-                        <p class="mb-1 secondary--text">
+                        <p class="label">
                           Renewed 80G,12A,FCRA per the new guidelines?
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-radio-group v-model="radioGroup" row>
                           <v-radio
                             label="Yes"
@@ -220,10 +246,12 @@
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-1 secondary--text">
+                        <p class="label">
                           Availability of Audited Financial statements for
                           previous 3 years?
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-radio-group v-model="radioGroup2" row>
                           <v-radio
                             label="Yes"
@@ -238,10 +266,12 @@
                         </v-radio-group>
                       </v-col>
                       <v-col cols="12" md="4">
-                        <p class="mb-1 secondary--text">
+                        <p class="label">
                           Compliant with Income Tax Return filing for previous 3
                           years?
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-radio-group v-model="radioGroup3" row>
                           <v-radio
                             label="Yes"
@@ -258,34 +288,40 @@
                     </v-row>
                     <v-row>
                       <v-col cols="12" md="4">
+                        <p class="label">Select the domain</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-select
                           dense
                           :items="itemsDomain"
                           outlined
                           transition="scroll-y-transition"
                           append-icon="mdi-chevron-down"
-                          label="Select the domain"
                           hide-details="auto"
                         ></v-select>
                       </v-col>
 
                       <v-col cols="12" md="4">
+                        <p class="label">Organization Accredited by</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-select
                           dense
                           :items="itemsAcc"
                           outlined
                           transition="scroll-y-transition"
                           append-icon="mdi-chevron-down"
-                          label="Organization Accredited by "
                           hide-details="auto"
                         ></v-select>
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-1 secondary--text">
+                        <p class="label">
                           Any litigation history against the organization ? If
                           yes, please provide details
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-radio-group v-model="radioGroup4" row>
                           <v-radio
                             label="Yes"
@@ -299,6 +335,7 @@
                           ></v-radio>
                         </v-radio-group>
                         <v-textarea
+                          v-if="radioGroup4 === 'Yes'"
                           label="Details here"
                           auto-grow
                           outlined
@@ -1137,7 +1174,12 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" to="/engagement-info?s=1">
+                          <v-btn
+                            large
+                            rounded
+                            color="primary"
+                            to="/engagement-info?s=1"
+                          >
                             Engagement Info
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>

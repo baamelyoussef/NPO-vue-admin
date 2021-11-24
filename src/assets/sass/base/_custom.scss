@@ -65,8 +65,15 @@ div[style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: au
   height: 2px;
   background-color: var(--v-secondary-base);
   width: 2rem;
-    min-width: 17px;
+  min-width: 17px;
   margin-top: calc(2% + 2px);
   margin: auto 0px auto;
 }
 
+.label {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 !important;
+  padding: 0;
+  // color: var(--v-secondary-base);
+}
