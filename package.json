@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "d": "yarn build && firebase deploy",
-    "s": "yarn serve"
+    "s": "yarn serve",
+    "all": "git add . && git commit -m '</>' && git push && yarn d && yarn s"
   },
   "dependencies": {
     "core-js": "^3.6.5",

@@ -398,23 +398,12 @@
                   <v-form v-model="valid">
                     <v-row class="d-none d-md-flex pt-4">
                       <v-col cols="4" md="4">
-                        <p class="mb-n2 secondary--text ml-10">
+                        <p class="label">
                           Details of NPO Person filling the form :
                         </p>
                       </v-col>
-                      <v-col cols="4" md="4">
-                        <p class="mb-n2 secondary--text ml-10">
-                          Details of NPO Champion :
-                        </p>
-                      </v-col>
-                      <v-col cols="4" md="4">
-                        <p class="mb-n2 secondary--text ml-10">
-                          Details of NPO CEO/ED/Funder
-                        </p>
-                      </v-col>
-                    </v-row>
-                    <v-row>
-                      <v-col cols="12" md="4">
+
+                      <v-col cols="12" md="8">
                         <p class="mb-2 secondary--text ml-10 d-md-none">
                           Details of NPO Person filling the form :
                         </p>
@@ -447,8 +436,11 @@
                           prepend-icon="mdi-cellphone"
                         ></v-text-field>
                       </v-col>
+                      <v-col cols="4" md="4">
+                        <p class="label">Details of NPO Champion :</p>
+                      </v-col>
 
-                      <v-col cols="12" md="4">
+                      <v-col cols="12" md="8">
                         <p class="mb-2 secondary--text ml-10 d-md-none">
                           Details of NPO Champion :
                         </p>
@@ -481,11 +473,10 @@
                           prepend-icon="mdi-cellphone"
                         ></v-text-field>
                       </v-col>
-
-                      <v-col cols="12" md="4">
-                        <p class="mb-2 secondary--text ml-10 d-md-none">
-                          Details of NPO CEO/ED/Funder
-                        </p>
+                      <v-col cols="4" md="4">
+                        <p class="label">Details of NPO CEO/ED/Funder</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
                         <v-text-field
                           class="mx-2"
                           label="Name"
@@ -518,11 +509,13 @@
                     </v-row>
                     <v-row>
                       <v-col cols="12" md="4">
-                        <p class="secondary--text" style="margin-bottom: 6px">
+                        <p class="label">
                           Explain organization's origin,purpose and core
                           activities. What is the social problem you are
                           addressing
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-textarea
                           label="Explain here"
                           auto-grow
@@ -533,10 +526,12 @@
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-1 secondary--text mb-md-7">
+                        <p class="label">
                           Who are the direct and indirect beneficiaries of the
                           organisation
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-textarea
                           label="Explain here"
                           auto-grow
@@ -547,10 +542,12 @@
                       </v-col>
 
                       <v-col cols="12" md="4">
-                        <p class="mb-1 secondary--text mb-md-7">
+                        <p class="label">
                           What are the key qualitative impact indicators
                           measured
-                        </p>
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-textarea
                           label="Explain here"
                           auto-grow
@@ -561,10 +558,10 @@
                       </v-col>
                     </v-row>
                     <v-row>
-                      <v-col cols="12" md="12">
-                        <p class="mb-2 secondary--text">
-                          Mention the SDG's impacted
-                        </p>
+                      <v-col cols="12" md="4">
+                        <p class="label">Mention the SDG's impacted</p></v-col
+                      >
+                      <v-col cols="12" md="8">
                         <v-textarea
                           label="Mention here (if known)"
                           auto-grow
