@@ -1137,7 +1137,7 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" @click="tab++">
+                          <v-btn large rounded color="primary" to="/engagement-info?s=1">
                             Engagement Info
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>

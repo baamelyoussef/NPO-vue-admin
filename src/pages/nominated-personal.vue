@@ -64,7 +64,7 @@
                       <div class="d-flex mt-5 mr-3">
                         <v-btn large rounded color="primary" to="/engagement-info?s=2">
                           <v-icon left>mdi-arrow-left</v-icon>
-                          Engagement Info
+                          Back
                         </v-btn>
                       </div>
                       <div class="d-flex mt-5 mr-3">
@@ -93,7 +93,7 @@
                       </div>
                       <div class="d-flex mt-5">
                         <v-btn large rounded color="primary" to="/beneficiary?s=1">
-                          Beneficiary
+                          Mou
                           <v-icon right>mdi-arrow-right</v-icon>
                         </v-btn>
                       </div>

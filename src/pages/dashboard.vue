@@ -46,31 +46,51 @@
             <div class="caption secondary--text">email@email.com</div>
           </div>
         </template>
-        <v-list nav class="menu-links">
-          <div v-for="(item, i) in links" :key="i" cl>
-            <p
-              class="upperline mt-8 mb-2 primary--text mx-4"
-              v-if="i === 1 && !mini"
-            >
-              DIY (Do It Yourself) Projects
-            </p>
-            <p class="upperline mt-8 mb-2 primary--text mx-4" v-if="i === 6 && !mini">
-              DEEP Projects
-            </p>
-            <div v-if="item.items">
-              <v-list-group no-action class="mb-1">
-                <template #activator>
-                  <v-list-item-icon>
-                    <v-icon v-text="item.icon"></v-icon>
-                  </v-list-item-icon>
-                  <v-list-item link :to="item.path" class="item-link" />
-                  <v-list-item-content>
-                    <v-list-item-title v-text="item.title"></v-list-item-title>
-                  </v-list-item-content>
-                </template>
+        <v-list rounded dense>
+        <v-subheader>Dashboard</v-subheader>
+        <v-list-item-group
+          v-model="selectedItem"
+          color="primary"
+        >
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            to="/"
+          >
+            <v-list-item-icon>
+              <v-icon v-text="item.icon"></v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.text"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
 
-                <!-- sub links -->
-                <template v-for="(child, i) in item.items">
+      <!---->
+      <v-list  dense>
+                <v-subheader>DIY (Do It Yourself) Projects</v-subheader>
+        <v-list-group
+          :value="true"
+          prepend-icon="mdi-domain"
+        >
+          <template v-slot:activator>
+            <v-list-item-title>Project Information</v-list-item-title>
+          </template>
+  
+          <v-list-group
+            :value="true"
+            no-action
+            sub-group
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Organization Information</v-list-item-title>
+              </v-list-item-content>
+            </template>
+            <div v-for="(item, i) in Oilinks" :key="i" cl>
+
+            <template v-for="(child, i) in item.items">
                   <v-list-item
                     v-if="child"
                     :to="child.path"
@@ -88,33 +108,142 @@
                     </v-list-item-content>
                   </v-list-item>
                 </template>
-              </v-list-group>
             </div>
-            <!---->
-            
-            <div v-else>
-              <p
-                class="upperline mt-8 mb-2 primary--text mx-4"
-                v-if="i === 0 && !mini"
-              >
-                dashbaords
-              </p>
-              <v-list-item
-                color="primary"
-                class="alone-list mb-1"
-                :to="item.path"
-                link
-              >
-                <v-list-item-icon class="regular">
-                  <v-icon>{{ item.icon }}</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title v-text="item.title"></v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
+          </v-list-group>
+  
+          <v-list-group
+            no-action
+            sub-group
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Project Scope</v-list-item-title>
+              </v-list-item-content>
+            </template>
+  
+            <div v-for="(item, i) in Eolinks" :key="i" cl>
+
+            <template v-for="(child, i) in item.items">
+                  <v-list-item
+                    v-if="child"
+                    :to="child.path"
+                    exact
+                    :key="i"
+                    router
+                  >
+                    <v-list-item-icon class="mr-1 ml-n2 mt-5">
+                      <v-icon size="7">mdi-brightness-1</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        v-text="child.title"
+                      ></v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </template>
             </div>
-          </div>
-        </v-list>
+          </v-list-group>
+
+          <v-list-group
+            no-action
+            sub-group
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>MnI</v-list-item-title>
+              </v-list-item-content>
+            </template>
+  
+            <div v-for="(item, i) in  Mnilinks" :key="i" cl>
+
+            <template v-for="(child, i) in item.items">
+                  <v-list-item
+                    v-if="child"
+                    :to="child.path"
+                    exact
+                    :key="i"
+                    router
+                  >
+                    <v-list-item-icon class="mr-1 ml-n2 mt-5">
+                      <v-icon size="7">mdi-brightness-1</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        v-text="child.title"
+                      ></v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                </template>
+            </div>
+          </v-list-group>
+        </v-list-group>
+
+        
+        <v-list-group
+          :value="true"
+          prepend-icon="mdi-account-settings"
+        >
+          <template v-slot:activator>
+            <v-list-item-title>MOU</v-list-item-title>
+          </template>
+  
+          <v-list-group
+            :value="true"
+            no-action
+            sub-group
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Admin</v-list-item-title>
+              </v-list-item-content>
+            </template>
+  
+            <v-list-item
+              v-for="([title, icon], i) in npo2"
+              :key="i"
+              link
+              dense
+              >
+              
+              <v-list-item-title v-text="title"></v-list-item-title>
+              <v-list-item-icon>
+                  <v-icon v-text="icon"></v-icon>
+              </v-list-item-icon>
+              
+            </v-list-item>
+          </v-list-group>
+  
+          <v-list-group
+            no-action
+            sub-group
+          >
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title>Actions</v-list-item-title>
+              </v-list-item-content>
+            </template>
+  
+            <v-list-item
+              v-for="([title, icon], i) in cruds"
+              :key="i"
+              link
+            >
+              <v-list-item-title v-text="title"></v-list-item-title>
+  
+              <v-list-item-icon>
+                <v-icon v-text="icon"></v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+          </v-list-group>
+        </v-list-group>
+      </v-list>
+
+      <!---->
+      <v-list  dense>
+                <v-subheader>DEEP Projects</v-subheader>
+        
+      
+      </v-list>
         
       </v-card>
     </v-navigation-drawer>
@@ -132,22 +261,7 @@ export default {
     return {
       mini: false,
       drawer: true,
-      links: [
-        {
-          title: "Dashboard",
-          icon: "mdi-view-carousel",
-          path: { path: "/" },
-        },
-        // {
-        //   title: "Analytics",
-        //   icon: "mdi-google-analytics",
-        //   path: { path: "/#" },
-        // },
-        // {
-        //   title: "All Projects",
-        //   icon: "mdi-cube",
-        //   path: { path: "/##" },
-        // },
+      Oilinks:[
         {
           title: "Organization Info",
           icon: "mdi-domain",
@@ -179,6 +293,8 @@ export default {
             },
           ],
         },
+      ],
+      Eolinks:[
         {
           title: "Engagement Info",
           icon: "mdi-clipboard-check",
@@ -194,6 +310,8 @@ export default {
             },
           ],
         },
+      ],
+      Mnilinks:[
         {
           title: "Nominated Personal",
           icon: "mdi-account-tie",
@@ -204,6 +322,14 @@ export default {
               path: { path: "/nominated-personal", query: { s: "1" } },
             },
           ],
+        },
+        
+      ],
+      links: [
+        {
+          title: "Dashboard",
+          icon: "mdi-view-carousel",
+          path: { path: "/" },
         },
         {
           title: "Beneficiary",
@@ -227,7 +353,8 @@ export default {
             }
           ],
         },
-        //
+
+        ////DEEP LINKS
         {
           title: "Govt. Engamement",
           icon: "mdi-office-building-cog",
@@ -335,6 +462,25 @@ export default {
           ],
         },
       ],
+      /////
+      items: [
+      { text: 'Dashboard', icon: 'mdi-view-carousel' },
+      
+    ],
+    npo1: [
+      ['TEST', 'mdi-account-multiple-outline'],
+      ['Settings', 'mdi-cog-outline'],
+    ],
+    npo2: [
+      ['Management', 'mdi-account-multiple-outline'],
+      ['Settings', 'mdi-cog-outline'],
+    ],
+    cruds: [
+      ['Create', 'mdi-plus-outline'],
+      ['Read', 'mdi-file-outline'],
+      ['Update', 'mdi-update'],
+      ['Delete', 'mdi-delete'],
+    ],
     };
   },
   methods: {
