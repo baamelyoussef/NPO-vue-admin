@@ -8,7 +8,6 @@
 export default {
   methods: {
     down() {
-      // window.scrollBy(0, 400);
       window.scrollBy({
         top: 400,
         left: 0,

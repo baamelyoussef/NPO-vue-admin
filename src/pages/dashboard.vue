@@ -215,9 +215,9 @@
         </v-list>
 
         <!---->
-        <v-list dense>
+        <!-- <v-list dense>
           <v-subheader>DEEP Projects</v-subheader>
-        </v-list>
+        </v-list> -->
       </v-card>
     </v-navigation-drawer>
 
