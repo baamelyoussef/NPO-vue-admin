@@ -75,5 +75,8 @@ div[style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: au
   font-weight: 700;
   margin: 0 !important;
   padding: 0;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    margin-bottom: -17px !important;
+  }
   // color: var(--v-secondary-base);
 }
