@@ -1,14 +1,5 @@
 <template>
-  <v-btn
-    class="primary float"
-    @click="down"
-    icon
-    large
-    dark
-    fixed
-    bottom
-    right
-  >
+  <v-btn class="primary float" @click="down" icon large dark fixed bottom right>
     <v-icon>mdi-chevron-down</v-icon>
   </v-btn>
 </template>
@@ -17,7 +8,12 @@
 export default {
   methods: {
     down() {
-      window.scrollBy(0, 400);
+      // window.scrollBy(0, 400);
+      window.scrollBy({
+        top: 400,
+        left: 0,
+        behavior: "smooth",
+      });
     },
   },
 };
