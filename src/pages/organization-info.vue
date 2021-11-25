@@ -5,17 +5,9 @@
       <v-card>
         <v-card-text>
           <v-tabs show-arrows v-model="tab" fixed-tabs>
-            <v-tab>Basic Info</v-tab>
+            <v-tab>Page 1</v-tab>
             <div class="dash"></div>
-            <v-tab>NP Info</v-tab>
-            <div class="dash"></div>
-            <v-tab>NPO Info</v-tab>
-            <div class="dash"></div>
-            <v-tab>Documents Info</v-tab>
-            <div class="dash"></div>
-            <v-tab>History Info</v-tab>
-            <div class="dash"></div>
-            <v-tab>Details Info</v-tab>
+            <v-tab>Page 2</v-tab>
 
             <!-- step #1 -->
             <v-tab-item>
@@ -30,35 +22,35 @@
                         <v-text-field
                           dense
                           hide-details="auto"
-                          v-model="firstname"
+                          v-model="orgname"
                           outlined
                           required
+                          @change="sameasabove1"
                         />
                       </v-col>
 
                       <v-col cols="12" md="4">
                         <p class="label">Legal Name</p>
                       </v-col>
-                      <v-col cols="12" md="8">
+                      
+                      <v-col cols="12" md="8" class="d-flex flex-wrap"                                          >
+                        
                         <v-text-field
                           dense
                           hide-details="auto"
-                          v-model="lastname"
+                          v-model="legname"
                           outlined
+                          :disabled="lock"
                         />
-                      </v-col>
-
-                      <v-col cols="12" md="4">
-                        <p class="label">Year of Establishment</p>
-                      </v-col>
-                      <v-col cols="12" md="8">
-                        <v-text-field
-                          dense
-                          hide-details="auto"
-                          v-model="email"
-                          outlined
-                          required
-                        />
+                        
+                        <v-checkbox
+                            label="Same As Above"
+                            color="primary"
+                            value="Yes"
+                            v-model="radiok"
+                            class="ma-2 "
+                            v-on:click="radiokclick"
+                          ></v-checkbox>
                       </v-col>
                     </v-row>
                     <v-row align="center"
@@ -68,25 +60,42 @@
                         </p></v-col
                       >
                       <v-col cols="12" md="8">
-                        <v-text-field
+                        <v-textarea
                           dense
                           hide-details="auto"
-                          v-model="firstname"
+                          v-model="ename"
                           outlined
+                          rows="3"
+                          @change="sameasabove2"
+                          no-resize
                           required
                         />
                       </v-col>
                       <v-col cols="12" md="4">
                         <p class="label">HO Address</p></v-col
                       >
-                      <v-col cols="12" md="8">
-                        <v-text-field
+                                            <v-col cols="12" md="8" class="d-flex flex-wrap">
+                        <v-textarea
                           dense
                           hide-details="auto"
-                          v-model="lastname"
+                          v-model="pname"
+                          
                           outlined
-                        /> </v-col
-                      ><v-col cols="12" md="4">
+                          rows="3"
+                          no-resize
+                          :disabled="lock2"
+                          required
+                        />
+                        <v-checkbox
+                            label="Same As Above"
+                            color="primary"
+                            v-model="radiod"
+                            value="Yes"
+                            v-on:click="radiokclick2"
+                            class="ma-2"
+                          ></v-checkbox>
+                      </v-col>
+                      <v-col cols="12" md="4">
                         <p class="label">Website</p></v-col
                       >
                       <v-col cols="12" md="8">
@@ -105,6 +114,7 @@
                       >
                       <v-col cols="12" md="8">
                         <v-select
+                        multiple
                           dense
                           :items="items"
                           outlined
@@ -139,52 +149,6 @@
                         />
                       </v-col>
                     </v-row>
-                  </v-form>
-                  <v-row align="center" justify="center">
-                    <div class="d-flex">
-                      <div class="d-inline-flex flex-wrap ma-3">
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab--"
-                          >
-                            Save And Exit
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab++"
-                          >
-                            Save And Continue<v-icon right
-                              >mdi-arrow-right</v-icon
-                            >
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" @click="tab++">
-                            next
-                            <v-icon right>mdi-arrow-right</v-icon>
-                          </v-btn>
-                        </div>
-                      </div>
-                    </div>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-tab-item>
-
-            <!-- step #2 -->
-            <v-tab-item>
-              <v-card outlined>
-                <v-card-text>
-                  <v-form v-model="valid">
                     <v-row>
                       <v-col cols="12" md="4">
                         <p class="label">80G Number</p></v-col
@@ -292,6 +256,7 @@
                       >
                       <v-col cols="12" md="8">
                         <v-select
+                        multiple
                           dense
                           :items="itemsDomain"
                           outlined
@@ -306,6 +271,7 @@
                       >
                       <v-col cols="12" md="8">
                         <v-select
+                        multiple
                           dense
                           :items="itemsAcc"
                           outlined
@@ -344,58 +310,6 @@
                         ></v-textarea>
                       </v-col>
                     </v-row>
-                  </v-form>
-                  <v-row align="center" justify="center">
-                    <div class="d-flex">
-                      <div class="d-inline-flex flex-wrap ma-3">
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn large rounded color="primary" @click="tab--">
-                            <v-icon left>mdi-arrow-left</v-icon>
-                            Back
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab--"
-                          >
-                            Save And Exit
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab++"
-                          >
-                            Save And Continue<v-icon right
-                              >mdi-arrow-right</v-icon
-                            >
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" @click="tab++">
-                            next
-                            <v-icon right>mdi-arrow-right</v-icon>
-                          </v-btn>
-                        </div>
-                      </div>
-                    </div>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-tab-item>
-
-            <!-- step #3 -->
-            <v-tab-item>
-              <v-card outlined>
-                <v-card-text>
-                  <v-form v-model="valid">
                     <v-row class="d-none d-md-flex pt-4">
                       <v-col cols="4" md="4">
                         <p class="label">
@@ -507,80 +421,10 @@
                         ></v-text-field>
                       </v-col>
                     </v-row>
-                    <v-row>
-                      <v-col cols="12" md="4">
-                        <p class="label">
-                          Explain organization's origin,purpose and core
-                          activities. What is the social problem you are
-                          addressing
-                        </p></v-col
-                      >
-                      <v-col cols="12" md="8">
-                        <v-textarea
-                          label="Explain here"
-                          auto-grow
-                          outlined
-                          rows="3"
-                          row-height="25"
-                        ></v-textarea>
-                      </v-col>
-
-                      <v-col cols="12" md="4">
-                        <p class="label">
-                          Who are the direct and indirect beneficiaries of the
-                          organisation
-                        </p></v-col
-                      >
-                      <v-col cols="12" md="8">
-                        <v-textarea
-                          label="Explain here"
-                          auto-grow
-                          outlined
-                          rows="3"
-                          row-height="25"
-                        ></v-textarea>
-                      </v-col>
-
-                      <v-col cols="12" md="4">
-                        <p class="label">
-                          What are the key qualitative impact indicators
-                          measured
-                        </p></v-col
-                      >
-                      <v-col cols="12" md="8">
-                        <v-textarea
-                          label="Explain here"
-                          auto-grow
-                          outlined
-                          rows="3"
-                          row-height="25"
-                        ></v-textarea>
-                      </v-col>
-                    </v-row>
-                    <v-row>
-                      <v-col cols="12" md="4">
-                        <p class="label">Mention the SDG's impacted</p></v-col
-                      >
-                      <v-col cols="12" md="8">
-                        <v-textarea
-                          label="Mention here (if known)"
-                          auto-grow
-                          outlined
-                          rows="3"
-                          row-height="25"
-                        ></v-textarea>
-                      </v-col>
-                    </v-row>
                   </v-form>
                   <v-row align="center" justify="center">
                     <div class="d-flex">
                       <div class="d-inline-flex flex-wrap ma-3">
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn large rounded color="primary" @click="tab--">
-                            <v-icon left>mdi-arrow-left</v-icon>
-                            Back
-                          </v-btn>
-                        </div>
                         <div class="d-flex mt-5 mr-3">
                           <v-btn
                             large
@@ -618,11 +462,68 @@
               </v-card>
             </v-tab-item>
 
-            <!-- step #4 -->
+            <!-- step #2 -->
             <v-tab-item>
               <v-card outlined>
                 <v-card-text>
                   <v-form v-model="valid">
+                    
+                    <v-row>
+                      <v-col cols="12" md="4">
+                        <p class="label">
+                          Explain organization's origin,purpose and core
+                          activities. What is the social problem you are
+                          addressing
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-textarea
+                        no-resize
+                          outlined
+                          rows="3"
+                        ></v-textarea>
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">
+                          Who are the direct and indirect beneficiaries of the
+                          organisation
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-textarea
+                          no-resize
+                          outlined
+                          rows="3"
+                        ></v-textarea>
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">
+                          What are the key qualitative impact indicators
+                          measured
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-textarea
+                        no-resize
+                          outlined
+                          rows="3"
+                        ></v-textarea>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="12" md="4">
+                        <p class="label">Mention the SDG's impacted</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-textarea
+                        no-resize
+                          outlined
+                          rows="3"
+                        ></v-textarea>
+                      </v-col>
+                    </v-row>
                     <v-row>
                       <v-col cols="12" md="12">
                         <v-row align="center" justify="center" class="pt-4">
@@ -792,58 +693,6 @@
                         </v-simple-table>
                       </v-col>
                     </v-row>
-                  </v-form>
-                  <v-row align="center" justify="center">
-                    <div class="d-flex">
-                      <div class="d-inline-flex flex-wrap ma-3">
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn large rounded color="primary" @click="tab--">
-                            <v-icon left>mdi-arrow-left</v-icon>
-                            Back
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab--"
-                          >
-                            Save And Exit
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab++"
-                          >
-                            Save And Continue<v-icon right
-                              >mdi-arrow-right</v-icon
-                            >
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" @click="tab++">
-                            next
-                            <v-icon right>mdi-arrow-right</v-icon>
-                          </v-btn>
-                        </div>
-                      </div>
-                    </div>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-tab-item>
-
-            <!-- step #5 -->
-            <v-tab-item>
-              <v-card outlined>
-                <v-card-text>
-                  <v-form v-model="valid">
                     <v-row>
                       <v-col cols="12" md="12">
                         <v-row
@@ -942,7 +791,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr v-for="item in details4" :key="item.name">
+                              <tr v-for="item in details69" :key="item.name">
                                 <td>
                                   <v-text-field
                                     hide-details="auto"
@@ -960,7 +809,17 @@
                               </tr>
                             </tbody>
                           </template>
+                          
                         </v-simple-table>
+                        <v-row align="center" justify="center" class="my-2">
+                        <v-btn  class="primary" @click="details69.push({ name:'nahenahe'})"
+                                dark
+                                rounded>
+                            <v-icon left> mdi-plus </v-icon>
+                            Add New Row
+                        </v-btn>
+
+                        </v-row>
                       </v-col>
 
                       <v-col cols="12" md="12">
@@ -1004,58 +863,6 @@
                         </v-simple-table>
                       </v-col>
                     </v-row>
-                  </v-form>
-                  <v-row align="center" justify="center">
-                    <div class="d-flex">
-                      <div class="d-inline-flex flex-wrap ma-3">
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn large rounded color="primary" @click="tab--">
-                            <v-icon left>mdi-arrow-left</v-icon>
-                            Back
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab--"
-                          >
-                            Save And Exit
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="tab++"
-                          >
-                            Save And Continue<v-icon right
-                              >mdi-arrow-right</v-icon
-                            >
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" @click="tab++">
-                            next
-                            <v-icon right>mdi-arrow-right</v-icon>
-                          </v-btn>
-                        </div>
-                      </div>
-                    </div>
-                  </v-row>
-                </v-card-text>
-              </v-card>
-            </v-tab-item>
-
-            <!-- step #6 -->
-            <v-tab-item>
-              <v-card outlined>
-                <v-card-text>
-                  <v-form v-model="valid">
                     <v-row>
                       <v-col cols="12" md="12">
                         <v-row align="center" justify="center" class="pt-4">
@@ -1172,13 +979,8 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            to="/engagement-info?s=1"
-                          >
-                            Engagement Info
+                          <v-btn large rounded color="primary" to="/engagement-info?s=1">
+                            Scope
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>
@@ -1188,6 +990,11 @@
                 </v-card-text>
               </v-card>
             </v-tab-item>
+
+            
+           
+
+          
           </v-tabs>
         </v-card-text>
       </v-card>
@@ -1201,6 +1008,14 @@ export default {
   components: { Float },
   data() {
     return {
+      ename:'',
+      pname:'',
+      lock2:false,
+      radiod:false,
+      lock:false,
+      orgname:'',
+      legname:'',   
+      radiok:false,
       tab: 0,
       radioGroup: 1,
       radioGroup2: 1,
@@ -1230,6 +1045,11 @@ export default {
         {
           name: "Expenditure",
         },
+      ],
+      details69: [
+        {
+          name:"nahenahe"
+        }
       ],
       details2: [
         {
@@ -1331,6 +1151,44 @@ export default {
         },
       ],
     };
+  },
+  methods:{
+    sameasabove1(){
+      
+      if(this.radiok){
+        this.legname=this.orgname;
+        
+      }else{
+
+      }
+    },
+    sameasabove2(){
+      
+      if(this.radiod){
+        this.pname=this.ename;
+        
+      }else{
+
+      }
+    },
+    radiokclick2(){
+      this.lock2= !this.lock2; 
+      if(this.lock2){  
+      this.pname=this.ename;
+      }else{
+        this.pname=''
+      }
+
+    },
+    radiokclick(){
+      this.lock= !this.lock; 
+      if(this.lock){  
+      this.legname=this.orgname;
+      }else{
+        this.legname=''
+      }
+
+    }
   },
   watch: {
     "$route.query.s": function (v) {

@@ -6,9 +6,7 @@
     <v-card>
       <v-card-text>
         <v-tabs show-arrows v-model="tab" fixed-tabs>
-          <v-tab>More NPO details</v-tab>
-          <div class="dash"></div>
-          <v-tab>Beneficiary details</v-tab>
+          
 
           <!-- step #1 -->
           <v-tab-item>
@@ -30,10 +28,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                             </tr>
@@ -44,7 +42,7 @@
 
                     <v-col cols="12" md="12">
                       <v-row align="center" class="mb-4" justify="center">
-                        <p class="mb-6 mx-2 secondary--text">
+                        <p class="mb-6 mx-1 secondary--text">
                           Please provide the details of the program or
                           intervention or project where MIS restructuring is
                           needed. <br />
@@ -65,10 +63,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                             </tr>
@@ -77,62 +75,10 @@
                       </v-simple-table>
                     </v-col>
                   </v-row>
-                </v-form>
-                <v-row align="center" justify="center">
-                  <div class="d-flex">
-                    <div class="d-inline-flex flex-wrap ma-3">
-                      <div class="d-flex mt-5 mr-3">
-                        <v-btn large rounded color="primary" to="/organization-info?s=6">
-                          <v-icon left>mdi-arrow-left</v-icon>
-                          Back
-                        </v-btn>
-                      </div>
-                      <div class="d-flex mt-5 mr-3">
-                        <v-btn
-                          large
-                          rounded
-                          color="primary"
-                          class="wall"
-                          @click="tab--"
-                        >
-                          Save And Exit
-                        </v-btn>
-                      </div>
-                      <div class="d-flex mt-5 mr-3">
-                        <v-btn
-                          large
-                          rounded
-                          color="primary"
-                          class="wall"
-                          @click="tab++"
-                        >
-                          Save And Continue<v-icon right
-                            >mdi-arrow-right</v-icon
-                          >
-                        </v-btn>
-                      </div>
-                      <div class="d-flex mt-5">
-                        <v-btn large rounded color="primary" @click="tab++">
-                          next
-                          <v-icon right>mdi-arrow-right</v-icon>
-                        </v-btn>
-                      </div>
-                    </div>
-                  </div>
-                </v-row>
-              </v-card-text>
-            </v-card>
-          </v-tab-item>
-
-          <!--Step #2-->
-          <v-tab-item>
-            <v-card outlined>
-              <v-card-text>
-                <v-form v-model="valid">
                   <v-row>
                     <v-col cols="12" md="12">
                       <v-row align="center" class="mb-4 pt-4" justify="center">
-                        <p class="mb-6 mx-2 secondary--text">
+                        <p class="mb-6 mx-1 secondary--text">
                           Program total beneficary impact details
                         </p>
                       </v-row>
@@ -142,7 +88,7 @@
                             <tr>
                               <th class="text-left">Impact indicator-1</th>
                               <th class="text-left">Past- 2018-19</th>
-                              <th class="text-left">Past- 2019-20</th>
+                              <th class="text-left">Past- 2019"10</th>
                               <th class="text-left">CY 2020-21(provisional)</th>
                               <th class="text-left">Projected- 2021-22</th>
                               <th class="text-left">Projected- 2022-23</th>
@@ -156,10 +102,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -167,10 +113,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -178,10 +124,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -189,10 +135,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -200,10 +146,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -211,10 +157,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -222,10 +168,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                             </tr>
@@ -236,7 +182,7 @@
 
                     <v-col cols="12" md="12">
                       <v-row align="center" class="mb-4" justify="center">
-                        <p class="mb-6 mx-2 secondary--text">
+                        <p class="mb-6 mx-1 secondary--text">
                           Explain the MIS process(as per questions in table
                           below)
                         </p>
@@ -264,10 +210,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -275,10 +221,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -286,10 +232,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -297,10 +243,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -308,10 +254,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                               <td>
@@ -319,10 +265,10 @@
                                   hide-details="auto"
                                   filled
                                   dense
-                                  auto-grow
+                                  no-resize
                                   outlined
-                                  rows="2"
-                                  row-height="20"
+                                  rows="1"
+                                  row-height="10"
                                 ></v-textarea>
                               </td>
                             </tr>
@@ -336,9 +282,9 @@
                   <div class="d-flex">
                     <div class="d-inline-flex flex-wrap ma-3">
                       <div class="d-flex mt-5 mr-3">
-                        <v-btn large rounded color="primary" @click="tab--">
+                        <v-btn large rounded color="primary" to="/organization-info?s=2">
                           <v-icon left>mdi-arrow-left</v-icon>
-                          Back
+                          Organization Information
                         </v-btn>
                       </div>
                       <div class="d-flex mt-5 mr-3">
@@ -367,7 +313,7 @@
                       </div>
                       <div class="d-flex mt-5">
                         <v-btn large rounded color="primary" to="/nominated-personal?s=1">
-                          Mni
+                          MnE
                           <v-icon right>mdi-arrow-right</v-icon>
                         </v-btn>
                       </div>
@@ -377,6 +323,7 @@
               </v-card-text>
             </v-card>
           </v-tab-item>
+
         </v-tabs>
       </v-card-text>
     </v-card>
@@ -393,7 +340,7 @@ export default {
       tab: 0,
       details: [
         {
-          name: "Reason for partnering with",
+          name: "Reason for partnering with GSIF",
         },
         {
           name: "What are the key challenges you are facing with the current MIS process",

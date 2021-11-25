@@ -47,7 +47,7 @@
           </div>
         </template>
         <v-list dense nav>
-          <v-subheader class="primary--text">Dashboard</v-subheader>
+          <v-subheader class="primary--text" v-if="bmc">Dashboard</v-subheader>
           <v-list-item-group v-model="selectedItem" color="primary">
             <v-list-item v-for="(item, i) in items" :key="i" to="/">
               <v-list-item-icon>
@@ -62,8 +62,7 @@
 
         <!---->
         <v-list dense nav>
-          <v-subheader class="primary--text"
-            >DIY (Do It Yourself) Projects</v-subheader
+          <v-subheader class="primary--text" v-if="bmc">DIY (Do It Yourself) Projects</v-subheader
           >
           <v-list-group prepend-icon="mdi-domain">
             <template v-slot:activator>
@@ -232,6 +231,7 @@ export default {
   components: { UserAvatarMenu },
   data() {
     return {
+      bmc:true,
       mini: false,
       drawer: true,
       Oilinks: [
@@ -241,29 +241,13 @@ export default {
           path: { path: "/organization-info", query: { s: "1" } },
           items: [
             {
-              title: "Basic Info",
+              title: "Page 1",
               path: { path: "/organization-info", query: { s: "1" } },
             },
             {
-              title: "NP Info",
+              title: "Page 2",
               path: { path: "/organization-info", query: { s: "2" } },
-            },
-            {
-              title: "NPO Info",
-              path: { path: "/organization-info", query: { s: "3" } },
-            },
-            {
-              title: "Documents Info",
-              path: { path: "/organization-info", query: { s: "4" } },
-            },
-            {
-              title: "History Info",
-              path: { path: "/organization-info", query: { s: "5" } },
-            },
-            {
-              title: "Details Info",
-              path: { path: "/organization-info", query: { s: "6" } },
-            },
+            }
           ],
         },
       ],
@@ -274,12 +258,8 @@ export default {
           path: { path: "/engagement-info", query: { s: "1" } },
           items: [
             {
-              title: "More NPO details",
+              title: "Engagement Scope",
               path: { path: "/engagement-info", query: { s: "1" } },
-            },
-            {
-              title: "Beneficiary details",
-              path: { path: "/engagement-info", query: { s: "2" } },
             },
           ],
         },
@@ -457,8 +437,10 @@ export default {
       if (this.$vuetify.breakpoint.mdAndDown) {
         this.mini = false;
         this.drawer = !this.drawer;
+        this.bmc=!this.bmc;
       } else {
         this.drawer = true;
+        this.bmc= !this.bmc;
         this.mini = !this.mini;
       }
     },
