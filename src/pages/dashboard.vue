@@ -139,7 +139,7 @@
               </v-list-item-content>
             </template>
 
-            <div v-for="(item, i) in Mnilinks" :key="i" cl>
+            <!--<div v-for="(item, i) in Mnilinks" :key="i" cl>
               <template v-for="(child, i) in item.items">
                 <v-list-item
                   v-if="child"
@@ -158,7 +158,7 @@
                   </v-list-item-content>
                 </v-list-item>
               </template>
-            </div>
+            </div>-->
           </v-list-group>
 
           <v-list-group prepend-icon="mdi-account-settings">
@@ -166,7 +166,7 @@
               <v-list-item-title>MOU</v-list-item-title>
             </template>
 
-            <v-list-group no-action sub-group prepend-icon="mdi-chevron-down">
+            <!--<v-list-group no-action sub-group prepend-icon="mdi-chevron-down">
               <template v-slot:activator>
                 <v-list-item-content>
                   <v-list-item-title>Admin</v-list-item-title>
@@ -209,7 +209,7 @@
                   <v-list-item-title v-text="title"></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
-            </v-list-group>
+            </v-list-group>-->
           </v-list-group>
         </v-list>
 
@@ -272,7 +272,7 @@ export default {
           items: [
             {
               title: "NP details",
-              path: { path: "/nominated-personal", query: { s: "1" } },
+              path: { path: "#", query: { s: "1" } },
             },
           ],
         },

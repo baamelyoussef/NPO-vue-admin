@@ -433,6 +433,7 @@
 
                         </v-row>
                     </v-col>
+                    <v-col cols="12" md="12">
                     <v-row align="center" class="ma-1">
                       <v-col cols="12" md="4">
                         <p class="label">What is the support you need from GSIF for MIS re-engineering</p>
@@ -531,9 +532,10 @@
                         />
                       </v-col>
                     </v-row>
+                    </v-col>
                   </v-row>
                 </v-form>
-                <v-row align="center" justify="center">
+                <v-row align="center" justify="center" class="ml-2">
                   <div class="d-flex">
                     <div class="d-inline-flex flex-wrap ma-3">
                       <div class="d-flex mt-5 mr-3">
