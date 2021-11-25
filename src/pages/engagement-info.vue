@@ -19,7 +19,9 @@
                         <p class="label">Reason for partnering with GSIF</p>
                       </v-col>
                       <v-col cols="12" md="8">
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="orgname"
@@ -35,7 +37,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -49,7 +53,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -63,7 +69,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -77,7 +85,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -91,7 +101,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -116,7 +128,9 @@
                         <p class="label">Program/Project Name</p>
                       </v-col>
                       <v-col cols="12" md="8">
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="orgname"
@@ -133,7 +147,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -147,7 +163,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -161,7 +179,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -175,7 +195,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -189,7 +211,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -414,7 +438,9 @@
                         <p class="label">What is the support you need from GSIF for MIS re-engineering</p>
                       </v-col>
                       <v-col cols="12" md="8">
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="orgname"
@@ -431,7 +457,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -445,7 +473,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -459,7 +489,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -473,7 +505,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -487,7 +521,9 @@
                       
                       <v-col cols="12" md="8">
                         
-                        <v-text-field
+                        <v-textarea
+                          rows="3"
+                          no-resize
                           dense
                           hide-details="auto"
                           v-model="legname"
