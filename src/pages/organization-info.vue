@@ -40,7 +40,6 @@
                           hide-details="auto"
                           v-model="legname"
                           outlined
-                          :disabled="lock"
                         />
                         
                         <v-checkbox
@@ -83,7 +82,6 @@
                           outlined
                           rows="3"
                           no-resize
-                          :disabled="lock2"
                           required
                         />
                         <v-checkbox

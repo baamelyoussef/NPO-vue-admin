@@ -14,34 +14,95 @@
               <v-card-text>
                 <v-form v-model="valid">
                   <v-row>
-                    <v-col cols="12" md="12">
-                      <v-simple-table>
-                        <template v-slot:default>
-                          <thead>
-                            <tr></tr>
-                          </thead>
-                          <tbody>
-                            <tr v-for="item in details" :key="item.name">
-                              <td>{{ item.name }}</td>
-                              <td>
-                                <v-textarea
-                                  hide-details="auto"
-                                  filled
-                                  dense
-                                  no-resize
-                                  outlined
-                                  rows="1"
-                                  row-height="10"
-                                ></v-textarea>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </template>
-                      </v-simple-table>
-                    </v-col>
+                    <v-row align="center" class="ma-1">
+                      <v-col cols="12" md="4">
+                        <p class="label">Reason for partnering with GSIF</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
 
+                      <v-col cols="12" md="4">
+                        <p class="label">What are the key challenges you are facing with the current MIS process</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">Why is transforming MIS important for your program</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">How will this project have an impact on end beneficiaries</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">No of MIS resources in the organisation (mention full time, part time, shared)</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">No of different Programs, Projects run by the Organisation</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+                    </v-row>
+                    
+                    
                     <v-col cols="12" md="12">
-                      <v-row align="center" class="mb-4" justify="center">
+                      <v-row align="center" class="mb-4 mt-2" justify="center">
                         <p class="mb-6 mx-1 secondary--text">
                           Please provide the details of the program or
                           intervention or project where MIS restructuring is
@@ -50,29 +111,92 @@
                           to 1 core program
                         </p>
                       </v-row>
-                      <v-simple-table>
-                        <template v-slot:default>
-                          <thead>
-                            <tr></tr>
-                          </thead>
-                          <tbody>
-                            <tr v-for="item in details2" :key="item.name">
-                              <td>{{ item.name }}</td>
-                              <td>
-                                <v-textarea
-                                  hide-details="auto"
-                                  filled
-                                  dense
-                                  no-resize
-                                  outlined
-                                  rows="1"
-                                  row-height="10"
-                                ></v-textarea>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </template>
-                      </v-simple-table>
+                      <v-row align="center" class="ma-1">
+                      <v-col cols="12" md="4">
+                        <p class="label">Program/Project Name</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          value="project 1"
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">Program/Project Budget</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">Program/Project Start and End Date</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">Overview of the program</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">Key Impact indicators of the program/Project</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">End Beneficiary</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+                    </v-row>
                     </v-col>
                   </v-row>
                   <v-row>
@@ -275,7 +399,102 @@
                           </tbody>
                         </template>
                       </v-simple-table>
+                      <v-row align="center" justify="center" class="my-2">
+                        <v-btn  class="primary" @click="details3.push({ name:'new category'})"
+                                dark
+                                rounded>
+                            <v-icon left> mdi-plus </v-icon>
+                            Add New Row
+                        </v-btn>
+
+                        </v-row>
                     </v-col>
+                    <v-row align="center" class="ma-1">
+                      <v-col cols="12" md="4">
+                        <p class="label">What is the support you need from GSIF for MIS re-engineering</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          value="project 1"
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">What is your automation requirement for excel based solutions, if any</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">What are the success indicators of GSIF project</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">Mention the key risks for achieving the planned outcomes and impacts of the GSIF project and how do these factors affect the project</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">What are the things that can be done/ planned to minimize or mitigate the impact of above-mentioned risk factors</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">How do you plan to sustain the MIS solution designed by GSIF (licence cost,maintenance,enhancement,resources,etc)</p>
+                      </v-col>
+                      
+                      <v-col cols="12" md="8">
+                        
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="legname"
+                          outlined
+                        />
+                      </v-col>
+                    </v-row>
                   </v-row>
                 </v-form>
                 <v-row align="center" justify="center">
@@ -337,6 +556,7 @@ export default {
   name: "engagement-info",
   data() {
     return {
+      projectname:'project 1',
       tab: 0,
       details: [
         {
@@ -413,6 +633,26 @@ export default {
         },
         {
           name: "How do you plan to sustain the MIS solution designed by (licence cost, maintenance, enhancement, resources, etc)",
+        },
+      ],
+      details5: [
+        {
+          name: "What is the support you need from GSIF for MIS re-engineering",
+        },
+        {
+          name: "What is your automation requirement for excel based solutions, if any",
+        },
+        {
+          name: "What are the success indicators of GSIF project",
+        },
+        {
+          name: "Mention the key risks for achieving the planned outcomes and impacts of the GSIF project and how do these factors affect the project",
+        },
+        {
+          name: "What are the things that can be done/ planned to minimize or mitigate the impact of above-mentioned risk factors",
+        },
+        {
+          name: "How do you plan to sustain the MIS solution designed by GSIF (licence cost,maintenance,enhancement,resources,etc)",
         },
       ],
     };
