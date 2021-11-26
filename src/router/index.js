@@ -27,11 +27,7 @@ const routes = [
     name: "login",
     component: Login,
   },
-  {
-    path:"/agreement",
-    name:"Agereement",
-    component:Agreement 
-  }
+  
   ,
   {
     path: "/auth/reset-password",
@@ -48,6 +44,11 @@ const routes = [
         path: "/",
         name: "home",
         component: home,
+      },
+      {
+        path:"/agreement",
+        name:"Agereement",
+        component:Agreement 
       },
       {
         path: "/profile",

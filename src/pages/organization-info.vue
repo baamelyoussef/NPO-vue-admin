@@ -25,7 +25,6 @@
                           v-model="orgname"
                           outlined
                           required
-                         
                           @change="sameasabove1"
                         />
                       </v-col>
@@ -33,25 +32,24 @@
                       <v-col cols="12" md="4">
                         <p class="label">Legal Name</p>
                       </v-col>
-                      
-                      <v-col cols="12" md="8" class="d-flex flex-wrap"                                          >
-                        
+
+                      <v-col cols="12" md="8" class="d-flex flex-wrap">
                         <v-text-field
                           dense
                           hide-details="auto"
                           v-model="legname"
-                          outlined 
+                          outlined
                           :disabled="lock"
                         />
-                        
+
                         <v-checkbox
-                            label="Same As Above"
-                            color="primary"
-                            value="Yes"
-                            v-model="radiok"
-                            class="ma-2 "
-                            v-on:click="radiokclick"
-                          ></v-checkbox>
+                          label="Same As Above"
+                          color="primary"
+                          value="Yes"
+                          v-model="radiok"
+                          class="ma-2"
+                          v-on:click="radiokclick"
+                        ></v-checkbox>
                       </v-col>
                     </v-row>
                     <v-row align="center"
@@ -69,15 +67,14 @@
                           rows="3"
                           @change="sameasabove2"
                           no-resize
-                           counter="300"
-                         
+                          counter="300"
                           required
                         />
                       </v-col>
                       <v-col cols="12" md="4">
                         <p class="label">HO Address</p></v-col
                       >
-                                            <v-col cols="12" md="8" class="d-flex flex-wrap">
+                      <v-col cols="12" md="8" class="d-flex flex-wrap">
                         <v-textarea
                           dense
                           hide-details="auto"
@@ -86,17 +83,17 @@
                           outlined
                           rows="3"
                           no-resize
-                           counter="300"
+                          counter="300"
                           required
                         />
                         <v-checkbox
-                            label="Same As Above"
-                            color="primary"
-                            v-model="radiod"
-                            value="Yes"
-                            v-on:click="radiokclick2"
-                            class="ma-2"
-                          ></v-checkbox>
+                          label="Same As Above"
+                          color="primary"
+                          v-model="radiod"
+                          value="Yes"
+                          v-on:click="radiokclick2"
+                          class="ma-2"
+                        ></v-checkbox>
                       </v-col>
                       <v-col cols="12" md="4">
                         <p class="label">Website</p></v-col
@@ -117,7 +114,7 @@
                       >
                       <v-col cols="12" md="8">
                         <v-select
-                        multiple
+                          multiple
                           dense
                           :items="items"
                           outlined
@@ -259,7 +256,7 @@
                       >
                       <v-col cols="12" md="8">
                         <v-select
-                        multiple
+                          multiple
                           dense
                           :items="itemsDomain"
                           outlined
@@ -274,7 +271,7 @@
                       >
                       <v-col cols="12" md="8">
                         <v-select
-                        multiple
+                          multiple
                           dense
                           :items="itemsAcc"
                           outlined
@@ -470,7 +467,6 @@
               <v-card outlined>
                 <v-card-text>
                   <v-form v-model="valid">
-                    
                     <v-row>
                       <v-col cols="12" md="4">
                         <p class="label">
@@ -481,8 +477,8 @@
                       >
                       <v-col cols="12" md="8">
                         <v-textarea
-                        no-resize
-                         counter="300"
+                          no-resize
+                          counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -497,7 +493,7 @@
                       <v-col cols="12" md="8">
                         <v-textarea
                           no-resize
-                           counter="300"
+                          counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -511,8 +507,8 @@
                       >
                       <v-col cols="12" md="8">
                         <v-textarea
-                        no-resize
-                         counter="300"
+                          no-resize
+                          counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -524,8 +520,8 @@
                       >
                       <v-col cols="12" md="8">
                         <v-textarea
-                        no-resize
-                         counter="300"
+                          no-resize
+                          counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -533,7 +529,11 @@
                     </v-row>
                     <v-row>
                       <v-col cols="12" md="12">
-                        <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                        <v-row
+                          align="left"
+                          class="my-2 ml-2 mr-1"
+                          justify="left"
+                        >
                           <p class="mb-6 mx-2 text-black- t">
                             Please provide supporting documents with the form
                             Organisational Funding details in Crors (Past and
@@ -546,13 +546,13 @@
                             <thead>
                               <tr>
                                 <th class="text-left"></th>
-                                <th class="text-left">{{year-2}}</th>
-                                <th class="text-left">{{year-1}}</th>
+                                <th class="text-left">{{ year - 2 }}</th>
+                                <th class="text-left">{{ year - 1 }}</th>
                                 <th class="text-left">
-                                  {{year}}
+                                  {{ year }}
                                 </th>
-                                <th class="text-left">{{year+1}}</th>
-                                <th class="text-left">{{year+2}}</th>
+                                <th class="text-left">{{ year + 1 }}</th>
+                                <th class="text-left">{{ year + 2 }}</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -564,48 +564,52 @@
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                                 <td>
-                                <v-text-field
+                                  <v-text-field
                                     hide-details="auto"
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                                 <td>
-                                <v-text-field
+                                  <v-text-field
                                     hide-details="auto"
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                                 <td>
-                                <v-text-field
+                                  <v-text-field
                                     hide-details="auto"
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                                 <td>
-                                <v-text-field
+                                  <v-text-field
                                     hide-details="auto"
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                               </tr>
-                          </tbody>
+                            </tbody>
                           </template>
                         </v-simple-table>
                       </v-col>
 
                       <v-col cols="12" md="12">
-                        <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                        <v-row
+                          align="left"
+                          class="my-2 ml-2 mr-1"
+                          justify="left"
+                        >
                           <p class="mb-6 mx-2 text-black t">
                             Please provide Committed and expected funding
                             details in croces
@@ -630,33 +634,35 @@
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                                 <td>
-                                <v-text-field
+                                  <v-text-field
                                     hide-details="auto"
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                                 <td>
-                                <v-text-field
+                                  <v-text-field
                                     hide-details="auto"
                                     label=""
                                     outlined
                                     dense
-                                ></v-text-field>
+                                  ></v-text-field>
                                 </td>
                               </tr>
-                          </tbody>
+                            </tbody>
                           </template>
                         </v-simple-table>
                       </v-col>
 
                       <v-col cols="12" md="12">
                         <v-row
-                          align="left" class="my-2 ml-2 mr-1" justify="left"
+                          align="left"
+                          class="my-2 ml-2 mr-1"
+                          justify="left"
                         >
                           <p class="mb-6 mx-2 text-black t">
                             Please provide Committed and expected funding
@@ -701,7 +707,9 @@
                     <v-row>
                       <v-col cols="12" md="12">
                         <v-row
-                          align="left" class="my-2 ml-2 mr-1" justify="left"
+                          align="left"
+                          class="my-2 ml-2 mr-1"
+                          justify="left"
                         >
                           <p class="mb-6 mx-2 text-black t">
                             Organisational Impact/ End beneficiary quantitative
@@ -713,14 +721,14 @@
                             <thead>
                               <tr>
                                 <th class="text-left"></th>
-                                <th class="text-left">{{year-2}}</th>
-                                <th class="text-left">{{year-1}}</th>
+                                <th class="text-left">{{ year - 2 }}</th>
+                                <th class="text-left">{{ year - 1 }}</th>
                                 <th class="text-left">
-                                 {{year}}
+                                  {{ year }}
                                 </th>
-                                <th class="text-left">{{year+1}}</th>
-                                <th class="text-left">{{year+2}}</th>
-                                <th class="text-left">{{year+3}}</th>
+                                <th class="text-left">{{ year + 1 }}</th>
+                                <th class="text-left">{{ year + 2 }}</th>
+                                <th class="text-left">{{ year + 3 }}</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -775,23 +783,28 @@
                       </v-col>
 
                       <v-col cols="12" md="12">
-                        <div class="d-flex">
-<v-spacer />
-<v-btn  class="primary" @click="details69.push({ name:'nahenahe'})"
-                                dark
-                                rounded>
-                            <v-icon left> mdi-plus </v-icon>
-                            Add New Row
-                        </v-btn>
-                        </div>
                         <v-row
-                         align="left" class="my-2 ml-2 mr-1" justify="left"
+                          align="left"
+                          class="my-2 ml-2 mr-1"
+                          justify="left"
                         >
-                          <p class="mb-6 mx-2 text-black t" >
+                          <p class="mb-6 mx-2 text-black t">
                             Provide names of states in wich you have project
                             offices in India
                           </p>
                         </v-row>
+                        <div class="d-flex">
+                          <v-spacer />
+                          <v-btn
+                            class="primary"
+                            @click="details69.push({ name: 'nahenahe' })"
+                            dark
+                            rounded
+                          >
+                            <v-icon left> mdi-plus </v-icon>
+                            Add New Row
+                          </v-btn>
+                        </div>
                         <v-simple-table>
                           <template v-slot:default>
                             <thead>
@@ -819,20 +832,22 @@
                               </tr>
                             </tbody>
                           </template>
-                          
                         </v-simple-table>
-                        
                       </v-col>
-                        <v-row align="center" justify="center" class="my-2">
+                      <!-- <v-row align="center" justify="center" class="my-2">
                           <v-btn  class="primary" @click="details69.push({ name:'nahenahe'})"
                                 dark
                                 rounded>
                             <v-icon left> mdi-plus </v-icon>
                             Add New Row
                         </v-btn>
-                        </v-row>
+                        </v-row> -->
                       <v-col cols="12" md="12">
-                        <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                        <v-row
+                          align="left"
+                          class="my-2 ml-2 mr-1"
+                          justify="left"
+                        >
                           <p class="mb-6 mx-2 text-black t">
                             Organisational employee details (as of last month or
                             Qtr)
@@ -915,7 +930,7 @@
                       </v-col>
 
                       <v-col cols="12" md="12">
-                        <v-row align="left" class="my-2  mr-1" justify="left" >
+                        <v-row align="left" class="my-2 mr-1" justify="left">
                           <p class="mb-6 mx-2 text-black t">
                             Organisational IT infrastructure availability
                             details
@@ -988,7 +1003,12 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5">
-                          <v-btn large rounded color="primary" to="/engagement-info?s=1">
+                          <v-btn
+                            large
+                            rounded
+                            color="primary"
+                            to="/engagement-info?s=1"
+                          >
                             Scope
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>
@@ -999,11 +1019,6 @@
                 </v-card-text>
               </v-card>
             </v-tab-item>
-
-            
-           
-
-          
           </v-tabs>
         </v-card-text>
       </v-card>
@@ -1018,14 +1033,14 @@ export default {
   data() {
     return {
       year: new Date().getFullYear(),
-      ename:'',
-      pname:'',
-      lock2:false,
-      radiod:false,
-      lock:false,
-      orgname:'',
-      legname:'',   
-      radiok:false,
+      ename: "",
+      pname: "",
+      lock2: false,
+      radiod: false,
+      lock: false,
+      orgname: "",
+      legname: "",
+      radiok: false,
       tab: 0,
       radioGroup: 1,
       radioGroup2: 1,
@@ -1058,8 +1073,8 @@ export default {
       ],
       details69: [
         {
-          name:"nahenahe"
-        }
+          name: "nahenahe",
+        },
       ],
       details2: [
         {
@@ -1162,43 +1177,35 @@ export default {
       ],
     };
   },
-  methods:{
-    sameasabove1(){
-      
-      if(this.radiok){
-        this.legname=this.orgname;
-        
-      }else{
-
+  methods: {
+    sameasabove1() {
+      if (this.radiok) {
+        this.legname = this.orgname;
+      } else {
       }
     },
-    sameasabove2(){
-      
-      if(this.radiod){
-        this.pname=this.ename;
-        
-      }else{
-
+    sameasabove2() {
+      if (this.radiod) {
+        this.pname = this.ename;
+      } else {
       }
     },
-    radiokclick2(){
-      this.lock2= !this.lock2; 
-      if(this.lock2){  
-      this.pname=this.ename;
-      }else{
-        this.pname=''
+    radiokclick2() {
+      this.lock2 = !this.lock2;
+      if (this.lock2) {
+        this.pname = this.ename;
+      } else {
+        this.pname = "";
       }
-
     },
-    radiokclick(){
-      this.lock= !this.lock; 
-      if(this.lock){  
-      this.legname=this.orgname;
-      }else{
-        this.legname=''
+    radiokclick() {
+      this.lock = !this.lock;
+      if (this.lock) {
+        this.legname = this.orgname;
+      } else {
+        this.legname = "";
       }
-
-    }
+    },
   },
   watch: {
     "$route.query.s": function (v) {
@@ -1221,7 +1228,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.t{
-  color:black
+.t {
+  color: black;
 }
 </style>
