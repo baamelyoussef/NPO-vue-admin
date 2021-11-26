@@ -122,12 +122,29 @@
   }
 }
 
-.v-text-field .v-input__control .v-input__slot {
-  min-height: 36px !important;
-  padding: 0 8px !important;
-  margin-bottom: 2px !important;
-  display: flex !important;
-  align-items: center !important;
+.v-text-field {
+  .v-input__icon {
+    margin-top: -2px !important;
+    transform: scale(0.9);
+  }
+  .v-select__selections,
+  .v-input__control .v-input__slot {
+    min-height: 33px !important;
+    padding: 0 8px !important;
+    margin-bottom: 2px !important;
+    display: flex !important;
+    align-items: center !important;
+
+    .v-text-field__slot .v-label:not(.v-label--active) {
+      left: 4px !important;
+      top: 5px !important;
+      // font-size: 15px;
+    }
+    .v-label--active {
+      top: 8px !important;
+      left: 4px !important;
+    }
+  }
 }
 
 // .v-text-field .v-input__control .v-input__slot .v-input__append-inner {
