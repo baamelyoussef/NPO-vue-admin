@@ -5,7 +5,7 @@
       <v-card>
         <v-card-text>
           <v-tabs show-arrows v-model="tab" fixed-tabs>
-            <v-tab>Signature Form</v-tab>
+           
 
             <!-- step #1 -->
             <v-tab-item>

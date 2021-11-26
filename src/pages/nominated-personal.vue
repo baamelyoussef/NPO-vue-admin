@@ -10,6 +10,146 @@
           <v-tab-item>
             <v-card outlined>
               <v-card-text>
+                 <v-row align="center">
+                      <v-col cols="12" md="4">
+                        <p class="label">Name</p>
+                      </v-col>
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+
+                      <v-col cols="12" md="4">
+                        <p class="label">E-mail</p>
+                      </v-col>
+
+                      <v-col cols="12" md="8" class="d-flex flex-wrap">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                    </v-row>
+                    <v-row align="center"
+                      ><v-col cols="12" md="4">
+                        <p class="label">
+                          Mobile
+                        </p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <p class="label">Education Qualification</p></v-col
+                      >
+                      <v-col cols="12" md="8" class="d-flex flex-wrap">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <p class="label">Total Work Experience</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <p class="label">Vintage in Organisation</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <p class="label">Has Understanding of MIS</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <p class="label">Has good communication skills</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                      <v-col cols="12" md="4">
+                        <p class="label">Has familiarity with tachnology esp. MS office,zoom,etc</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                     
+                      <v-col cols="12" md="4">
+                        <p class="label">Has the ability to deal with stakeholder, get approval/take decision and influence others in the organisation to adopt the project improvements</p></v-col
+                      >
+                      <v-col cols="12" md="8">
+                        <v-text-field
+                          dense
+                          hide-details="auto"
+                          v-model="orgname"
+                          outlined
+                          required
+                          @change="sameasabove1"
+                        />
+                      </v-col>
+                    </v-row>
+                <!--
                 <v-form v-model="valid">
                   <v-row>
                     <v-col cols="12" md="12">
@@ -57,7 +197,7 @@
                       </v-simple-table>
                     </v-col>
                   </v-row>
-                </v-form>
+                </v-form>-->
                 <v-row align="center" justify="center">
                   <div class="d-flex">
                     <div class="d-inline-flex flex-wrap ma-3">
