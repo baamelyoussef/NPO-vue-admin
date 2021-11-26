@@ -770,6 +770,15 @@
                       </v-col>
 
                       <v-col cols="12" md="12">
+                        <div class="d-flex">
+<v-spacer />
+<v-btn  class="primary" @click="details69.push({ name:'nahenahe'})"
+                                dark
+                                rounded>
+                            <v-icon left> mdi-plus </v-icon>
+                            Add New Row
+                        </v-btn>
+                        </div>
                         <v-row
                           align="center"
                           justify="center"
