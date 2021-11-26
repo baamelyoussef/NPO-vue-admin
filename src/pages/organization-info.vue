@@ -25,6 +25,7 @@
                           v-model="orgname"
                           outlined
                           required
+                         
                           @change="sameasabove1"
                         />
                       </v-col>
@@ -39,7 +40,8 @@
                           dense
                           hide-details="auto"
                           v-model="legname"
-                          outlined
+                          outlined 
+                          :disabled="lock"
                         />
                         
                         <v-checkbox
@@ -67,6 +69,8 @@
                           rows="3"
                           @change="sameasabove2"
                           no-resize
+                           counter="300"
+                         
                           required
                         />
                       </v-col>
@@ -78,10 +82,11 @@
                           dense
                           hide-details="auto"
                           v-model="pname"
-                          
+                          :disabled="lock2"
                           outlined
                           rows="3"
                           no-resize
+                           counter="300"
                           required
                         />
                         <v-checkbox
@@ -477,6 +482,7 @@
                       <v-col cols="12" md="8">
                         <v-textarea
                         no-resize
+                         counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -491,6 +497,7 @@
                       <v-col cols="12" md="8">
                         <v-textarea
                           no-resize
+                           counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -505,6 +512,7 @@
                       <v-col cols="12" md="8">
                         <v-textarea
                         no-resize
+                         counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -517,6 +525,7 @@
                       <v-col cols="12" md="8">
                         <v-textarea
                         no-resize
+                         counter="300"
                           outlined
                           rows="3"
                         ></v-textarea>
@@ -524,8 +533,8 @@
                     </v-row>
                     <v-row>
                       <v-col cols="12" md="12">
-                        <v-row align="center" justify="center" class="pt-4">
-                          <p class="mb-6 mx-2 secondary--text">
+                        <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                          <p class="mb-6 mx-2 text-black- t">
                             Please provide supporting documents with the form
                             Organisational Funding details in Crors (Past and
                             Projected)
@@ -537,67 +546,67 @@
                             <thead>
                               <tr>
                                 <th class="text-left"></th>
-                                <th class="text-left">Past-2018-19</th>
-                                <th class="text-left">Past2-2019-20</th>
+                                <th class="text-left">{{year-2}}</th>
+                                <th class="text-left">{{year-1}}</th>
                                 <th class="text-left">
-                                  CY2020-21 (Provisional)
+                                  {{year}}
                                 </th>
-                                <th class="text-left">Projected-1 2021-22</th>
-                                <th class="text-left">Projected-2023-24</th>
+                                <th class="text-left">{{year+1}}</th>
+                                <th class="text-left">{{year+2}}</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr v-for="item in details" :key="item.name">
                                 <td>{{ item.name }}</td>
                                 <td>
-                                  <v-file-input
+                                  <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                                 <td>
-                                  <v-file-input
+                                <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                                 <td>
-                                  <v-file-input
+                                <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                                 <td>
-                                  <v-file-input
+                                <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                                 <td>
-                                  <v-file-input
+                                <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                               </tr>
-                            </tbody>
+                          </tbody>
                           </template>
                         </v-simple-table>
                       </v-col>
 
                       <v-col cols="12" md="12">
-                        <v-row align="center" justify="center" class="pt-4">
-                          <p class="mb-6 mx-2 secondary--text">
+                        <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                          <p class="mb-6 mx-2 text-black t">
                             Please provide Committed and expected funding
                             details in croces
                           </p>
@@ -616,42 +625,40 @@
                               <tr v-for="item in details2" :key="item.name">
                                 <td>{{ item.name }}</td>
                                 <td>
-                                  <v-file-input
+                                  <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                                 <td>
-                                  <v-file-input
+                                <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                                 <td>
-                                  <v-file-input
+                                <v-text-field
                                     hide-details="auto"
-                                    label="File input"
+                                    label=""
                                     outlined
                                     dense
-                                  ></v-file-input>
+                                ></v-text-field>
                                 </td>
                               </tr>
-                            </tbody>
+                          </tbody>
                           </template>
                         </v-simple-table>
                       </v-col>
 
                       <v-col cols="12" md="12">
                         <v-row
-                          align="center"
-                          justify="center"
-                          class="mb-2 pt-2"
+                          align="left" class="my-2 ml-2 mr-1" justify="left"
                         >
-                          <p class="mb-6 mx-2 secondary--text">
+                          <p class="mb-6 mx-2 text-black t">
                             Please provide Committed and expected funding
                             details in croces
                           </p>
@@ -694,11 +701,9 @@
                     <v-row>
                       <v-col cols="12" md="12">
                         <v-row
-                          align="center"
-                          justify="center"
-                          class="mb-2 pt-4"
+                          align="left" class="my-2 ml-2 mr-1" justify="left"
                         >
-                          <p class="mb-6 mx-2 secondary--text">
+                          <p class="mb-6 mx-2 text-black t">
                             Organisational Impact/ End beneficiary quantitative
                             details (Past and Projected)
                           </p>
@@ -708,14 +713,14 @@
                             <thead>
                               <tr>
                                 <th class="text-left"></th>
-                                <th class="text-left">Past- 2018-19</th>
-                                <th class="text-left">Past2- 2019-20</th>
+                                <th class="text-left">{{year-2}}</th>
+                                <th class="text-left">{{year-1}}</th>
                                 <th class="text-left">
-                                  CY 2020-21 (Provisional)
+                                 {{year}}
                                 </th>
-                                <th class="text-left">Projected-1 2021-22</th>
-                                <th class="text-left">Projected- 2022-23</th>
-                                <th class="text-left">Projected- 2013-24</th>
+                                <th class="text-left">{{year+1}}</th>
+                                <th class="text-left">{{year+2}}</th>
+                                <th class="text-left">{{year+3}}</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -780,11 +785,9 @@
                         </v-btn>
                         </div>
                         <v-row
-                          align="center"
-                          justify="center"
-                          class="mb-2 pt-5"
+                         align="left" class="my-2 ml-2 mr-1" justify="left"
                         >
-                          <p class="mb-6 mx-2 secondary--text">
+                          <p class="mb-6 mx-2 text-black t" >
                             Provide names of states in wich you have project
                             offices in India
                           </p>
@@ -818,20 +821,19 @@
                           </template>
                           
                         </v-simple-table>
+                        
+                      </v-col>
                         <v-row align="center" justify="center" class="my-2">
-                        <v-btn  class="primary" @click="details69.push({ name:'nahenahe'})"
+                          <v-btn  class="primary" @click="details69.push({ name:'nahenahe'})"
                                 dark
                                 rounded>
                             <v-icon left> mdi-plus </v-icon>
                             Add New Row
                         </v-btn>
-
                         </v-row>
-                      </v-col>
-
                       <v-col cols="12" md="12">
-                        <v-row align="center" justify="center">
-                          <p class="mb-6 mx-2 secondary--text">
+                        <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                          <p class="mb-6 mx-2 text-black t">
                             Organisational employee details (as of last month or
                             Qtr)
                           </p>
@@ -872,8 +874,8 @@
                     </v-row>
                     <v-row>
                       <v-col cols="12" md="12">
-                        <v-row align="center" justify="center" class="pt-4">
-                          <p class="mb-6 mx-2 secondary--text">
+                        <v-row align="left" class="my-2 mr-1" justify="left">
+                          <p class="mb-6 mx-2 text-black t">
                             Organisational Risk Details
                           </p>
                         </v-row>
@@ -913,8 +915,8 @@
                       </v-col>
 
                       <v-col cols="12" md="12">
-                        <v-row align="center" justify="center" class="pt-4">
-                          <p class="mb-6 mx-2 secondary--text">
+                        <v-row align="left" class="my-2  mr-1" justify="left" >
+                          <p class="mb-6 mx-2 text-black t">
                             Organisational IT infrastructure availability
                             details
                           </p>
@@ -1015,6 +1017,7 @@ export default {
   components: { Float },
   data() {
     return {
+      year: new Date().getFullYear(),
       ename:'',
       pname:'',
       lock2:false,
@@ -1217,4 +1220,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.t{
+  color:black
+}
+</style>

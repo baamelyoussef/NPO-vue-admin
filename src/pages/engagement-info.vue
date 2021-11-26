@@ -22,6 +22,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="orgname"
@@ -40,6 +41,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -56,6 +58,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -72,6 +75,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -88,6 +92,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -104,6 +109,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -114,8 +120,8 @@
                     
                     
                     <v-col cols="12" md="12">
-                      <v-row align="center" class="mb-4 mt-2" justify="center">
-                        <p class="mb-6 mx-1 secondary--text">
+                      <v-row align="left" class="my-2 ml-2 mr-1" justify="left" >
+                        <p class="mb-6 mx-1 text-black-800 text-opacity-100 t">
                           Please provide the details of the program or
                           intervention or project where MIS restructuring is
                           needed. <br />
@@ -131,6 +137,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="orgname"
@@ -150,6 +157,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -166,6 +174,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -182,6 +191,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -198,6 +208,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -214,6 +225,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -225,8 +237,8 @@
                   </v-row>
                   <v-row>
                     <v-col cols="12" md="12">
-                      <v-row align="center" class="mb-4 pt-4" justify="center">
-                        <p class="mb-6 mx-1 secondary--text">
+                      <v-row align="left" class="my-2 ml-2 mr-1" justify="left" >
+                        <p class="mb-6 mx-1 text-black-800 text-opacity-100 t">
                           Program total beneficary impact details
                         </p>
                       </v-row>
@@ -251,6 +263,7 @@
                                   filled
                                   dense
                                   no-resize
+                                   
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -262,6 +275,7 @@
                                   filled
                                   dense
                                   no-resize
+                                   
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -273,6 +287,7 @@
                                   filled
                                   dense
                                   no-resize
+                                   
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -284,6 +299,7 @@
                                   filled
                                   dense
                                   no-resize
+                                 
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -295,6 +311,7 @@
                                   filled
                                   dense
                                   no-resize
+                                  
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -306,6 +323,7 @@
                                   filled
                                   dense
                                   no-resize
+                                
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -317,6 +335,7 @@
                                   filled
                                   dense
                                   no-resize
+                                  
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -329,8 +348,8 @@
                     </v-col>
 
                     <v-col cols="12" md="12">
-                      <v-row align="center" class="mb-4" justify="center">
-                        <p class="mb-6 mx-1 secondary--text">
+                      <v-row align="left" class="my-2 ml-2 mr-1" justify="left">
+                        <p class="mb-6 mx-1 text-black-800 t" >
                           Explain the MIS process(as per questions in table
                           below)
                         </p>
@@ -359,6 +378,7 @@
                                   filled
                                   dense
                                   no-resize
+                                   
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -370,6 +390,7 @@
                                   filled
                                   dense
                                   no-resize
+                                   
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -381,6 +402,7 @@
                                   filled
                                   dense
                                   no-resize
+                                  
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -392,6 +414,7 @@
                                   filled
                                   dense
                                   no-resize
+                                  
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -403,6 +426,7 @@
                                   filled
                                   dense
                                   no-resize
+                                  
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -414,6 +438,7 @@
                                   filled
                                   dense
                                   no-resize
+                                   
                                   outlined
                                   rows="1"
                                   row-height="10"
@@ -433,6 +458,7 @@
 
                         </v-row>
                     </v-col>
+                    <v-col cols="12" md="12">
                     <v-row align="center" class="ma-1">
                       <v-col cols="12" md="4">
                         <p class="label">What is the support you need from GSIF for MIS re-engineering</p>
@@ -441,6 +467,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="orgname"
@@ -460,6 +487,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -476,6 +504,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -492,6 +521,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -508,6 +538,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -524,6 +555,7 @@
                         <v-textarea
                           rows="3"
                           no-resize
+                           counter="300"
                           dense
                           hide-details="auto"
                           v-model="legname"
@@ -531,9 +563,10 @@
                         />
                       </v-col>
                     </v-row>
+                    </v-col>
                   </v-row>
                 </v-form>
-                <v-row align="center" justify="center">
+                <v-row align="center" justify="center" class="ml-2">
                   <div class="d-flex">
                     <div class="d-inline-flex flex-wrap ma-3">
                       <div class="d-flex mt-5 mr-3">
@@ -568,7 +601,7 @@
                       </div>
                       <div class="d-flex mt-5">
                         <v-btn large rounded color="primary" to="/nominated-personal?s=1">
-                          MnE
+                          Nominated Personal
                           <v-icon right>mdi-arrow-right</v-icon>
                         </v-btn>
                       </div>
@@ -713,4 +746,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.t{
+  color:black;
+}
+</style>

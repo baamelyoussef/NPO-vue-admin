@@ -92,8 +92,8 @@
                         </v-btn>
                       </div>
                       <div class="d-flex mt-5">
-                        <v-btn large rounded color="primary" to="/beneficiary?s=1">
-                          Mou
+                        <v-btn large rounded color="primary" to="/sign?s=1">
+                          Digital Signature
                           <v-icon right>mdi-arrow-right</v-icon>
                         </v-btn>
                       </div>
