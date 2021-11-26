@@ -262,20 +262,42 @@ export default {
               path: { path: "/engagement-info", query: { s: "1" } },
             },
           ],
-        },
-      ],
-      Mnilinks: [
-        {
+        },{
           title: "Nominated Personal",
           icon: "mdi-account-tie",
           path: { path: "/nominated-personal", query: { s: "1" } },
           items: [
             {
               title: "NP details",
-              path: { path: "#", query: { s: "1" } },
+              path: { path: "/nominated-personal?s=1", query: { s: "1" } },
             },
           ],
         },
+        {
+          title: "Agreemet",
+          icon: "mdi-file",
+          path: { path: "/agreement", query: { s: "1" } },
+          items: [
+            {
+              title: "Agreement",
+              path: { path: "/agreement", query: { s: "1" } },
+            },
+          ],
+        },
+        {
+          title: "Digital Signature",
+          icon: "mdi-file-sign",
+          path: { path: "/sign", query: { s: "1" } },
+          items: [
+            {
+              title: "Signature Form",
+              path: { path: "/sign", query: { s: "1" } },
+            },
+          ],
+        },
+      ],
+      Mnilinks: [
+        
       ],
       links: [
         {
@@ -294,17 +316,7 @@ export default {
             },
           ],
         },
-        {
-          title: "Digital Signature",
-          icon: "mdi-file-sign",
-          path: { path: "/sign", query: { s: "1" } },
-          items: [
-            {
-              title: "Signature Form",
-              path: { path: "/sign", query: { s: "1" } },
-            },
-          ],
-        },
+        
 
         ////DEEP LINKS
         {

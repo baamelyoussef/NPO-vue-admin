@@ -11,34 +11,42 @@
             <v-tab-item>
               <v-card outlined>
                 <v-card-text>
-                  <v-form v-model="valid">
-                    <v-row align="center" justify="center" class="pa-5">
-                      <p class="pr-2">Digital Signature Pad</p>
-                      <v-text-field
-                        outlined="name"
-                        dense
-                        class="mx-2"
-                        >  </v-text-field>
-                        <v-text-field
-                        outlined="Designation"
-                        dense
-                        class="mx-2">  </v-text-field>
-                        <v-text-field
-                        outlined="Date"
-                        dense
-                        class="mx-2">  </v-text-field>
-                    </v-row>
-                    <v-card outlined class="d-block d-md-flex justify-center overflow-x-hidden">
-                      <vueSignature
-                        ref="signature"
-                        :sigOption="option"
-                        :w="'800px'"
-                        :h="'400px'"
-                        :disabled="disabled"
-                        :defaultUrl="dataUrl"
-                      ></vueSignature>
-                    </v-card>
-                  </v-form>
+                    <v-col cols="12" md="12" >
+                    <v-row align="center" justify="center" class="my-2">
+                    <h3>Do you Agree On: <br></h3></v-row>
+                  <v-row align="center" justify="center"> 
+                      
+                      <p class="t">1. Willing to work on virtual mode <br></p>
+                  </v-row>
+                      <v-row align="center" justify="center"> 
+                      <p class="t">2. There are no infrastructure challenges to work remotely with </p>
+
+                  </v-row>
+                  <v-row align="center" justify="center"> 
+                      <p class="t">3. Willing to assign a dedicated resource to work with team for next 6 months</p>
+
+                  </v-row>
+                  <v-row align="center" justify="center"> 
+                      <p class="t">4. The nominated resource is from middle/senior management, is conversant in English, <br>MS Office and is willing to learn and execute the project using Six sigma with support</p>
+
+                  </v-row>
+                  <v-row align="center" justify="center"> 
+                      <p class="t">5. THe resource will need to spend 20 hours. a week with the team</p>
+
+                  </v-row>
+                  <v-row align="center" justify="center"> 
+                      <p class="t">6. Commit to 3 year post project completion re-porting to on the project impact</p>
+
+                  </v-row>
+                  <v-row align="center" justify="center"> 
+                      <p class="t">7. Are willing to use excel based solution for reporting, without any integration with any other platform </p>
+
+                  </v-row>
+                    <v-row align="center" justify="center"> 
+                      <p class="t">8. Will be able to organize resources for pilot</p>
+
+                  </v-row>
+                    </v-col>
                   <v-row align="center" justify="center">
                     <div class="d-flex">
                       <div class="d-inline-flex flex-wrap ma-3">
@@ -88,9 +96,15 @@
                             Save And Exit
                           </v-btn>
                         </div>
+                        <div class="d-flex mt-5 mr-2">
+                          <v-btn large rounded color="primary" to="/agreement">
+                            Submit
+                            <v-icon right>mdi-arrow-right</v-icon>
+                          </v-btn>
+                        </div>
                         <div class="d-flex mt-5">
                           <v-btn large rounded color="primary" to="/sign?s=1">
-                            Submit
+                            Sign & Submit
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>
@@ -110,11 +124,13 @@
 <script>
 import Float from "../components/Float.vue";
 import vueSignature from "vue-signature";
+import Projectdetails from './projectdetails.vue';
 
 export default {
   components: {
     Float,
     vueSignature,
+    Projectdetails,
   },
   data() {
     return {

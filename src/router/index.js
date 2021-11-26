@@ -17,6 +17,7 @@ import fundingdetails from '@/pages/fundingdetails.vue';
 import signd from "@/pages/signd.vue";
 import profile from "@/pages/profile.vue";
 import forgotPass from "@/pages/auth/forgot-pass.vue";
+import Agreement from '@/pages/Agreement.vue';
 
 Vue.use(VueRouter);
 
@@ -26,6 +27,12 @@ const routes = [
     name: "login",
     component: Login,
   },
+  {
+    path:"/agreement",
+    name:"Agereement",
+    component:Agreement 
+  }
+  ,
   {
     path: "/auth/reset-password",
     name: "reset-password",
