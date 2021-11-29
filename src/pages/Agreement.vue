@@ -6,44 +6,82 @@
         <v-card-text>
           <v-tabs show-arrows v-model="tab" fixed-tabs>
            
-
+            
             <!-- step #1 -->
             <v-tab-item>
               <v-card outlined>
                 <v-card-text>
                     <v-col cols="12" md="12" >
                     <v-row align="center" justify="center" class="my-2">
-                    <h3>Do you Agree On: <br></h3></v-row>
+                    <h1>Do you Agree On: <br></h1></v-row>
+
+                    <v-col cols="12" md="12">
+                    <v-row align="center" class="ma-1">
+                      <v-col cols="12" md="12">
+                                              <h3 class="t">1. Willing to work on virtual mode <br></h3>
+
+                      </v-col>
+                      <v-col cols="12" md="12">
+                                              <h3 class="t">2. There are no infrastructure challenges to work remotely with </h3>
+
+                         
+                      </v-col>
+
+                      <v-col cols="12" md="12">
+                                              <h3 class="t">3. Willing to assign a dedicated resource to work with team for next 6 months</h3>
+
+                      </v-col>
+                      
+                      <v-col cols="12" md="12">
+                                                              <h3 class="t">4. The nominated resource is from middle/senior management, is conversant in English, MS Office and is willing to learn and execute the project using Six sigma with support</h3>
+
+                      </v-col>
+
+                      <v-col cols="12" md="12">
+                                              <h3 class="t">5. THe resource will need to spend 20 hours. a week with the team</h3>
+
+                      </v-col>
+
+                      <v-col cols="12" md="12">
+                                                                    <h3 class="t">6. Commit to 3 year post project completion re-porting to on the project impact</h3>
+
+                      </v-col>
+                        <v-col cols="12" md="12">
+                                              <h3 class="t">7. Are willing to use excel based solution for reporting, without any integration with any other platform </h3>
+
+                      </v-col>
+                      <v-col cols="12" md="12">
+                           <h3 class="t">8. Will be able to organize resources for pilot</h3>
+                      </v-col>
+                      <v-col cols="12" md="12">
+                        
+                      </v-col>
+                    </v-row>
+                    </v-col>
+
                   <v-row align="center" justify="center"> 
                       
-                      <p class="t">1. Willing to work on virtual mode <br></p>
                   </v-row>
                       <v-row align="center" justify="center"> 
-                      <p class="t">2. There are no infrastructure challenges to work remotely with </p>
 
                   </v-row>
                   <v-row align="center" justify="center"> 
-                      <p class="t">3. Willing to assign a dedicated resource to work with team for next 6 months</p>
 
                   </v-row>
                   <v-row align="center" justify="center"> 
-                      <p class="t">4. The nominated resource is from middle/senior management, is conversant in English, <br>MS Office and is willing to learn and execute the project using Six sigma with support</p>
 
                   </v-row>
                   <v-row align="center" justify="center"> 
-                      <p class="t">5. THe resource will need to spend 20 hours. a week with the team</p>
 
                   </v-row>
                   <v-row align="center" justify="center"> 
-                      <p class="t">6. Commit to 3 year post project completion re-porting to on the project impact</p>
 
                   </v-row>
                   <v-row align="center" justify="center"> 
-                      <p class="t">7. Are willing to use excel based solution for reporting, without any integration with any other platform </p>
 
                   </v-row>
                     <v-row align="center" justify="center"> 
-                      <p class="t">8. Will be able to organize resources for pilot</p>
+                     
 
                   </v-row>
                     </v-col>
@@ -55,7 +93,7 @@
                             large
                             rounded
                             color="primary"
-                            to="/beneficiary?s=1"
+                            to="/nominated-personal?s=1"
                           >
                             <v-icon left>mdi-arrow-left</v-icon>
                             Back
@@ -97,8 +135,8 @@
                           </v-btn>
                         </div>
                         <div class="d-flex mt-5 mr-2">
-                          <v-btn large rounded color="primary" to="/agreement">
-                            Submit
+                          <v-btn large rounded color="primary" to="/agreement?s=1">
+                            Agree & Submit
                             <v-icon right>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>

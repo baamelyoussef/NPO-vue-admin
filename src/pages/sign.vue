@@ -13,18 +13,21 @@
                 <v-card-text>
                   <v-form v-model="valid">
                     <v-row align="center" justify="center" class="pa-5">
-                      <p class="pr-2">Digital Signature Pad</p>
+                      <h3 class="pr-2 mb-3">Digital Signature Pad</h3>
                       <v-text-field
-                        outlined="name"
+                        outlined
                         dense
+                        placeholder="Name"
                         class="mx-2"
                         >  </v-text-field>
                         <v-text-field
-                        outlined="Designation"
+                        outlined
                         dense
+                        placeholder="Designation"
                         class="mx-2">  </v-text-field>
                         <v-text-field
-                        outlined="Date"
+                        outlined
+                        placeholder="Date"
                         dense
                         class="mx-2">  </v-text-field>
                     </v-row>
@@ -47,7 +50,7 @@
                             large
                             rounded
                             color="primary"
-                            to="/beneficiary?s=1"
+                            to="/agreement?s=1"
                           >
                             <v-icon left>mdi-arrow-left</v-icon>
                             Back
