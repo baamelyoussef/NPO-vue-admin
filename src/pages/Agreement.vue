@@ -99,30 +99,8 @@
                             Back
                           </v-btn>
                         </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="clear"
-                          >
-                            Clear
-                            <v-icon right>mdi-file-outline</v-icon>
-                          </v-btn>
-                        </div>
-                        <div class="d-flex mt-5 mr-3">
-                          <v-btn
-                            large
-                            rounded
-                            color="primary"
-                            class="wall"
-                            @click="clear"
-                          >
-                            Save
-                            <v-icon right>mdi-content-save</v-icon>
-                          </v-btn>
-                        </div>
+                        
+                    
                         <div class="d-flex mt-5 mr-3">
                           <v-btn
                             large
