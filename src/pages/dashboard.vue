@@ -47,7 +47,7 @@
           </div>
         </template>
         <v-list dense nav>
-          <v-subheader class="primary--text" v-if="bmc">Dashboard</v-subheader>
+          <v-subheader class="primary--text" v-if="bmc">Overview</v-subheader>
           <v-list-item-group v-model="selectedItem" color="primary">
             <v-list-item v-for="(item, i) in items" :key="i" to="/">
               <v-list-item-icon>
@@ -166,7 +166,8 @@
               <v-list-item-title>MOU</v-list-item-title>
             </template>
 
-            <v-list-group no-action sub-group prepend-icon="mdi-chevron-down">
+             s
+             <v-list-group no-action sub-group prepend-icon="mdi-chevron-down">
               <template v-slot:activator>
                 <v-list-item-content>
                   <v-list-item-title>Admin</v-list-item-title>
@@ -427,7 +428,7 @@ export default {
         },
       ],
       /////
-      items: [{ text: "Dashboard", icon: "mdi-view-carousel" }],
+      items: [{ text: "Admin Panel", icon: "mdi-view-carousel" }],
       npo1: [
         ["TEST", "mdi-account-multiple-outline"],
         ["Settings", "mdi-cog-outline"],
